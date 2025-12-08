@@ -1,0 +1,2379 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Constructo AI | ERP intelligent pour la construction au Québec - 27+ modules, 57 experts IA</title>
+    <meta name="description" content="Constructo AI est un système ERP complet pour la construction au Québec. 27+ modules intégrés (Devis, Projets, Comptabilité, TimeTracker, CRM, Inventaire), 57 experts IA spécialisés, 100% conforme RBQ, CCQ et Loi 16. Essai 7 jours.">
+    <meta name="keywords" content="ERP construction, logiciel construction Québec, gestion projet construction, devis construction, comptabilité construction, RBQ, CCQ, Loi 16, IA construction, Constructo AI">
+    <meta name="author" content="Sylvain Leduc - Constructo AI Inc.">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://constructoai.ca/">
+    <meta property="og:title" content="Constructo AI | ERP intelligent pour la construction au Québec">
+    <meta property="og:description" content="Gérez votre entreprise de construction avec 27+ modules intégrés et 57 experts IA. 100% conforme RBQ, CCQ, Loi 16. Essai 7 jours.">
+    <meta property="og:image" content="https://constructoai.ca/logo.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://constructoai.ca/">
+    <meta property="twitter:title" content="Constructo AI | ERP intelligent pour la construction au Québec">
+    <meta property="twitter:description" content="Gérez votre entreprise de construction avec 27+ modules intégrés et 57 experts IA. 100% conforme RBQ, CCQ, Loi 16.">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/logo.png">
+    <link rel="apple-touch-icon" href="/logo.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #2563eb;
+            --primary-dark: #1d4ed8;
+            --primary-light: #3b82f6;
+            --dark: #1e293b;
+            --gray-900: #0f172a;
+            --gray-800: #1e293b;
+            --gray-700: #334155;
+            --gray-600: #475569;
+            --gray-500: #64748b;
+            --gray-400: #94a3b8;
+            --gray-300: #cbd5e1;
+            --gray-200: #e2e8f0;
+            --gray-100: #f1f5f9;
+            --gray-50: #f8fafc;
+            --white: #ffffff;
+            --orange: #f97316;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            color: var(--gray-900);
+            line-height: 1.5;
+            background: var(--white);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* Top Banner */
+        .top-banner {
+            background: var(--primary);
+            color: var(--white);
+            text-align: center;
+            padding: 8px 16px;
+            font-size: 13px;
+        }
+
+        .top-banner a {
+            color: var(--white);
+            text-decoration: underline;
+        }
+
+        /* Header */
+        .header {
+            background: var(--white);
+            padding: 12px 24px;
+            border-bottom: 1px solid var(--gray-200);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 700;
+            font-size: 17px;
+            color: var(--gray-900);
+        }
+
+        .logo-icon {
+            width: 36px;
+            height: 36px;
+            position: relative;
+        }
+
+        .logo-icon svg {
+            width: 100%;
+            height: 100%;
+        }
+
+        .nav {
+            display: flex;
+            align-items: center;
+            gap: 28px;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .nav a {
+            color: var(--gray-600);
+            font-size: 14px;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .nav a:hover {
+            color: var(--primary);
+        }
+
+        .header-right {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .lang-select {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 14px;
+            color: var(--gray-600);
+            cursor: pointer;
+        }
+
+        .theme-toggle {
+            width: 36px;
+            height: 36px;
+            border-radius: 8px;
+            border: 1px solid var(--gray-200);
+            background: var(--white);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 10px 18px;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+            border: none;
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: var(--white);
+        }
+
+        .btn-primary:hover {
+            background: var(--primary-dark);
+        }
+
+        .btn-outline {
+            background: var(--white);
+            color: var(--gray-700);
+            border: 1px solid var(--gray-300);
+        }
+
+        .btn-outline:hover {
+            border-color: var(--primary);
+            color: var(--primary);
+        }
+
+        .btn-white {
+            background: var(--white);
+            color: var(--gray-900);
+        }
+
+        .btn-white:hover {
+            background: var(--gray-100);
+        }
+
+        /* Hero */
+        .hero {
+            padding: 60px 24px 50px;
+            text-align: center;
+            background: var(--white);
+        }
+
+        .hero-inner {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .hero-logo {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            margin: 0 auto 30px;
+        }
+
+        .hero-logo img {
+            width: 150px;
+            height: auto;
+        }
+
+        .hero h1 {
+            font-size: 42px;
+            font-weight: 700;
+            color: var(--gray-900);
+            margin-top: 0;
+            margin-bottom: 12px;
+            letter-spacing: -0.02em;
+        }
+
+        .hero-subtitle {
+            font-size: 18px;
+            color: var(--gray-500);
+            margin-bottom: 20px;
+        }
+
+        .hero-description {
+            font-size: 15px;
+            color: var(--gray-500);
+            margin-bottom: 28px;
+            line-height: 1.7;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 12px;
+            justify-content: center;
+            margin-bottom: 28px;
+        }
+
+        .enterprise-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--gray-100);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 14px;
+            color: var(--gray-600);
+        }
+
+        .enterprise-badge .dot {
+            width: 8px;
+            height: 8px;
+            background: #22c55e;
+            border-radius: 50%;
+        }
+
+        .enterprise-badge span {
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        /* Stats Section - Blue Background */
+        .stats-section {
+            background: var(--primary);
+            padding: 60px 24px;
+        }
+
+        .stats-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .stats-section .section-title {
+            color: var(--white);
+            font-size: 26px;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 8px;
+        }
+
+        .stats-section .section-subtitle {
+            color: rgba(255,255,255,0.8);
+            font-size: 15px;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 32px;
+            margin-bottom: 48px;
+        }
+
+        @media (max-width: 768px) {
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 42px;
+            font-weight: 800;
+            color: var(--white);
+            margin-bottom: 4px;
+        }
+
+        .stat-label {
+            font-size: 14px;
+            color: rgba(255,255,255,0.8);
+        }
+
+        .logos-title {
+            text-align: center;
+            font-size: 14px;
+            color: rgba(255,255,255,0.8);
+            margin-bottom: 24px;
+        }
+
+        .logos-wrapper {
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+            mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+            -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+        }
+
+        .logos-track {
+            display: flex;
+            gap: 20px;
+            animation: scroll 35s linear infinite;
+            width: max-content;
+        }
+
+        .logos-track:hover {
+            animation-play-state: paused;
+        }
+
+        @keyframes scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
+        .logo-item {
+            flex-shrink: 0;
+            width: 70px;
+            height: 70px;
+            background: var(--white);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 12px;
+            transition: transform 0.3s;
+        }
+
+        .logo-item:hover {
+            transform: scale(1.05);
+        }
+
+        .logo-item img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+
+        /* Problems Section - White Background */
+        .problems-section {
+            padding: 70px 24px;
+            background: var(--white);
+        }
+
+        .problems-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 48px;
+        }
+
+        .section-title {
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--gray-900);
+            margin-bottom: 10px;
+        }
+
+        .section-subtitle {
+            font-size: 15px;
+            color: var(--gray-500);
+        }
+
+        .problems-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        @media (max-width: 900px) {
+            .problems-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .problem-card {
+            background: var(--white);
+            border: 1px solid var(--gray-200);
+            border-radius: 16px;
+            padding: 28px;
+        }
+
+        .problem-icon {
+            width: 44px;
+            height: 44px;
+            background: var(--gray-100);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 18px;
+        }
+
+        .problem-icon svg {
+            width: 22px;
+            height: 22px;
+            color: var(--primary);
+        }
+
+        .problem-card h3 {
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--gray-900);
+            margin-bottom: 12px;
+        }
+
+        .problem-card p {
+            font-size: 14px;
+            color: var(--gray-500);
+            margin-bottom: 16px;
+            line-height: 1.6;
+        }
+
+        .problem-stat {
+            font-size: 13px;
+            color: var(--gray-500);
+            padding-top: 16px;
+            border-top: 1px solid var(--gray-200);
+        }
+
+        /* Solution Section - Blue Background */
+        .solution-section {
+            padding: 70px 24px;
+            background: var(--primary);
+        }
+
+        .solution-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .solution-section .section-title {
+            color: var(--white);
+            text-align: center;
+            margin-bottom: 8px;
+        }
+
+        .solution-section .section-subtitle {
+            color: rgba(255,255,255,0.8);
+            text-align: center;
+            margin-bottom: 16px;
+        }
+
+        .solution-section h3 {
+            color: var(--white);
+            font-size: 18px;
+            font-weight: 600;
+            text-align: center;
+            margin-bottom: 32px;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            margin-bottom: 60px;
+        }
+
+        @media (max-width: 900px) {
+            .features-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 600px) {
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .feature-card {
+            background: var(--white);
+            border-radius: 12px;
+            padding: 24px;
+        }
+
+        .feature-icon {
+            width: 40px;
+            height: 40px;
+            margin-bottom: 16px;
+        }
+
+        .feature-icon svg {
+            width: 100%;
+            height: 100%;
+            color: var(--primary);
+        }
+
+        .feature-card h4 {
+            font-size: 15px;
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+
+        .feature-card p {
+            font-size: 13px;
+            color: var(--gray-500);
+            line-height: 1.6;
+        }
+
+        /* Experts */
+        .experts-section {
+            padding: 50px 24px;
+            background: var(--primary);
+        }
+
+        .experts-inner {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .experts-title {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            color: var(--white);
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 32px;
+        }
+
+        .experts-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px 48px;
+        }
+
+        @media (max-width: 700px) {
+            .experts-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .expert-item {
+            color: var(--white);
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        .expert-item strong {
+            color: var(--white);
+        }
+
+        .expert-item span {
+            color: rgba(255,255,255,0.8);
+        }
+
+        .experts-more {
+            text-align: center;
+            color: var(--white);
+            font-weight: 600;
+            margin-top: 32px;
+        }
+
+        /* How it works */
+        .how-section {
+            padding: 50px 24px;
+            background: var(--primary);
+            text-align: center;
+        }
+
+        .how-section h2 {
+            color: var(--white);
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+
+        .how-section .subtitle {
+            color: rgba(255,255,255,0.9);
+            font-size: 16px;
+            margin-bottom: 8px;
+        }
+
+        .how-section .description {
+            color: rgba(255,255,255,0.8);
+            font-size: 14px;
+        }
+
+        /* Demo Section - White */
+        .demo-section {
+            padding: 70px 24px;
+            background: var(--white);
+        }
+
+        .demo-inner {
+            max-width: 850px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .demo-section h2 {
+            font-size: 26px;
+            font-weight: 700;
+            color: var(--gray-900);
+            margin-bottom: 12px;
+        }
+
+        .demo-section > .demo-inner > p {
+            color: var(--gray-500);
+            font-size: 15px;
+            margin-bottom: 32px;
+        }
+
+        .video-wrapper {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        /* Why Section */
+        .why-section {
+            padding: 70px 24px;
+            background: var(--white);
+        }
+
+        .why-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+            margin-bottom: 48px;
+        }
+
+        @media (max-width: 900px) {
+            .why-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        .why-card {
+            background: var(--white);
+            border: 1px solid var(--gray-200);
+            border-radius: 12px;
+            padding: 24px;
+        }
+
+        .why-icon {
+            width: 40px;
+            height: 40px;
+            margin-bottom: 16px;
+        }
+
+        .why-icon svg {
+            width: 100%;
+            height: 100%;
+            color: var(--primary);
+        }
+
+        .why-card h3 {
+            font-size: 15px;
+            font-weight: 600;
+            color: var(--gray-900);
+            margin-bottom: 8px;
+        }
+
+        .why-card p {
+            font-size: 13px;
+            color: var(--gray-500);
+            line-height: 1.5;
+        }
+
+        /* Info Cards */
+        .info-cards {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+        }
+
+        @media (max-width: 700px) {
+            .info-cards {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .info-card {
+            background: var(--gray-50);
+            border-radius: 16px;
+            padding: 28px;
+        }
+
+        .info-card-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 16px;
+        }
+
+        .info-card-icon {
+            width: 28px;
+            height: 28px;
+        }
+
+        .info-card-icon svg {
+            width: 100%;
+            height: 100%;
+        }
+
+        .info-card h3 {
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--gray-900);
+        }
+
+        .info-card > p {
+            font-size: 14px;
+            color: var(--gray-500);
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        .info-card ul {
+            list-style: none;
+            margin-bottom: 24px;
+        }
+
+        .info-card li {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 6px 0;
+            font-size: 14px;
+            color: var(--gray-700);
+        }
+
+        .info-card li svg {
+            width: 16px;
+            height: 16px;
+            color: var(--primary);
+            flex-shrink: 0;
+        }
+
+        .info-card .btn {
+            width: 100%;
+        }
+
+        /* Testimonials */
+        .testimonials-section {
+            padding: 70px 24px;
+            background: var(--white);
+        }
+
+        .testimonials-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .testimonials-tabs {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            margin-bottom: 40px;
+        }
+
+        .tab-btn {
+            padding: 8px 18px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s;
+            background: var(--white);
+            color: var(--gray-600);
+            border: 1px solid var(--gray-200);
+        }
+
+        .tab-btn.active {
+            background: var(--primary);
+            color: var(--white);
+            border-color: var(--primary);
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            margin-bottom: 32px;
+        }
+
+        @media (max-width: 900px) {
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .testimonial-card {
+            background: var(--white);
+            border: 1px solid var(--gray-200);
+            border-radius: 12px;
+            padding: 24px;
+            transition: opacity 0.3s ease;
+        }
+
+        .quote-icon {
+            font-size: 32px;
+            color: var(--gray-300);
+            font-family: Georgia, serif;
+            line-height: 1;
+            margin-bottom: 16px;
+        }
+
+        .testimonial-card p {
+            font-size: 14px;
+            color: var(--gray-600);
+            line-height: 1.6;
+            margin-bottom: 16px;
+        }
+
+        .stars {
+            display: flex;
+            gap: 2px;
+            margin-bottom: 16px;
+        }
+
+        .star {
+            color: var(--primary);
+            font-size: 14px;
+        }
+
+        .star.empty {
+            color: var(--gray-300);
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .author-avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: var(--gray-300);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            color: var(--gray-600);
+            font-size: 14px;
+        }
+
+        .author-name {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--gray-900);
+        }
+
+        .author-role {
+            font-size: 13px;
+            color: var(--gray-500);
+        }
+
+        .carousel-controls {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .carousel-btn {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            border: 1px solid var(--gray-200);
+            background: var(--white);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+        }
+
+        .carousel-dots {
+            display: flex;
+            gap: 8px;
+        }
+
+        .dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: var(--gray-300);
+            cursor: pointer;
+            transition: background 0.2s ease, transform 0.2s ease;
+        }
+
+        .dot:hover {
+            transform: scale(1.2);
+        }
+
+        .dot.active {
+            background: var(--primary);
+            width: 24px;
+            border-radius: 4px;
+        }
+
+        /* FAQ */
+        .faq-section {
+            padding: 70px 24px;
+            background: var(--white);
+        }
+
+        .faq-inner {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid var(--gray-200);
+        }
+
+        .faq-question {
+            padding: 20px 0;
+            font-size: 15px;
+            font-weight: 500;
+            color: var(--gray-900);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-chevron {
+            transition: transform 0.3s;
+        }
+
+        .faq-item.active .faq-chevron {
+            transform: rotate(180deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 400px;
+        }
+
+        .faq-answer p {
+            padding-bottom: 20px;
+            font-size: 14px;
+            color: var(--gray-500);
+            line-height: 1.7;
+        }
+
+        /* Blog */
+        .blog-section {
+            padding: 70px 24px;
+            background: var(--white);
+        }
+
+        .blog-inner {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .blog-card {
+            background: var(--white);
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+
+        .blog-image {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+        }
+
+        .blog-content {
+            padding: 24px;
+        }
+
+        .blog-meta {
+            font-size: 13px;
+            color: var(--gray-500);
+            margin-bottom: 12px;
+        }
+
+        .blog-card h3 {
+            font-size: 20px;
+            font-weight: 600;
+            color: var(--gray-900);
+            margin-bottom: 12px;
+        }
+
+        .blog-card > .blog-content > p {
+            font-size: 14px;
+            color: var(--gray-500);
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        .blog-author {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 16px;
+        }
+
+        .blog-link {
+            color: var(--primary);
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            padding: 70px 24px;
+            background: var(--white);
+        }
+
+        .cta-inner {
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .cta-section h2 {
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--gray-900);
+            margin-bottom: 8px;
+        }
+
+        .cta-section > .cta-inner > p {
+            color: var(--gray-500);
+            margin-bottom: 40px;
+        }
+
+        .cta-cards {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+            margin-bottom: 48px;
+        }
+
+        @media (max-width: 700px) {
+            .cta-cards {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .cta-card {
+            border-radius: 16px;
+            padding: 28px;
+            text-align: left;
+        }
+
+        .cta-card.primary {
+            background: var(--primary);
+            color: var(--white);
+        }
+
+        .cta-card.outline {
+            background: var(--white);
+            border: 1px solid var(--gray-200);
+        }
+
+        .cta-card-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 20px;
+        }
+
+        .cta-card h3 {
+            font-size: 18px;
+            font-weight: 600;
+        }
+
+        .cta-card.primary h3 {
+            color: var(--white);
+        }
+
+        .cta-card.outline h3 {
+            color: var(--gray-900);
+        }
+
+        .cta-card ul {
+            list-style: none;
+            margin-bottom: 24px;
+        }
+
+        .cta-card li {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 6px 0;
+            font-size: 14px;
+        }
+
+        .cta-card.primary li {
+            color: rgba(255,255,255,0.9);
+        }
+
+        .cta-card.outline li {
+            color: var(--gray-600);
+        }
+
+        .cta-card .btn {
+            width: 100%;
+        }
+
+        .guarantee {
+            text-align: center;
+        }
+
+        .guarantee-header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 12px;
+        }
+
+        .guarantee h3 {
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--gray-900);
+        }
+
+        .guarantee p {
+            font-size: 14px;
+            color: var(--gray-500);
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        /* Newsletter - Blue */
+        .newsletter-section {
+            padding: 60px 24px;
+            background: var(--primary);
+        }
+
+        .newsletter-inner {
+            max-width: 500px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .newsletter-section h2 {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--white);
+            margin-bottom: 8px;
+        }
+
+        .newsletter-section > .newsletter-inner > p {
+            color: rgba(255,255,255,0.8);
+            font-size: 14px;
+            margin-bottom: 28px;
+        }
+
+        .newsletter-form {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .form-group {
+            text-align: left;
+        }
+
+        .form-group label {
+            display: block;
+            color: var(--white);
+            font-size: 13px;
+            font-weight: 500;
+            margin-bottom: 6px;
+        }
+
+        .newsletter-form input[type="email"],
+        .newsletter-form input[type="text"] {
+            width: 100%;
+            padding: 12px 14px;
+            border: 1px solid rgba(255,255,255,0.3);
+            border-radius: 8px;
+            font-size: 14px;
+            background: var(--white);
+        }
+
+        .newsletter-form input:focus {
+            outline: none;
+            border-color: var(--white);
+        }
+
+        .checkbox-group {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            text-align: left;
+            margin: 8px 0;
+        }
+
+        .checkbox-group input {
+            width: 16px;
+            height: 16px;
+            margin-top: 2px;
+        }
+
+        .checkbox-group label {
+            font-size: 13px;
+            color: rgba(255,255,255,0.9);
+        }
+
+        .newsletter-form .btn {
+            margin-top: 8px;
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--gray-50);
+            padding: 60px 24px 32px;
+            border-top: 1px solid var(--gray-200);
+        }
+
+        .footer-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr 1fr 1fr;
+            gap: 32px;
+            margin-bottom: 48px;
+        }
+
+        @media (max-width: 900px) {
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 500px) {
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .footer-brand .logo {
+            color: var(--gray-900);
+            margin-bottom: 16px;
+        }
+
+        .footer-brand p {
+            color: var(--gray-500);
+            font-size: 13px;
+            line-height: 1.7;
+        }
+
+        .footer-section h4 {
+            color: var(--gray-900);
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 18px;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section li {
+            margin-bottom: 10px;
+        }
+
+        .footer-section a {
+            color: var(--gray-500);
+            font-size: 13px;
+            transition: color 0.2s;
+        }
+
+        .footer-section a:hover {
+            color: var(--primary);
+        }
+
+        .footer-section .btn {
+            margin-top: 8px;
+        }
+
+        .footer-section .btn.btn-primary {
+            color: var(--white) !important;
+            background: var(--primary);
+        }
+
+        .footer-section .btn.btn-primary:hover {
+            background: var(--primary-dark);
+        }
+
+        .dmca-badge {
+            display: inline-block;
+            margin-top: 12px;
+        }
+
+        .dmca-badge img {
+            height: 24px;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid var(--gray-200);
+            padding-top: 24px;
+            text-align: center;
+        }
+
+        .footer-bottom p {
+            color: var(--gray-500);
+            font-size: 13px;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .nav {
+                display: none;
+            }
+            
+            .header-right {
+                gap: 10px;
+            }
+            
+            .lang-select span {
+                display: none;
+            }
+            
+            .lang-select svg:last-child {
+                display: none;
+            }
+            
+            .hero h1 {
+                font-size: 32px;
+            }
+            
+            .hero-subtitle {
+                font-size: 16px;
+            }
+            
+            .stat-number {
+                font-size: 32px;
+            }
+            
+            .section-title {
+                font-size: 24px;
+            }
+            
+            .cta-cards {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 32px;
+            }
+        }
+
+        /* Scroll smooth */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Top Banner -->
+    <div class="top-banner">
+        Pour tout problème, contactez <a href="tel:+15148201972">(514) 820-1972</a> ou <a href="mailto:info@constructoai.ca">info@constructoai.ca</a>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="header-inner">
+            <a href="#" class="logo">
+                <img src="/logo.png" alt="Constructo AI" style="width: 36px; height: auto;">
+                Constructo AI
+            </a>
+            <nav class="nav">
+                <a href="#fonctionnalites">Fonctionnalités</a>
+                <a href="#comparaison">Comparaison</a>
+                <a href="#contact">Contact</a>
+            </nav>
+            <div class="header-right">
+                <div class="lang-select">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10"/>
+                        <line x1="2" y1="12" x2="22" y2="12"/>
+                        <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+                    </svg>
+                    <span>Français</span>
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M6 9l6 6 6-6"/>
+                    </svg>
+                </div>
+                <button class="theme-toggle">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="5"/>
+                        <line x1="12" y1="1" x2="12" y2="3"/>
+                        <line x1="12" y1="21" x2="12" y2="23"/>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+                        <line x1="1" y1="12" x2="3" y2="12"/>
+                        <line x1="21" y1="12" x2="23" y2="12"/>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+                    </svg>
+                </button>
+                <a href="https://app.constructoai.ca/" class="btn btn-primary">Mon compte</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="hero-inner">
+            <div class="hero-logo">
+                <img src="/logo.png" alt="Constructo AI">
+            </div>
+            <h1>Constructo AI</h1>
+            <p class="hero-subtitle">Le système ERP intelligent conçu pour la construction au Québec</p>
+            <p class="hero-description">
+                Gérez l'ensemble de votre entreprise de construction avec 27+ modules intégrés: Devis, Projets, Comptabilité, TimeTracker, CRM, Inventaire et plus. Propulsé par 57 experts IA spécialisés et 100% conforme aux normes RBQ, CCQ et Loi 16.
+            </p>
+            <div class="hero-buttons">
+                <a href="https://app.constructoai.ca/" class="btn btn-primary">
+                    Commencer
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                </a>
+                <a href="#demo" class="btn btn-outline">Voir la demo</a>
+            </div>
+            <div class="enterprise-badge">
+                <span class="dot"></span>
+                Déjà <span>15+</span> entreprises
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section">
+        <div class="stats-inner">
+            <h2 class="section-title">Un ERP complet et puissant</h2>
+            <p class="section-subtitle">Tout ce dont vous avez besoin pour gérer votre entreprise de construction</p>
+
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number">27+</div>
+                    <div class="stat-label">Modules intégrés</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">180+</div>
+                    <div class="stat-label">Tables de données</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">57</div>
+                    <div class="stat-label">Experts IA spécialisés</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">61</div>
+                    <div class="stat-label">Postes construction</div>
+                </div>
+            </div>
+
+            <p class="logos-title">Rejoignez les entreprises qui font confiance à Constructo AI</p>
+            <div class="logos-wrapper">
+                <div class="logos-track">
+                    <div class="logo-item"><img src="https://lirp.cdn-website.com/1fb0fcfd/dms3rep/multi/opt/nosco_logo_V5_final_out-202w.png" alt="Nosco"></div>
+                    <div class="logo-item"><img src="https://avimco.ca/images/Brand_initial_Simple_Logo-removebg-preview.png" alt="Avimco"></div>
+                    <div class="logo-item"><img src="https://lirp.cdn-website.com/b9969df9/dms3rep/multi/opt/logo-1+copy-196w.png" alt="Empire M"></div>
+                    <div class="logo-item"><img src="https://lirp.cdn-website.com/f8028fb0/dms3rep/multi/opt/steeve-doucet-logo-411w.png" alt="Steeve Doucet"></div>
+                    <div class="logo-item"><img src="https://parallelegestion.com/wp-content/uploads/2022/09/logo-1.svg" alt="Parallele"></div>
+                    <div class="logo-item"><img src="https://constructionquadra.com/images/logo.png" alt="Quadra"></div>
+                    <div class="logo-item"><img src="https://plomberiegoyer.com/wp-content/uploads/2017/11/logo-bleu-blanc100.png" alt="Goyer"></div>
+                    <div class="logo-item"><img src="https://www.novika.ca/images/logo_novika.png" alt="Novika"></div>
+                    <div class="logo-item"><img src="https://renocart.ca/cdn/shop/files/Logo_RenoCart_1.png" alt="RenoCart"></div>
+                    <div class="logo-item"><img src="https://constructionjfnadeau.com/images/logo.png" alt="JF Nadeau"></div>
+                    <div class="logo-item"><img src="https://2crl.ca/wp-content/uploads/2022/03/construction-ricky-loiselle-logo.png" alt="Ricky Loiselle"></div>
+                    <!-- Duplicate for seamless loop -->
+                    <div class="logo-item"><img src="https://lirp.cdn-website.com/1fb0fcfd/dms3rep/multi/opt/nosco_logo_V5_final_out-202w.png" alt="Nosco"></div>
+                    <div class="logo-item"><img src="https://avimco.ca/images/Brand_initial_Simple_Logo-removebg-preview.png" alt="Avimco"></div>
+                    <div class="logo-item"><img src="https://lirp.cdn-website.com/b9969df9/dms3rep/multi/opt/logo-1+copy-196w.png" alt="Empire M"></div>
+                    <div class="logo-item"><img src="https://lirp.cdn-website.com/f8028fb0/dms3rep/multi/opt/steeve-doucet-logo-411w.png" alt="Steeve Doucet"></div>
+                    <div class="logo-item"><img src="https://parallelegestion.com/wp-content/uploads/2022/09/logo-1.svg" alt="Parallele"></div>
+                    <div class="logo-item"><img src="https://constructionquadra.com/images/logo.png" alt="Quadra"></div>
+                    <div class="logo-item"><img src="https://plomberiegoyer.com/wp-content/uploads/2017/11/logo-bleu-blanc100.png" alt="Goyer"></div>
+                    <div class="logo-item"><img src="https://www.novika.ca/images/logo_novika.png" alt="Novika"></div>
+                    <div class="logo-item"><img src="https://renocart.ca/cdn/shop/files/Logo_RenoCart_1.png" alt="RenoCart"></div>
+                    <div class="logo-item"><img src="https://constructionjfnadeau.com/images/logo.png" alt="JF Nadeau"></div>
+                    <div class="logo-item"><img src="https://2crl.ca/wp-content/uploads/2022/03/construction-ricky-loiselle-logo.png" alt="Ricky Loiselle"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problems Section -->
+    <section class="problems-section">
+        <div class="problems-inner">
+            <div class="section-header">
+                <h2 class="section-title">Vous perdez du temps et de l'argent chaque jour</h2>
+                <p class="section-subtitle">Les défis quotidiens que vous rencontrez dans vos projets de construction</p>
+            </div>
+            
+            <div class="problems-grid">
+                <div class="problem-card">
+                    <div class="problem-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"/>
+                            <polyline points="12,6 12,12 16,14"/>
+                        </svg>
+                    </div>
+                    <h3>Perte de Temps</h3>
+                    <p>2-3 heures par jour à chercher de l'information dans vos documents</p>
+                    <div class="problem-stat">70% des projets en retard</div>
+                </div>
+                <div class="problem-card">
+                    <div class="problem-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/>
+                            <line x1="12" y1="9" x2="12" y2="13"/>
+                            <line x1="12" y1="17" x2="12.01" y2="17"/>
+                        </svg>
+                    </div>
+                    <h3>Erreurs Coûteuses</h3>
+                    <p>Oubli d'un détail dans les plans coûte minimum 50 000$ en corrections</p>
+                    <div class="problem-stat">28% dépassement de coûts</div>
+                </div>
+                <div class="problem-card">
+                    <div class="problem-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="23,6 13.5,15.5 8.5,10.5 1,18"/>
+                            <polyline points="17,6 23,6 23,12"/>
+                        </svg>
+                    </div>
+                    <h3>Opportunités Manquées</h3>
+                    <p>Manque de temps pour une analyse approfondie de toutes les spécifications techniques des projets potentiels</p>
+                    <div class="problem-stat">5-10% coûts = retravail</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solution Section -->
+    <section class="solution-section" id="fonctionnalites">
+        <div class="solution-inner">
+            <h2 class="section-title">27+ Modules Intégrés</h2>
+            <p class="section-subtitle">Une solution complète pour gérer tous les aspects de votre entreprise de construction</p>
+            <h3>Vos outils au quotidien</h3>
+
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                            <polyline points="14,2 14,8 20,8"/>
+                            <line x1="16" y1="13" x2="8" y2="13"/>
+                            <line x1="16" y1="17" x2="8" y2="17"/>
+                        </svg>
+                    </div>
+                    <h4>Devis & Soumissions</h4>
+                    <p>Créez des soumissions professionnelles avec 140+ items prédéfinis. Calcul automatique des marges (admin 3%, contingences 12%, profit 15%), TPS/TVQ et génération HTML avec votre branding. Lien d'approbation client unique.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                            <line x1="16" y1="2" x2="16" y2="6"/>
+                            <line x1="8" y1="2" x2="8" y2="6"/>
+                            <line x1="3" y1="10" x2="21" y2="10"/>
+                        </svg>
+                    </div>
+                    <h4>Gestion de Projets</h4>
+                    <p>Dashboard temps réel avec KPIs, Gantt interactif, Kanban agile, calendrier des échéances. Bons de travail automatiques et intégration complète avec le TimeTracker pour un suivi précis.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="12" y1="1" x2="12" y2="23"/>
+                            <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+                        </svg>
+                    </div>
+                    <h4>Comptabilité Complète</h4>
+                    <p>Facturation clients (FAC-YYYY-NNNN), gestion des dépenses, calcul automatique TPS 5% / TVQ 9.975%, suivi des paiements, budgets projets et rapports financiers. Intégration bons de commande.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"/>
+                            <polyline points="12,6 12,12 16,14"/>
+                        </svg>
+                    </div>
+                    <h4>TimeTracker Unifié</h4>
+                    <p>Pointage précis sur 61 postes de construction québécois (Terrassement à Finition). Punch IN/OUT, mapping automatique poste → étape construction, rapports par projet/employé. Export CSV inclus.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                            <circle cx="9" cy="7" r="4"/>
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                        </svg>
+                    </div>
+                    <h4>CRM & Ventes</h4>
+                    <p>Gestion complète de vos clients et fournisseurs, contacts, opportunités avec pipeline de ventes. Historique des interactions et suivi des leads jusqu'à la conversion en projet.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+                            <polyline points="3.27,6.96 12,12.01 20.73,6.96"/>
+                            <line x1="12" y1="22.08" x2="12" y2="12"/>
+                        </svg>
+                    </div>
+                    <h4>Inventaire & Produits</h4>
+                    <p>Catalogue unifié avec specs complètes, suivi stock temps réel, alertes seuil minimum, calcul automatique valeur stock. Linkage bidirectionnel produits ↔ inventaire synchronisé.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/>
+                            <rect x="8" y="2" width="8" height="4" rx="1" ry="1"/>
+                            <path d="M9 14l2 2 4-4"/>
+                        </svg>
+                    </div>
+                    <h4>Ressources Humaines</h4>
+                    <p>Profils employés complets avec compétences, suivi des cartes CCQ et licences RBQ, gestion des départements. 25 cartes CCQ actives supportées avec validation automatique.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                            <polyline points="9,22 9,12 15,12 15,22"/>
+                        </svg>
+                    </div>
+                    <h4>Fonds de Prévoyance</h4>
+                    <p>Module complet Loi 16 Québec pour syndicats de copropriétés. Gestion cadastre, études financières 25 ans, composantes majeures, réserves et rapports conformes à la réglementation.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experts Section -->
+    <section class="experts-section">
+        <div class="experts-inner">
+            <h2 class="experts-title">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                    <circle cx="9" cy="7" r="4"/>
+                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                    <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                </svg>
+                57 Experts IA Spécialisés Construction
+            </h2>
+            <p style="color: rgba(255,255,255,0.8); margin-bottom: 24px;">Propulsés par Claude Opus 4.5 d'Anthropic avec 26 311 lignes de documentation spécialisée</p>
+            <div class="experts-grid">
+                <div class="expert-item">
+                    <strong>Architecte</strong> - <span>Conception de plans, Code National du Bâtiment, intégration harmonieuse des systèmes et optimisation des espaces.</span>
+                </div>
+                <div class="expert-item">
+                    <strong>Ingénieur Structure</strong> - <span>Calculs CSA S16 (acier), CSA O86 (bois), CSA A23.3 (béton). Charges neige Québec, zones sismiques.</span>
+                </div>
+                <div class="expert-item">
+                    <strong>Expert RBQ</strong> - <span>Conformité réglementaire Québec, licences d'entrepreneur, permis de construction, inspections.</span>
+                </div>
+                <div class="expert-item">
+                    <strong>Expert CCQ</strong> - <span>Convention collective construction, cartes de compétence, relations de travail, classifications d'emploi.</span>
+                </div>
+                <div class="expert-item">
+                    <strong>Estimateur Pro</strong> - <span>Estimation précise des coûts avec pricing marché actuel, analyse des soumissions, marges et contingences.</span>
+                </div>
+                <div class="expert-item">
+                    <strong>Comptable Construction</strong> - <span>TPS/TVQ, facturation, dépenses, rapports financiers, budgets projets, intégration comptable.</span>
+                </div>
+                <div class="expert-item">
+                    <strong>Expert Fonds Prévoyance</strong> - <span>Loi 16 Québec, études financières copropriétés, composantes majeures, projections 25 ans.</span>
+                </div>
+                <div class="expert-item">
+                    <strong>Calculs Poutres</strong> - <span>Sélection linteaux et poutres avec code Python intégré, calculs automatisés selon les charges.</span>
+                </div>
+            </div>
+            <p class="experts-more">+ 49 autres experts: Électricien, Plombier, CVC, Toiture, Isolation, Maçonnerie, Menuiserie, Peinture, Céramique, Pavage...</p>
+        </div>
+    </section>
+
+    <!-- How it works -->
+    <section class="how-section">
+        <h2>Workflow simplifié pour vos projets</h2>
+        <p class="subtitle">De l'opportunité à la facturation en quelques clics</p>
+        <p class="description">CRM → Opportunité → Devis → Projet → Planning (Gantt/Kanban) → TimeTracker → Comptabilité. Tout est intégré et synchronisé automatiquement.</p>
+    </section>
+
+    <!-- Demo Section -->
+    <section class="demo-section" id="demo">
+        <div class="demo-inner">
+            <h2>Voir Constructo AI en action</h2>
+            <p>Regardez la démo de notre plateforme pour voir comment Constructo AI transforme votre gestion de projets de construction et accélère vos chantiers.</p>
+            <div class="video-wrapper">
+                <iframe
+                    src="https://www.youtube.com/embed/hojXV_ZOqIk"
+                    title="Constructo AI - Demo"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen
+                    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Section -->
+    <section class="why-section">
+        <div class="why-inner">
+            <div class="section-header">
+                <h2 class="section-title">Pourquoi Constructo AI?</h2>
+                <p class="section-subtitle">Un ERP 100% québécois conçu pour votre réalité</p>
+            </div>
+
+            <div class="why-grid">
+                <div class="why-card">
+                    <div class="why-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                        </svg>
+                    </div>
+                    <h3>100% Conforme Québec</h3>
+                    <p>RBQ, CCQ, CNESST, Code National du Bâtiment, Loi 16, normes CSA/BNQ. TPS 5% et TVQ 9.975% automatiques.</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+                            <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+                        </svg>
+                    </div>
+                    <h3>Multi-Tenant Sécurisé</h3>
+                    <p>Chaque entreprise a son espace isolé (schéma PostgreSQL). Hachage bcrypt, rate limiting, sessions sécurisées.</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+                        </svg>
+                    </div>
+                    <h3>IA Claude Opus 4.5</h3>
+                    <p>Le modèle IA le plus avancé d'Anthropic avec recherche web temps réel, analyse de documents et mémoire persistante.</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"/>
+                            <path d="M12 6v6l4 2"/>
+                        </svg>
+                    </div>
+                    <h3>Auto-Réparation</h3>
+                    <p>Migration automatique des tables et colonnes au démarrage. Votre base de données reste toujours à jour sans intervention.</p>
+                </div>
+            </div>
+
+            <div class="info-cards" id="comparaison">
+                <div class="info-card">
+                    <div class="info-card-header">
+                        <div class="info-card-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2">
+                                <polyline points="23,6 13.5,15.5 8.5,10.5 1,18"/>
+                                <polyline points="17,6 23,6 23,12"/>
+                            </svg>
+                        </div>
+                        <h3>Tout-en-un vs Multiples logiciels</h3>
+                    </div>
+                    <p>Remplacez Excel, QuickBooks, et vos outils éparpillés par une seule plateforme intégrée conçue pour la construction.</p>
+                    <ul>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                            CRM + Devis + Projets + Compta = 1 seul outil
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                            Données synchronisées automatiquement
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                            139.99$/mois tout inclus, utilisateurs illimités
+                        </li>
+                    </ul>
+                    <a href="#demo" class="btn btn-primary">
+                        Voir la demo
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </a>
+                </div>
+                <div class="info-card">
+                    <div class="info-card-header">
+                        <div class="info-card-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2">
+                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                                <polyline points="14,2 14,8 20,8"/>
+                                <line x1="16" y1="13" x2="8" y2="13"/>
+                                <line x1="16" y1="17" x2="8" y2="17"/>
+                            </svg>
+                        </div>
+                        <h3>SEAOP - 100% Gratuit</h3>
+                    </div>
+                    <p>Plateforme d'appels d'offres publics au Québec. Consultez et soumissionnez sans frais, sans carte de crédit.</p>
+                    <ul>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22,4 12,14.01 9,11.01"/></svg>
+                            Consultation des appels d'offres publics
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22,4 12,14.01 9,11.01"/></svg>
+                            Création et suivi de soumissions
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22,4 12,14.01 9,11.01"/></svg>
+                            Alertes et notifications automatiques
+                        </li>
+                    </ul>
+                    <a href="https://app.constructoai.ca/" class="btn btn-outline" style="border-color: #22c55e; color: #22c55e;">
+                        Accéder gratuitement
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials-section">
+        <div class="testimonials-inner">
+            <div class="section-header">
+                <h2 class="section-title">Ce que nos clients disent</h2>
+                <p class="section-subtitle">Découvrez comment Constructo AI aide les professionnels de la construction</p>
+            </div>
+            
+            <div class="testimonials-tabs">
+                <button class="tab-btn active" data-filter="tous">Tous</button>
+                <button class="tab-btn" data-filter="entrepreneurs">Entrepreneurs</button>
+                <button class="tab-btn" data-filter="professionnels">Professionnels</button>
+            </div>
+
+            <div class="testimonials-grid">
+                <div class="testimonial-card" data-category="professionnels">
+                    <div class="quote-icon">"</div>
+                    <p>Constructo AI a révolutionné notre façon d'estimer les coûts. Nous économisons en moyenne 15 heures par projet et nos estimations sont beaucoup plus précises.</p>
+                    <div class="stars">
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">MT</div>
+                        <div>
+                            <div class="author-name">Marie Tremblay</div>
+                            <div class="author-role">Directrice de projet, Construction Québec Inc.</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card" data-category="entrepreneurs">
+                    <div class="quote-icon">"</div>
+                    <p>L'assistant IA répond instantanément à mes questions sur la conformité RBQ. C'est comme avoir un expert en réglementation disponible 24/7.</p>
+                    <div class="stars">
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">JPG</div>
+                        <div>
+                            <div class="author-name">Jean-Philippe Gagnon</div>
+                            <div class="author-role">Entrepreneur général, Bâtiments Gagnon</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card" data-category="professionnels">
+                    <div class="quote-icon">"</div>
+                    <p>La collaboration avec les entrepreneurs est beaucoup plus fluide grâce à Constructo AI. Les modifications sont immédiatement reflétées dans les estimations.</p>
+                    <div class="stars">
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star empty">★</span>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">SL</div>
+                        <div>
+                            <div class="author-name">Sophie Lavoie</div>
+                            <div class="author-role">Architecte, Lavoie Architecture</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card" data-category="entrepreneurs">
+                    <div class="quote-icon">"</div>
+                    <p>Le module TimeTracker nous fait gagner 3 heures par semaine en gestion de paie. Les 61 postes CCQ sont déjà configurés, c'est parfait pour notre réalité québécoise.</p>
+                    <div class="stars">
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">PB</div>
+                        <div>
+                            <div class="author-name">Pierre Bergeron</div>
+                            <div class="author-role">Entrepreneur électricien, Électro-Berg Inc.</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card" data-category="professionnels">
+                    <div class="quote-icon">"</div>
+                    <p>En tant qu'ingénieur, j'apprécie la rigueur des calculs et la conformité aux normes CSA. Les rapports générés sont professionnels et acceptés par les clients.</p>
+                    <div class="stars">
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">RC</div>
+                        <div>
+                            <div class="author-name">Robert Côté</div>
+                            <div class="author-role">Ingénieur structure, Génie-Plus</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card" data-category="entrepreneurs">
+                    <div class="quote-icon">"</div>
+                    <p>La gestion multi-projets est excellente. Je peux suivre mes 12 chantiers en cours avec le Gantt et Kanban. SEAOP gratuit m'a aussi permis de décrocher 3 nouveaux contrats!</p>
+                    <div class="stars">
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star empty">★</span>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">ML</div>
+                        <div>
+                            <div class="author-name">Michel Leblanc</div>
+                            <div class="author-role">Entrepreneur général, Constructions ML</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="carousel-controls">
+                <button class="carousel-btn">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+                </button>
+                <div class="carousel-dots">
+                    <span class="dot active"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+                <button class="carousel-btn">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq-section">
+        <div class="faq-inner">
+            <div class="section-header">
+                <h2 class="section-title">Questions fréquemment posées</h2>
+                <p class="section-subtitle">Anticipons Vos Objections</p>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    Qu'est-ce qui est inclus dans l'abonnement?
+                    <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+                </div>
+                <div class="faq-answer">
+                    <p>L'abonnement de 139.99$/mois inclut: accès complet aux 27+ modules ERP (CRM, Devis, Comptabilité, TimeTracker, Inventaire, etc.), 57 profils d'experts IA spécialisés construction, espace entreprise privé et sécurisé (multi-tenant PostgreSQL), support technique, mises à jour automatiques et hébergement cloud sur Render. Utilisateurs illimités!</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    Mes données sont-elles sécurisées?
+                    <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+                </div>
+                <div class="faq-answer">
+                    <p>Absolument. Chaque entreprise dispose d'un espace 100% isolé grâce à notre architecture multi-tenant PostgreSQL. Vos données sont protégées par hachage bcrypt (12 rounds), rate limiting contre les attaques brute force (5 tentatives max/30 min), sessions sécurisées avec déconnexion automatique après 30 min d'inactivité, et HTTPS forcé en production. Backups automatiques quotidiens inclus.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    Combien d'utilisateurs peuvent utiliser l'ERP?
+                    <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+                </div>
+                <div class="faq-answer">
+                    <p>Illimité! Vous pouvez créer autant de comptes utilisateurs que nécessaire pour votre entreprise sans frais supplémentaires. Notre architecture PostgreSQL supporte 1000+ utilisateurs simultanés avec un temps de réponse moyen inférieur à 200ms.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    Dois-je fournir ma propre clé API pour l'IA?
+                    <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+                </div>
+                <div class="faq-answer">
+                    <p>Non! La clé API Claude (Anthropic) est incluse dans votre abonnement de 139.99$/mois. Vous avez accès immédiatement aux 57 experts IA spécialisés, à la recherche web et à l'analyse de documents sans aucune configuration supplémentaire.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    Combien coûte vraiment Constructo AI?
+                    <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+                </div>
+                <div class="faq-answer">
+                    <p>L'ERP complet coûte 139.99$/mois après 7 jours d'essai (carte de crédit requise pour l'essai). Aucun frais si vous annulez avant la fin de l'essai. Cartes acceptées: Visa, Mastercard, Amex, Visa Desjardins. Le module SEAOP (appels d'offres publics) est 100% gratuit, sans carte requise.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    Puis-je annuler à tout moment?
+                    <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+                </div>
+                <div class="faq-answer">
+                    <p>Oui, vous pouvez annuler quand vous voulez sans frais cachés ni pénalités. Pour annuler, contactez-nous au <strong>(514) 820-1972</strong> ou par courriel à <strong>info@constructoai.ca</strong>. Vos données restent accessibles pendant 30 jours après l'annulation pour vous permettre de les exporter si nécessaire.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+        <div class="cta-inner">
+            <h2>Prêt à Démarrer Aujourd'hui?</h2>
+            <p>Commencez à utiliser Constructo AI dès aujourd'hui</p>
+            
+            <div class="cta-cards">
+                <div class="cta-card primary">
+                    <div class="cta-card-header">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                            <polyline points="22,4 12,14.01 9,11.01"/>
+                        </svg>
+                        <h3>Essai Libre Immédiat</h3>
+                    </div>
+                    <ul>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9 12l2 2 4-4"/></svg>
+                            Créez votre compte en 2 minutes
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9 12l2 2 4-4"/></svg>
+                            Commencez à tester tout de suite
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9 12l2 2 4-4"/></svg>
+                            Support disponible si besoin
+                        </li>
+                    </ul>
+                    <a href="https://app.constructoai.ca/" class="btn btn-white">Commencer</a>
+                </div>
+                <div class="cta-card outline">
+                    <div class="cta-card-header">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2">
+                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                            <line x1="3" y1="9" x2="21" y2="9"/>
+                            <line x1="9" y1="21" x2="9" y2="9"/>
+                        </svg>
+                        <h3>Démo Personnalisée (Recommandé)</h3>
+                    </div>
+                    <ul>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9 12l2 2 4-4"/></svg>
+                            30 minutes avec un expert
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9 12l2 2 4-4"/></svg>
+                            On utilise VOS vrais documents
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9 12l2 2 4-4"/></svg>
+                            Réponses à toutes vos questions
+                        </li>
+                    </ul>
+                    <a href="#demo" class="btn btn-primary">Voir la demo</a>
+                </div>
+            </div>
+
+            <div class="guarantee">
+                <div class="guarantee-header">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2">
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                    </svg>
+                    <h3>Garantie Sans Risque</h3>
+                </div>
+                <p>Essayez Constructo AI sans engagement et sans risque. Vous êtes le seul juge de la valeur que vous en retirez.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter-section" id="contact">
+        <div class="newsletter-inner">
+            <h2>Restez informé</h2>
+            <p>Inscrivez-vous à notre infolettre pour recevoir les dernières nouvelles et mises à jour de Constructo AI</p>
+            
+            <form class="newsletter-form">
+                <div class="form-group">
+                    <label>Courriel</label>
+                    <input type="email" placeholder="Votre courriel" required>
+                </div>
+                <div class="form-group">
+                    <label>Nom (facultatif)</label>
+                    <input type="text" placeholder="Votre nom">
+                </div>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="consent">
+                    <label for="consent">J'accepte de recevoir des communications marketing de Constructo AI</label>
+                </div>
+                <button type="submit" class="btn btn-white" style="width: 100%;">S'abonner</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-inner">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#" class="logo">
+                        <img src="/logo.png" alt="Constructo AI" style="width: 36px; height: auto;">
+                        Constructo AI
+                    </a>
+                    <p>L'ERP intelligent conçu pour la construction au Québec. 27+ modules intégrés, 57 experts IA spécialisés, 100% conforme RBQ, CCQ et Loi 16.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="#fonctionnalites">Fonctionnalités</a></li>
+                        <li><a href="#comparaison">Comparaison</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><a href="tel:+15148201972">(514) 820-1972</a></li>
+                        <li><a href="mailto:info@constructoai.ca">info@constructoai.ca</a></li>
+                        <li><a href="#contact">Formulaire de contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Accès</h4>
+                    <ul>
+                        <li><a href="https://app.constructoai.ca/">Se connecter</a></li>
+                        <li><a href="#demo">Voir la démo</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Légal</h4>
+                    <ul>
+                        <li><a href="https://app.constructoai.ca/privacy-policy">Politique de confidentialité</a></li>
+                        <li><a href="https://app.constructoai.ca/terms-of-service">Conditions d'utilisation</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Siège social</h4>
+                    <p style="font-size: 13px; color: var(--gray-500); line-height: 1.6;">
+                        1760 Rue Jacques-Cartier S<br>
+                        Farnham, QC J2N 1Y8<br>
+                        Canada
+                    </p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 Constructo AI Inc. - Tous droits réservés | Développé par Sylvain Leduc</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // FAQ Accordion
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const item = question.parentElement;
+                item.classList.toggle('active');
+            });
+        });
+
+        // ========================================
+        // Testimonials - Filtrage et Carrousel
+        // ========================================
+        const testimonialCards = document.querySelectorAll('.testimonial-card');
+        const tabBtns = document.querySelectorAll('.tab-btn');
+        const carouselBtns = document.querySelectorAll('.carousel-btn');
+        const carouselDots = document.querySelectorAll('.carousel-dots .dot');
+
+        let currentPage = 0;
+        let filteredCards = [...testimonialCards];
+        const cardsPerPage = 3;
+
+        // Fonction pour mettre à jour l'affichage
+        function updateTestimonialsDisplay() {
+            // Cacher toutes les cartes
+            testimonialCards.forEach(card => {
+                card.style.display = 'none';
+                card.style.opacity = '0';
+            });
+
+            // Calculer les cartes à afficher pour la page courante
+            const startIndex = currentPage * cardsPerPage;
+            const endIndex = Math.min(startIndex + cardsPerPage, filteredCards.length);
+
+            // Afficher les cartes de la page courante avec animation
+            for (let i = startIndex; i < endIndex; i++) {
+                filteredCards[i].style.display = 'block';
+                setTimeout(() => {
+                    filteredCards[i].style.opacity = '1';
+                }, 50);
+            }
+
+            // Mettre à jour les dots
+            updateDots();
+        }
+
+        // Fonction pour mettre à jour les dots
+        function updateDots() {
+            const totalPages = Math.ceil(filteredCards.length / cardsPerPage);
+            carouselDots.forEach((dot, index) => {
+                dot.classList.toggle('active', index === currentPage);
+                dot.style.display = index < totalPages ? 'block' : 'none';
+            });
+        }
+
+        // Filtrage par tabs
+        tabBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Mise à jour de l'état actif
+                tabBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+
+                // Filtrer les cartes
+                const filter = btn.dataset.filter;
+                if (filter === 'tous') {
+                    filteredCards = [...testimonialCards];
+                } else {
+                    filteredCards = [...testimonialCards].filter(card =>
+                        card.dataset.category === filter
+                    );
+                }
+
+                // Reset à la première page et afficher
+                currentPage = 0;
+                updateTestimonialsDisplay();
+            });
+        });
+
+        // Navigation carrousel - Précédent
+        carouselBtns[0].addEventListener('click', () => {
+            const totalPages = Math.ceil(filteredCards.length / cardsPerPage);
+            currentPage = (currentPage - 1 + totalPages) % totalPages;
+            updateTestimonialsDisplay();
+        });
+
+        // Navigation carrousel - Suivant
+        carouselBtns[1].addEventListener('click', () => {
+            const totalPages = Math.ceil(filteredCards.length / cardsPerPage);
+            currentPage = (currentPage + 1) % totalPages;
+            updateTestimonialsDisplay();
+        });
+
+        // Clic sur les dots
+        carouselDots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                currentPage = index;
+                updateTestimonialsDisplay();
+            });
+        });
+
+        // Initialisation
+        updateTestimonialsDisplay();
+
+        // Smooth scroll pour les liens d'ancrage
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>

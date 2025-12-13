@@ -1542,6 +1542,209 @@
             font-size: 13px;
             color: var(--gray-500);
         }
+
+        /* API Section */
+        .api-section {
+            padding: 70px 24px;
+            background: var(--primary);
+        }
+
+        .api-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .api-section .section-title {
+            color: var(--white);
+            text-align: center;
+            margin-bottom: 8px;
+        }
+
+        .api-section .section-subtitle {
+            color: rgba(255,255,255,0.7);
+            text-align: center;
+            margin-bottom: 48px;
+        }
+
+        .api-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            margin-bottom: 48px;
+        }
+
+        @media (max-width: 900px) {
+            .api-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .api-card {
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 16px;
+            padding: 28px;
+            transition: transform 0.3s, border-color 0.3s;
+        }
+
+        .api-card:hover {
+            transform: translateY(-4px);
+            border-color: rgba(255,255,255,0.4);
+        }
+
+        .api-card-icon {
+            width: 48px;
+            height: 48px;
+            background: var(--white);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .api-card-icon svg {
+            width: 24px;
+            height: 24px;
+            color: var(--primary);
+        }
+
+        .api-card h3 {
+            color: var(--white);
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+
+        .api-card p {
+            color: rgba(255,255,255,0.7);
+            font-size: 14px;
+            line-height: 1.6;
+            margin-bottom: 16px;
+        }
+
+        .api-card ul {
+            list-style: none;
+        }
+
+        .api-card li {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: rgba(255,255,255,0.8);
+            font-size: 13px;
+            padding: 6px 0;
+        }
+
+        .api-card li svg {
+            width: 16px;
+            height: 16px;
+            color: #22c55e;
+            flex-shrink: 0;
+        }
+
+        .api-integrations {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 16px;
+            margin-bottom: 40px;
+        }
+
+        .integration-badge {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background: rgba(255,255,255,0.1);
+            padding: 12px 20px;
+            border-radius: 50px;
+            color: var(--white);
+            font-size: 14px;
+            font-weight: 500;
+            transition: background 0.3s;
+        }
+
+        .integration-badge:hover {
+            background: rgba(255,255,255,0.15);
+        }
+
+        .integration-badge img {
+            width: 24px;
+            height: 24px;
+            object-fit: contain;
+        }
+
+        .integration-badge svg {
+            width: 24px;
+            height: 24px;
+        }
+
+        .api-code-preview {
+            background: #0d1117;
+            border-radius: 12px;
+            overflow: hidden;
+            margin-bottom: 32px;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .code-header {
+            background: #161b22;
+            padding: 12px 16px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .code-dots {
+            display: flex;
+            gap: 6px;
+        }
+
+        .code-dots span {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+        }
+
+        .code-dots span:nth-child(1) { background: #ff5f56; }
+        .code-dots span:nth-child(2) { background: #ffbd2e; }
+        .code-dots span:nth-child(3) { background: #27ca40; }
+
+        .code-lang {
+            color: rgba(255,255,255,0.5);
+            font-size: 12px;
+            font-family: monospace;
+        }
+
+        .code-body {
+            padding: 20px;
+            overflow-x: auto;
+        }
+
+        .code-body pre {
+            margin: 0;
+            font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+            font-size: 13px;
+            line-height: 1.6;
+            color: #c9d1d9;
+        }
+
+        .code-body .comment { color: #8b949e; }
+        .code-body .keyword { color: #ff7b72; }
+        .code-body .string { color: #a5d6ff; }
+        .code-body .function { color: #d2a8ff; }
+        .code-body .variable { color: #79c0ff; }
+
+        .api-cta {
+            text-align: center;
+        }
+
+        .api-cta p {
+            color: rgba(255,255,255,0.6);
+            font-size: 14px;
+            margin-top: 16px;
+        }
     </style>
 </head>
 <body>
@@ -1560,6 +1763,7 @@
             </a>
             <nav class="nav">
                 <a href="#fonctionnalites">Fonctionnalités</a>
+                <a href="#api">Intégrations</a>
                 <a href="#comparaison">Comparaison</a>
                 <a href="#contact">Contact</a>
             </nav>
@@ -1978,6 +2182,154 @@
                         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
                     </a>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- API REST Section -->
+    <section class="api-section" id="api">
+        <div class="api-inner">
+            <div class="section-header">
+                <h2 class="section-title">Branchez vos logiciels existants</h2>
+                <p class="section-subtitle">QuickBooks, Sage, ou votre comptable qui utilise autre chose? Pas de problème — tout se synchronise automatiquement.</p>
+            </div>
+
+            <!-- Integration Badges -->
+            <div class="api-integrations">
+                <div class="integration-badge">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+                    QuickBooks
+                </div>
+                <div class="integration-badge">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 14H6v-2h6v2zm4-4H6v-2h10v2zm0-4H6V7h10v2z"/></svg>
+                    Sage
+                </div>
+                <div class="integration-badge">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                    n8n
+                </div>
+                <div class="integration-badge">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                    Zapier
+                </div>
+                <div class="integration-badge">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z"/></svg>
+                    + Autres
+                </div>
+            </div>
+
+            <!-- API Features Grid -->
+            <div class="api-grid">
+                <div class="api-card">
+                    <div class="api-card-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                            <circle cx="9" cy="7" r="4"/>
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                        </svg>
+                    </div>
+                    <h3>Fini la double saisie</h3>
+                    <p>Vos factures Constructo AI apparaissent direct dans QuickBooks ou Sage. Plus besoin de rentrer les mêmes chiffres deux fois.</p>
+                    <ul>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22,4 12,14.01 9,11.01"/></svg>
+                            Factures synchronisées automatiquement
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22,4 12,14.01 9,11.01"/></svg>
+                            Clients et fournisseurs à jour
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22,4 12,14.01 9,11.01"/></svg>
+                            Paiements réconciliés
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="api-card">
+                    <div class="api-card-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+                        </svg>
+                    </div>
+                    <h3>Alertes en temps réel</h3>
+                    <p>Nouvelle facture payée? Stock bas? Soumission acceptée? Recevez l'info instantanément dans vos autres outils.</p>
+                    <ul>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22,4 12,14.01 9,11.01"/></svg>
+                            Notification quand une facture est payée
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22,4 12,14.01 9,11.01"/></svg>
+                            Alerte inventaire bas
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22,4 12,14.01 9,11.01"/></svg>
+                            Suivi des projets en direct
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="api-card">
+                    <div class="api-card-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+                            <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+                        </svg>
+                    </div>
+                    <h3>Vos données restent les vôtres</h3>
+                    <p>Sécurité bancaire. Seuls vous et les logiciels que <strong>vous</strong> autorisez peuvent accéder à vos chiffres. Point final.</p>
+                    <ul>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22,4 12,14.01 9,11.01"/></svg>
+                            Vous contrôlez qui voit quoi
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22,4 12,14.01 9,11.01"/></svg>
+                            Révocation en un clic
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22,4 12,14.01 9,11.01"/></svg>
+                            Historique de tous les accès
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Simplified visual instead of code -->
+            <div class="api-code-preview">
+                <div class="code-header">
+                    <div class="code-dots">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <span class="code-lang">Comment ça marche</span>
+                </div>
+                <div class="code-body">
+                    <pre><span class="comment">1. Vous créez une facture dans Constructo AI</span>
+   <span class="string">→ Elle apparaît automatiquement dans QuickBooks</span>
+
+<span class="comment">2. Votre client paie via votre compte bancaire</span>
+   <span class="string">→ La facture est marquée "Payée" partout</span>
+
+<span class="comment">3. Votre comptable fait ses rapports dans Sage</span>
+   <span class="string">→ Toutes les données sont déjà là, à jour</span>
+
+<span class="function">Résultat:</span> <span class="variable">Zéro double saisie. Zéro erreur de copier-coller.</span></pre>
+                </div>
+            </div>
+
+            <!-- API CTA -->
+            <div class="api-cta">
+                <a href="https://app.constructoai.ca/" class="btn btn-white btn-large">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                    </svg>
+                    Essayer gratuitement 7 jours
+                </a>
+                <p>Besoin d'aide pour brancher vos logiciels? On vous accompagne — appelez-nous au (514) 820-1972</p>
             </div>
         </div>
     </section>

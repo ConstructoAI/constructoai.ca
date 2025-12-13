@@ -733,6 +733,12 @@
             background: var(--gray-50);
             border-radius: 16px;
             padding: 28px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .info-card .btn {
+            margin-top: auto;
         }
 
         .info-card-header {
@@ -1254,6 +1260,288 @@
         html {
             scroll-behavior: smooth;
         }
+
+        /* Founder Chat Section */
+        .founder-chat-section {
+            padding: 70px 24px;
+            background: var(--gray-50);
+        }
+
+        .founder-chat-inner {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .chat-preview-container {
+            display: grid;
+            grid-template-columns: 1.4fr 1fr;
+            gap: 24px;
+            margin-bottom: 32px;
+        }
+
+        @media (max-width: 800px) {
+            .chat-preview-container {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .chat-preview {
+            background: var(--white);
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            overflow: hidden;
+            border: 1px solid var(--gray-200);
+        }
+
+        .chat-header-preview {
+            background: var(--primary);
+            padding: 16px 20px;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+
+        .founder-avatar {
+            position: relative;
+            flex-shrink: 0;
+        }
+
+        .founder-avatar img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid var(--white);
+        }
+
+        .online-status {
+            position: absolute;
+            bottom: 2px;
+            right: 2px;
+            width: 12px;
+            height: 12px;
+            background: #22c55e;
+            border-radius: 50%;
+            border: 2px solid var(--primary);
+        }
+
+        .founder-info h3 {
+            color: var(--white);
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 2px;
+        }
+
+        .founder-info p {
+            color: rgba(255,255,255,0.85);
+            font-size: 13px;
+            margin-bottom: 4px;
+        }
+
+        .status-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: rgba(255,255,255,0.2);
+            padding: 3px 10px;
+            border-radius: 20px;
+            font-size: 12px;
+            color: var(--white);
+        }
+
+        .status-dot {
+            width: 8px;
+            height: 8px;
+            background: #22c55e;
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+
+        .chat-body-preview {
+            padding: 20px;
+            min-height: 200px;
+            background: var(--gray-50);
+        }
+
+        .chat-message {
+            display: flex;
+            gap: 12px;
+        }
+
+        .message-avatar {
+            width: 36px;
+            height: 36px;
+            background: var(--primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 12px;
+            font-weight: 600;
+            flex-shrink: 0;
+            overflow: hidden;
+        }
+
+        .message-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .message-content {
+            background: var(--white);
+            padding: 14px 18px;
+            border-radius: 0 16px 16px 16px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+            font-size: 14px;
+            line-height: 1.6;
+            color: var(--gray-700);
+        }
+
+        .message-content p {
+            margin-bottom: 6px;
+        }
+
+        .help-options {
+            list-style: none;
+            margin: 8px 0;
+            padding-left: 0;
+        }
+
+        .help-options li {
+            padding: 4px 0;
+            color: var(--gray-600);
+            font-size: 13px;
+        }
+
+        .help-options li::before {
+            content: "•";
+            color: var(--primary);
+            margin-right: 8px;
+        }
+
+        .chat-input-preview {
+            padding: 16px 20px;
+            background: var(--white);
+            border-top: 1px solid var(--gray-200);
+            display: flex;
+            gap: 12px;
+        }
+
+        .chat-input-preview input {
+            flex: 1;
+            padding: 12px 16px;
+            border: 1px solid var(--gray-300);
+            border-radius: 8px;
+            font-size: 14px;
+            background: var(--gray-50);
+            color: var(--gray-500);
+        }
+
+        .chat-input-preview .btn {
+            padding: 12px 20px;
+        }
+
+        /* Quick Actions */
+        .chat-actions {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .chat-actions h4 {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--gray-700);
+            margin-bottom: 6px;
+        }
+
+        .quick-action-btn {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 16px;
+            background: var(--white);
+            border: 1px solid var(--gray-200);
+            border-radius: 8px;
+            font-size: 14px;
+            color: var(--gray-700);
+            transition: all 0.2s;
+            text-decoration: none;
+        }
+
+        .quick-action-btn:hover {
+            border-color: var(--primary);
+            color: var(--primary);
+            transform: translateX(4px);
+        }
+
+        .quick-action-btn.blue {
+            border-left: 3px solid var(--primary);
+        }
+
+        .quick-action-btn.orange {
+            border-left: 3px solid var(--orange);
+        }
+
+        .quick-action-btn.green {
+            border-left: 3px solid #22c55e;
+        }
+
+        .quick-action-btn.pink {
+            border-left: 3px solid #ec4899;
+        }
+
+        .direct-contact {
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid var(--gray-200);
+        }
+
+        .direct-contact h4 {
+            margin-bottom: 12px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 8px 0;
+            font-size: 14px;
+            color: var(--gray-600);
+            transition: color 0.2s;
+        }
+
+        .contact-item:hover {
+            color: var(--primary);
+        }
+
+        .contact-item svg {
+            color: var(--primary);
+        }
+
+        /* Chat CTA */
+        .chat-cta {
+            text-align: center;
+        }
+
+        .btn-large {
+            padding: 16px 32px;
+            font-size: 16px;
+            border-radius: 12px;
+        }
+
+        .chat-cta-note {
+            margin-top: 12px;
+            font-size: 13px;
+            color: var(--gray-500);
+        }
     </style>
 </head>
 <body>
@@ -1312,16 +1600,16 @@
                 <img src="logo.png" alt="Constructo AI">
             </div>
             <h1>Constructo AI</h1>
-            <p class="hero-subtitle">Le système ERP intelligent conçu pour la construction au Québec</p>
+            <p class="hero-subtitle">L'ERP qui comprend votre métier d'entrepreneur au Québec</p>
             <p class="hero-description">
-                Gérez l'ensemble de votre entreprise de construction avec <strong>30+ modules intégrés</strong>: Devis & Soumissions, Gestion de Projets, Comptabilité complète (TPS/TVQ), TimeTracker (61 postes CCQ), CRM & Pipeline de ventes, Inventaire temps réel, Subventions Québec 2025 (50+ programmes), Qualification prospects B.A.T., Fonds de prévoyance (Loi 16), Gantt interactif, Kanban agile, Portail B2B client et plus encore.
+                Arrêtez de jongler entre Excel, QuickBooks et vos fichiers papier. <strong>30+ modules pensés pour vos chantiers</strong>: Soumissions avec 140+ items construction, Suivi de projets temps réel, Comptabilité TPS/TVQ automatique, Pointage 61 postes CCQ, Gestion sous-traitants et fournisseurs, Inventaire matériaux, Subventions Québec 2025, Qualification de prospects (B.A.T.), Fonds de prévoyance Loi 16, Gantt et Kanban.
             </p>
             <p class="hero-description" style="margin-top: -15px;">
-                Propulsé par <strong>60 experts IA spécialisés</strong> (Claude Opus 4.5) et <strong>100% conforme</strong> aux normes RBQ, CCQ, CNESST et Loi 16. Architecture multi-tenant sécurisée avec 195+ tables PostgreSQL.
+                <strong>60 experts IA à votre service</strong> — comme avoir un estimateur, un comptable et un contremaître disponibles 24/7. <strong>100% conforme</strong> RBQ, CCQ, CNESST. Vous gérez vos jobs, pas de la paperasse.
             </p>
             <div class="hero-buttons">
                 <a href="https://app.constructoai.ca/" class="btn btn-primary">
-                    Commencer
+                    Essayer maintenant
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <path d="M5 12h14M12 5l7 7-7 7"/>
                     </svg>
@@ -1334,29 +1622,29 @@
     <!-- Stats Section -->
     <section class="stats-section">
         <div class="stats-inner">
-            <h2 class="section-title">Un ERP complet et puissant</h2>
-            <p class="section-subtitle">Tout ce dont vous avez besoin pour gérer votre entreprise de construction</p>
+            <h2 class="section-title">Tout votre bureau dans un seul outil</h2>
+            <p class="section-subtitle">Fini les 10 logiciels différents — une plateforme conçue par et pour les entrepreneurs</p>
 
             <div class="stats-grid">
                 <div class="stat-item">
                     <div class="stat-number">30+</div>
-                    <div class="stat-label">Modules intégrés</div>
+                    <div class="stat-label">Modules pour vos chantiers</div>
                 </div>
                 <div class="stat-item">
-                    <div class="stat-number">195+</div>
-                    <div class="stat-label">Tables de données</div>
+                    <div class="stat-number">140+</div>
+                    <div class="stat-label">Items soumission prêts</div>
                 </div>
                 <div class="stat-item">
                     <div class="stat-number">60</div>
-                    <div class="stat-label">Experts IA spécialisés</div>
+                    <div class="stat-label">Experts IA à consulter</div>
                 </div>
                 <div class="stat-item">
                     <div class="stat-number">61</div>
-                    <div class="stat-label">Postes construction</div>
+                    <div class="stat-label">Postes CCQ intégrés</div>
                 </div>
             </div>
 
-            <p class="logos-title">Rejoignez les entreprises qui font confiance à Constructo AI</p>
+            <p class="logos-title">Des entrepreneurs comme vous utilisent déjà Constructo AI</p>
             <div class="logos-wrapper">
                 <div class="logos-track">
                     <div class="logo-item"><img src="https://lirp.cdn-website.com/1fb0fcfd/dms3rep/multi/opt/nosco_logo_V5_final_out-202w.png" alt="Nosco"></div>
@@ -1391,10 +1679,10 @@
     <section class="problems-section">
         <div class="problems-inner">
             <div class="section-header">
-                <h2 class="section-title">Vous perdez du temps et de l'argent chaque jour</h2>
-                <p class="section-subtitle">Les défis quotidiens que vous rencontrez dans vos projets de construction</p>
+                <h2 class="section-title">On connaît vos maux de tête quotidiens</h2>
+                <p class="section-subtitle">Parce qu'on vient du métier — on sait ce qui vous ralentit sur vos jobs</p>
             </div>
-            
+
             <div class="problems-grid">
                 <div class="problem-card">
                     <div class="problem-icon">
@@ -1403,9 +1691,9 @@
                             <polyline points="12,6 12,12 16,14"/>
                         </svg>
                     </div>
-                    <h3>Perte de Temps</h3>
-                    <p>2-3 heures par jour à chercher de l'information dans vos documents</p>
-                    <div class="problem-stat">70% des projets en retard</div>
+                    <h3>Soirées au bureau</h3>
+                    <p>Vous finissez vos soumissions à 22h parce que votre journée est passée à gérer les urgences du chantier</p>
+                    <div class="problem-stat">2-3h/jour perdues en paperasse</div>
                 </div>
                 <div class="problem-card">
                     <div class="problem-icon">
@@ -1415,9 +1703,9 @@
                             <line x1="12" y1="17" x2="12.01" y2="17"/>
                         </svg>
                     </div>
-                    <h3>Erreurs Coûteuses</h3>
-                    <p>Oubli d'un détail dans les plans coûte minimum 50 000$ en corrections</p>
-                    <div class="problem-stat">28% dépassement de coûts</div>
+                    <h3>Extras non facturés</h3>
+                    <p>Des changements au chantier qui passent dans le beurre parce que personne les a notés à temps</p>
+                    <div class="problem-stat">5-15% de profit perdu</div>
                 </div>
                 <div class="problem-card">
                     <div class="problem-icon">
@@ -1426,9 +1714,9 @@
                             <polyline points="17,6 23,6 23,12"/>
                         </svg>
                     </div>
-                    <h3>Opportunités Manquées</h3>
-                    <p>Manque de temps pour une analyse approfondie de toutes les spécifications techniques des projets potentiels</p>
-                    <div class="problem-stat">5-10% coûts = retravail</div>
+                    <h3>Contrats laissés sur la table</h3>
+                    <p>Pas le temps de soumissionner sur tous les projets intéressants — vous choisissez lesquels perdre</p>
+                    <div class="problem-stat">3-5 contrats/mois manqués</div>
                 </div>
             </div>
         </div>
@@ -1437,9 +1725,9 @@
     <!-- Solution Section -->
     <section class="solution-section" id="fonctionnalites">
         <div class="solution-inner">
-            <h2 class="section-title">30+ Modules Intégrés</h2>
-            <p class="section-subtitle">Une solution complète pour gérer tous les aspects de votre entreprise de construction</p>
-            <h3>Vos outils au quotidien</h3>
+            <h2 class="section-title">Vos outils de chantier, version numérique</h2>
+            <p class="section-subtitle">30+ modules qui parlent votre langage — pas celui des informaticiens</p>
+            <h3>Ce que vous utilisez tous les jours</h3>
 
             <div class="features-grid">
                 <div class="feature-card">
@@ -1451,8 +1739,8 @@
                             <line x1="16" y1="17" x2="8" y2="17"/>
                         </svg>
                     </div>
-                    <h4>Devis & Soumissions</h4>
-                    <p>Créez des soumissions professionnelles avec 140+ items prédéfinis. Calcul automatique des marges (admin 3%, contingences 12%, profit 15%), TPS/TVQ et génération HTML avec votre branding. Lien d'approbation client unique.</p>
+                    <h4>Soumissions rapides</h4>
+                    <p>Sortez vos prix en moins d'une heure avec 140+ items prêts à l'emploi. Admin 3%, contingences 12%, profit 15% — déjà calculés. TPS/TVQ automatiques. Envoyez un lien au client pour approbation directe.</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">
@@ -1463,8 +1751,8 @@
                             <line x1="3" y1="10" x2="21" y2="10"/>
                         </svg>
                     </div>
-                    <h4>Gestion de Projets</h4>
-                    <p>Dashboard temps réel avec KPIs, Gantt interactif, Kanban agile, calendrier des échéances. Bons de travail automatiques et intégration complète avec le TimeTracker pour un suivi précis.</p>
+                    <h4>Suivi de chantiers</h4>
+                    <p>Voyez où en sont vos jobs d'un coup d'œil. Gantt pour planifier vos corps de métier, Kanban pour suivre l'avancement. Bons de travail automatiques quand un projet démarre.</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">
@@ -1473,8 +1761,8 @@
                             <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
                         </svg>
                     </div>
-                    <h4>Comptabilité Complète</h4>
-                    <p>Facturation clients (FAC-YYYY-NNNN), gestion des dépenses, calcul automatique TPS 5% / TVQ 9.975%, suivi des paiements, budgets projets et rapports financiers. Intégration bons de commande.</p>
+                    <h4>Facturation TPS/TVQ</h4>
+                    <p>Facturez vos clients en 2 clics. TPS 5% et TVQ 9.975% calculés automatiquement. Suivi des paiements, dépenses par projet, bons de commande fournisseurs. Fini les erreurs de calcul.</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">
@@ -1483,8 +1771,8 @@
                             <polyline points="12,6 12,12 16,14"/>
                         </svg>
                     </div>
-                    <h4>TimeTracker Unifié</h4>
-                    <p>Pointage précis sur 61 postes de construction québécois (Terrassement à Finition). Punch IN/OUT, mapping automatique poste → étape construction, rapports par projet/employé. Export CSV inclus.</p>
+                    <h4>Pointage CCQ</h4>
+                    <p>Vos gars punchent sur leur téléphone — 61 postes CCQ intégrés (Terrassement à Finition). Vous voyez les heures par projet, par employé. Export pour la paie en un clic.</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">
@@ -1495,8 +1783,8 @@
                             <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
                         </svg>
                     </div>
-                    <h4>CRM & Ventes</h4>
-                    <p>Gestion complète de vos clients et fournisseurs, contacts, opportunités avec pipeline de ventes. Historique des interactions et suivi des leads jusqu'à la conversion en projet.</p>
+                    <h4>Clients & sous-traitants</h4>
+                    <p>Tout votre carnet d'adresses au même endroit. Clients, fournisseurs, sous-traitants avec historique complet. Suivez vos leads du premier appel jusqu'au contrat signé.</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">
@@ -1506,8 +1794,8 @@
                             <line x1="12" y1="22.08" x2="12" y2="12"/>
                         </svg>
                     </div>
-                    <h4>Inventaire & Produits</h4>
-                    <p>Catalogue unifié avec specs complètes, suivi stock temps réel, alertes seuil minimum, calcul automatique valeur stock. Linkage bidirectionnel produits ↔ inventaire synchronisé.</p>
+                    <h4>Stock matériaux</h4>
+                    <p>Savez combien de feuilles de gypse il vous reste avant d'en manquer. Alertes automatiques quand le stock descend. Plus de course chez le fournisseur en plein milieu d'une job.</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">
@@ -1517,8 +1805,8 @@
                             <path d="M9 14l2 2 4-4"/>
                         </svg>
                     </div>
-                    <h4>Ressources Humaines</h4>
-                    <p>Profils employés complets avec compétences, suivi des cartes CCQ et licences RBQ, gestion des départements. 25 cartes CCQ actives supportées avec validation automatique.</p>
+                    <h4>Gestion d'équipe</h4>
+                    <p>Profils de vos employés avec leurs compétences et cartes CCQ. Voyez qui est disponible, qui a quelle certification. 25 classifications CCQ supportées avec dates d'expiration.</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">
@@ -1528,14 +1816,14 @@
                         </svg>
                     </div>
                     <h4>Fonds de Prévoyance</h4>
-                    <p>Module complet Loi 16 Québec pour syndicats de copropriétés. Gestion cadastre, études financières 25 ans, composantes majeures, réserves et rapports conformes à la réglementation.</p>
+                    <p>Vous faites des condos ou du multi-logements? Module Loi 16 complet: études financières 25 ans, composantes majeures, réserves. Rapports prêts pour les syndicats.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Experts Section -->
-    <section class="experts-section">
+    <section class="experts-section" id="experts">
         <div class="experts-inner">
             <h2 class="experts-title">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -1544,51 +1832,51 @@
                     <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
                     <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
                 </svg>
-                60 Experts IA Spécialisés Construction
+                60 experts qui parlent construction comme vous
             </h2>
-            <p style="color: rgba(255,255,255,0.8); margin-bottom: 24px;">Propulsés par Claude Opus 4.5 d'Anthropic avec 26 311 lignes de documentation spécialisée</p>
+            <p style="color: rgba(255,255,255,0.8); margin-bottom: 24px;">Posez n'importe quelle question technique — prix, normes, méthodes — et obtenez une réponse de gars de métier, pas de vendeur</p>
             <div class="experts-grid">
                 <div class="expert-item">
-                    <strong>Architecte</strong> - <span>Conception de plans, Code National du Bâtiment, intégration harmonieuse des systèmes et optimisation des espaces.</span>
+                    <strong>Entrepreneur Général</strong> - <span>40 ans d'expérience. Estimation détaillée 225-550$/pi² avec ventilation main-d'œuvre/matériaux. Code de construction, Novoclimat, LEED. Coordination des 10 corps de métier.</span>
                 </div>
                 <div class="expert-item">
-                    <strong>Ingénieur Structure</strong> - <span>Calculs CSA S16 (acier), CSA O86 (bois), CSA A23.3 (béton). Charges neige Québec, zones sismiques.</span>
+                    <strong>Plombier</strong> - <span>Licence RBQ maître plombier, membre CMMTQ. Code de plomberie du Québec, chauffage hydronique, planchers radiants, certifié gaz naturel/propane. Liste de prix intégrée.</span>
                 </div>
                 <div class="expert-item">
-                    <strong>Expert RBQ</strong> - <span>Conformité réglementaire Québec, licences d'entrepreneur, permis de construction, inspections.</span>
+                    <strong>Électricien</strong> - <span>Licence RBQ maître électricien, CMEQ, formation Hydro-Québec. Panneaux 100A-200A, bornes de recharge VÉ, panneaux solaires, domotique. Prix matériaux 2025.</span>
                 </div>
                 <div class="expert-item">
-                    <strong>Expert CCQ</strong> - <span>Convention collective construction, cartes de compétence, relations de travail, classifications d'emploi.</span>
+                    <strong>Revêtement Extérieur</strong> - <span>40 ans au Québec. Écran pare-pluie, vinyle, fibrociment, brique, pierre. Ventilation cavité, drainage intégré, jonctions critiques. Normes manufacturiers.</span>
                 </div>
                 <div class="expert-item">
-                    <strong>Estimateur Pro</strong> - <span>Estimation précise des coûts avec pricing marché actuel, analyse des soumissions, marges et contingences.</span>
+                    <strong>Finition Intérieure</strong> - <span>35+ ans, ASP Construction, cartes CCQ. Gypse niveaux 1-5, tirage de joints machine, planchers bois franc/LVP, moulures, faux-finis artistiques.</span>
                 </div>
                 <div class="expert-item">
-                    <strong>Comptable Construction</strong> - <span>TPS/TVQ, facturation, dépenses, rapports financiers, budgets projets, intégration comptable.</span>
+                    <strong>Structure de Bois</strong> - <span>Expert CSA O86. Poutrelles, fermes de toit, murs préfabriqués, poutres LVL. Calcul des charges résidentiel/commercial, optimisation des coûts. Liste de prix complète intégrée.</span>
                 </div>
                 <div class="expert-item">
-                    <strong>Expert Fonds Prévoyance</strong> - <span>Loi 16 Québec, études financières copropriétés, composantes majeures, projections 25 ans.</span>
+                    <strong>CVC / HVAC</strong> - <span>Membre CETAF, normes ASHRAE. Thermopompes air-air/air-eau, VRC/VRE, géothermie, bi-énergie. Calculs charges thermiques, zonage multiple, contrôles WiFi.</span>
                 </div>
                 <div class="expert-item">
-                    <strong>Calculs Poutres</strong> - <span>Sélection linteaux et poutres avec code Python intégré, calculs automatisés selon les charges.</span>
+                    <strong>Toiture</strong> - <span>Normes AMCQ. Bardeaux asphalte, membrane élastomère, TPO/EPDM, métal architectural. Protection neige/glace Québec, ventilation optimale, imagerie thermique.</span>
                 </div>
             </div>
-            <p class="experts-more">+ 52 autres experts: Électricien, Plombier, CVC, Toiture, Isolation, Maçonnerie, Menuiserie, Peinture, Céramique, Pavage, Subventions...</p>
+            <p class="experts-more">+ 52 autres experts disponibles: Architecte, Ingénieur structure, Fondations, Excavation, Maçonnerie, Portes & Fenêtres, Armoires cuisine, Peintre, Escaliers, Conformité RBQ/CCQ, Estimateur, Subventions Québec, Fonds de prévoyance (Loi 16)...</p>
         </div>
     </section>
 
     <!-- How it works -->
     <section class="how-section">
-        <h2>Workflow simplifié pour vos projets</h2>
-        <p class="subtitle">De l'opportunité à la facturation en quelques clics</p>
-        <p class="description">CRM → Opportunité → Devis → Projet → Planning (Gantt/Kanban) → TimeTracker → Comptabilité. Tout est intégré et synchronisé automatiquement.</p>
+        <h2>Du premier appel jusqu'à la facture payée</h2>
+        <p class="subtitle">Un workflow qui suit le vrai processus d'une job</p>
+        <p class="description">Client vous appelle → Soumission en 1h → Contrat signé → Planification équipe → Pointage chantier → Facturation → Paiement reçu. Tout se parle automatiquement.</p>
     </section>
 
     <!-- Demo Section -->
     <section class="demo-section" id="demo">
         <div class="demo-inner">
-            <h2>Voir Constructo AI en action</h2>
-            <p>Regardez la démo de notre plateforme pour voir comment Constructo AI transforme votre gestion de projets de construction et accélère vos chantiers.</p>
+            <h2>Voyez comment ça marche sur un vrai projet</h2>
+            <p>Regardez comment un entrepreneur comme vous utilise Constructo AI au quotidien — de la soumission jusqu'au dernier paiement du client.</p>
             <div class="video-wrapper">
                 <iframe
                     src="https://www.youtube.com/embed/fvMsHDHKo1I"
@@ -1606,8 +1894,8 @@
     <section class="why-section">
         <div class="why-inner">
             <div class="section-header">
-                <h2 class="section-title">Pourquoi Constructo AI?</h2>
-                <p class="section-subtitle">Un ERP 100% québécois conçu pour votre réalité</p>
+                <h2 class="section-title">Pourquoi les entrepreneurs choisissent Constructo AI?</h2>
+                <p class="section-subtitle">Parce qu'on comprend votre réalité de terrain au Québec</p>
             </div>
 
             <div class="why-grid">
@@ -1617,8 +1905,8 @@
                             <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
                         </svg>
                     </div>
-                    <h3>100% Conforme Québec</h3>
-                    <p>RBQ, CCQ, CNESST, Code National du Bâtiment, Loi 16, normes CSA/BNQ. TPS 5% et TVQ 9.975% automatiques.</p>
+                    <h3>Déjà conforme RBQ/CCQ</h3>
+                    <p>Pas besoin de configurer les taxes ou les postes CCQ — c'est déjà fait. TPS 5%, TVQ 9.975%, 61 classifications, Code du bâtiment, Loi 16. Prêt à utiliser.</p>
                 </div>
                 <div class="why-card">
                     <div class="why-icon">
@@ -1627,8 +1915,8 @@
                             <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
                         </svg>
                     </div>
-                    <h3>Multi-Tenant Sécurisé</h3>
-                    <p>Chaque entreprise a son espace isolé (schéma PostgreSQL). Hachage bcrypt, rate limiting, sessions sécurisées.</p>
+                    <h3>Vos données, juste à vous</h3>
+                    <p>Votre compagnie a son propre espace privé. Personne d'autre ne voit vos prix, vos clients ou vos projets. Sécurité bancaire.</p>
                 </div>
                 <div class="why-card">
                     <div class="why-icon">
@@ -1636,8 +1924,8 @@
                             <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
                         </svg>
                     </div>
-                    <h3>IA Claude Opus 4.5</h3>
-                    <p>Le modèle IA le plus avancé d'Anthropic avec recherche web temps réel, analyse de documents et mémoire persistante.</p>
+                    <h3>60 experts disponibles 24/7</h3>
+                    <p>Besoin d'un prix pour du gypse niveau 5? D'un calcul de poutre? D'aide avec une soumission? L'IA sait répondre comme un vrai gars de métier.</p>
                 </div>
                 <div class="why-card">
                     <div class="why-icon">
@@ -1646,8 +1934,8 @@
                             <path d="M12 6v6l4 2"/>
                         </svg>
                     </div>
-                    <h3>Auto-Réparation</h3>
-                    <p>Migration automatique des tables et colonnes au démarrage. Votre base de données reste toujours à jour sans intervention.</p>
+                    <h3>Ça marche, point final</h3>
+                    <p>Pas de bugs qui bloquent votre travail. Le système se met à jour tout seul sans vous déranger. Vous ouvrez, vous travaillez.</p>
                 </div>
             </div>
 
@@ -1660,25 +1948,25 @@
                                 <polyline points="17,6 23,6 23,12"/>
                             </svg>
                         </div>
-                        <h3>Tout-en-un vs Multiples logiciels</h3>
+                        <h3>Fini Excel et les 10 logiciels</h3>
                     </div>
-                    <p>Remplacez Excel, QuickBooks, et vos outils éparpillés par une seule plateforme intégrée conçue pour la construction.</p>
+                    <p>Vos soumissions dans Excel, votre compta dans QuickBooks, vos contacts sur votre téléphone? Regroupez tout dans un seul outil qui se parle.</p>
                     <ul>
                         <li>
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                            CRM + Devis + Projets + Compta = 1 seul outil
+                            Soumissions + Projets + Facturation = même place
                         </li>
                         <li>
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                            Données synchronisées automatiquement
+                            Plus de copier-coller entre vos fichiers
                         </li>
                         <li>
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                            139.99$/mois tout inclus, utilisateurs illimités
+                            139.99$/mois — tous vos employés inclus
                         </li>
                     </ul>
                     <a href="#demo" class="btn btn-primary">
-                        Voir la demo
+                        Voir comment ça marche
                         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
                     </a>
                 </div>
@@ -1692,25 +1980,25 @@
                                 <line x1="16" y1="17" x2="8" y2="17"/>
                             </svg>
                         </div>
-                        <h3>SEAOP - 100% Gratuit</h3>
+                        <h3>SEAOP - Appels d'offres gratuits</h3>
                     </div>
-                    <p>Plateforme d'appels d'offres publics au Québec. Consultez et soumissionnez sans frais, sans carte de crédit.</p>
+                    <p>Trouvez de nouveaux contrats sans payer. Notre plateforme d'appels d'offres publics au Québec est 100% gratuite — pas de carte de crédit.</p>
                     <ul>
                         <li>
                             <svg viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22,4 12,14.01 9,11.01"/></svg>
-                            Consultation des appels d'offres publics
+                            Voyez les projets disponibles dans votre région
                         </li>
                         <li>
                             <svg viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22,4 12,14.01 9,11.01"/></svg>
-                            Création et suivi de soumissions
+                            Soumissionnez directement sur la plateforme
                         </li>
                         <li>
                             <svg viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22,4 12,14.01 9,11.01"/></svg>
-                            Alertes et notifications automatiques
+                            Alertes quand un projet vous intéresse
                         </li>
                     </ul>
                     <a href="https://app.constructoai.ca/" class="btn btn-outline" style="border-color: #22c55e; color: #22c55e;">
-                        Accéder gratuitement
+                        Voir les contrats disponibles
                         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
                     </a>
                 </div>
@@ -1722,63 +2010,169 @@
     <section class="faq-section">
         <div class="faq-inner">
             <div class="section-header">
-                <h2 class="section-title">Questions fréquemment posées</h2>
-                <p class="section-subtitle">Anticipons Vos Objections</p>
+                <h2 class="section-title">Vos questions, nos réponses directes</h2>
+                <p class="section-subtitle">Pas de bullshit — voici ce que les entrepreneurs veulent savoir</p>
             </div>
-            
+
             <div class="faq-item">
                 <div class="faq-question">
-                    Qu'est-ce qui est inclus dans l'abonnement?
+                    Qu'est-ce que j'ai pour 139.99$/mois?
                     <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
                 </div>
                 <div class="faq-answer">
-                    <p>L'abonnement de 139.99$/mois inclut: accès complet aux 30+ modules ERP (CRM, Devis, Comptabilité, TimeTracker, Inventaire, Subventions Québec, etc.), 60 profils d'experts IA spécialisés construction, espace entreprise privé et sécurisé (multi-tenant PostgreSQL), support technique, mises à jour automatiques et hébergement cloud sur Render. Utilisateurs illimités!</p>
-                </div>
-            </div>
-            <div class="faq-item">
-                <div class="faq-question">
-                    Mes données sont-elles sécurisées?
-                    <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
-                </div>
-                <div class="faq-answer">
-                    <p>Absolument. Chaque entreprise dispose d'un espace 100% isolé grâce à notre architecture multi-tenant PostgreSQL. Vos données sont protégées par hachage bcrypt (12 rounds), rate limiting contre les attaques brute force (5 tentatives max/30 min), sessions sécurisées avec déconnexion automatique après 30 min d'inactivité, et HTTPS forcé en production. Backups automatiques quotidiens inclus.</p>
+                    <p>Tout. Les 30+ modules (soumissions, projets, facturation, pointage, inventaire, etc.), les 60 experts IA pour vos questions techniques, votre espace privé sécurisé, le support téléphone, les mises à jour. <strong>Tous vos employés peuvent l'utiliser</strong> — pas de frais par utilisateur. C'est votre bureau complet dans le cloud.</p>
                 </div>
             </div>
             <div class="faq-item">
                 <div class="faq-question">
-                    Combien d'utilisateurs peuvent utiliser l'ERP?
+                    Est-ce que mes concurrents vont voir mes prix?
                     <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
                 </div>
                 <div class="faq-answer">
-                    <p>Illimité! Vous pouvez créer autant de comptes utilisateurs que nécessaire pour votre entreprise sans frais supplémentaires. Notre architecture PostgreSQL supporte 1000+ utilisateurs simultanés avec un temps de réponse moyen inférieur à 200ms.</p>
+                    <p>Jamais. Votre compagnie a son propre espace 100% isolé. Vos soumissions, vos prix, vos clients, vos projets — personne d'autre que vous et votre équipe y a accès. Même nous on ne regarde pas vos données. Sécurité bancaire avec backups quotidiens.</p>
                 </div>
             </div>
             <div class="faq-item">
                 <div class="faq-question">
-                    Dois-je fournir ma propre clé API pour l'IA?
+                    Combien de gars peuvent l'utiliser?
                     <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
                 </div>
                 <div class="faq-answer">
-                    <p>Non! La clé API Claude (Anthropic) est incluse dans votre abonnement de 139.99$/mois. Vous avez accès immédiatement aux 60 experts IA spécialisés, à la recherche web et à l'analyse de documents sans aucune configuration supplémentaire.</p>
+                    <p>Autant que vous voulez — pas de limite. Votre secrétaire, vos contremaîtres, vos gars sur le chantier pour le pointage, tout le monde. Un seul prix fixe peu importe la taille de votre équipe.</p>
                 </div>
             </div>
             <div class="faq-item">
                 <div class="faq-question">
-                    Combien coûte vraiment Constructo AI?
+                    L'IA, c'est compliqué à utiliser?
                     <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
                 </div>
                 <div class="faq-answer">
-                    <p>L'ERP complet coûte 139.99$/mois après 7 jours d'essai (carte de crédit requise pour l'essai). Aucun frais si vous annulez avant la fin de l'essai. Cartes acceptées: Visa, Mastercard, Amex, Visa Desjardins. Le module SEAOP (appels d'offres publics) est 100% gratuit, sans carte requise.</p>
+                    <p>Non, vous parlez comme si c'était un collègue. "J'ai besoin du prix pour installer 1500 pi² de gypse niveau 4" — et l'IA vous répond avec les détails. Pas de configuration, pas de clé API à acheter. C'est inclus et ça marche dès le premier jour.</p>
                 </div>
             </div>
             <div class="faq-item">
                 <div class="faq-question">
-                    Puis-je annuler à tout moment?
+                    Y'a-tu des frais cachés?
                     <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
                 </div>
                 <div class="faq-answer">
-                    <p>Oui, vous pouvez annuler quand vous voulez sans frais cachés ni pénalités. Pour annuler, contactez-nous au <strong>(514) 820-1972</strong> ou par courriel à <strong>info@constructoai.ca</strong>. Vos données restent accessibles pendant 30 jours après l'annulation pour vous permettre de les exporter si nécessaire.</p>
+                    <p>Non. 139.99$/mois, point final. Pas de frais de setup, pas de frais par utilisateur, pas de frais pour l'IA. 7 jours d'essai pour tester (carte de crédit requise mais pas de charge si vous annulez). Et SEAOP (appels d'offres) est 100% gratuit, même sans abonnement.</p>
                 </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    Si ça fait pas mon affaire, je peux-tu arrêter?
+                    <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+                </div>
+                <div class="faq-answer">
+                    <p>Oui, vous annulez quand vous voulez — un appel au <strong>(514) 820-1972</strong> ou un courriel et c'est fait. Pas de contrat à long terme, pas de pénalité. Vos données restent disponibles 30 jours pour les exporter si vous en avez besoin.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Chat avec le Fondateur -->
+    <section class="founder-chat-section">
+        <div class="founder-chat-inner">
+            <div class="section-header">
+                <h2 class="section-title">Une question? Parlez directement au fondateur</h2>
+                <p class="section-subtitle">Sylvain Leduc répond personnellement à vos questions sur Constructo AI</p>
+            </div>
+
+            <div class="chat-preview-container">
+                <!-- Chat Preview -->
+                <div class="chat-preview">
+                    <div class="chat-header-preview">
+                        <div class="founder-avatar">
+                            <img src="moi.jpg" alt="Sylvain Leduc" onerror="this.style.display='none'; this.parentElement.innerHTML='<div style=\'width:50px;height:50px;background:var(--primary);border-radius:50%;display:flex;align-items:center;justify-content:center;color:white;font-weight:bold;font-size:18px;\'>SL</div>';">
+                            <span class="online-status"></span>
+                        </div>
+                        <div class="founder-info">
+                            <h3>Chat avec Sylvain Leduc</h3>
+                            <p>Fondateur et développeur de Constructo AI</p>
+                            <span class="status-badge">
+                                <span class="status-dot"></span>
+                                En ligne
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="chat-body-preview">
+                        <div class="chat-message">
+                            <div class="message-avatar">
+                                <img src="moi.jpg" alt="SL" onerror="this.style.display='none'; this.parentElement.innerHTML='SL';">
+                            </div>
+                            <div class="message-content">
+                                <p><strong>Bonjour! Je suis Sylvain Leduc</strong>, créateur de Constructo AI!</p>
+                                <p>Bienvenue sur <strong>Constructo AI</strong>, notre système ERP intelligent pour la construction au Québec.</p>
+                                <p style="margin-top: 12px;"><strong>Comment puis-je vous aider?</strong></p>
+                                <ul class="help-options">
+                                    <li>Créer un compte entreprise</li>
+                                    <li>Découvrir les fonctionnalités</li>
+                                    <li>En savoir plus sur SEAOP (gratuit!)</li>
+                                    <li>Questions sur nos 3 applications</li>
+                                </ul>
+                                <p style="font-style: italic; color: var(--gray-500); margin-top: 12px;">Posez-moi vos questions, je suis là pour vous guider!</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="chat-input-preview">
+                        <input type="text" placeholder="Ex: Comment créer un compte? C'est quoi Constructo AI?" disabled>
+                        <button class="btn btn-primary" disabled>Envoyer</button>
+                    </div>
+                </div>
+
+                <!-- Quick Actions -->
+                <div class="chat-actions">
+                    <h4>Questions fréquentes</h4>
+                    <a href="https://app.constructoai.ca/" class="quick-action-btn">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="8.5" cy="7" r="4"/><line x1="20" y1="8" x2="20" y2="14"/><line x1="23" y1="11" x2="17" y2="11"/></svg>
+                        Comment créer un compte?
+                    </a>
+                    <a href="https://app.constructoai.ca/" class="quick-action-btn blue">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>
+                        Fonctionnalités Constructo AI
+                    </a>
+                    <a href="https://app.constructoai.ca/" class="quick-action-btn orange">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14,2 14,8 20,8"/></svg>
+                        C'est quoi SEAOP?
+                    </a>
+                    <a href="https://app.constructoai.ca/" class="quick-action-btn green">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+                        Les 60 experts IA
+                    </a>
+                    <a href="https://app.constructoai.ca/" class="quick-action-btn pink">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                        Tarifs et abonnements
+                    </a>
+
+                    <div class="direct-contact">
+                        <h4>Contact direct</h4>
+                        <a href="tel:+15148201972" class="contact-item">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                            514-820-1972
+                        </a>
+                        <a href="mailto:info@constructoai.ca" class="contact-item">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                            info@constructoai.ca
+                        </a>
+                        <a href="https://www.facebook.com/constructoai.sylvainleduc" target="_blank" class="contact-item">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                            Facebook
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="chat-cta">
+                <a href="https://app.constructoai.ca/" class="btn btn-primary btn-large">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                    </svg>
+                    Démarrer une conversation avec Sylvain
+                </a>
+                <p class="chat-cta-note">Gratuit • Sans engagement • Réponse rapide</p>
             </div>
         </div>
     </section>
@@ -1786,9 +2180,9 @@
     <!-- CTA -->
     <section class="cta-section">
         <div class="cta-inner">
-            <h2>Prêt à Démarrer Aujourd'hui?</h2>
-            <p>Commencez à utiliser Constructo AI dès aujourd'hui</p>
-            
+            <h2>Prêt à reprendre le contrôle de vos projets?</h2>
+            <p>Rejoignez les entrepreneurs qui ont choisi de travailler plus intelligemment</p>
+
             <div class="cta-cards">
                 <div class="cta-card primary">
                     <div class="cta-card-header">
@@ -1796,23 +2190,23 @@
                             <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
                             <polyline points="22,4 12,14.01 9,11.01"/>
                         </svg>
-                        <h3>Essai Libre Immédiat</h3>
+                        <h3>Essai gratuit — testez par vous-même</h3>
                     </div>
                     <ul>
                         <li>
                             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9 12l2 2 4-4"/></svg>
-                            Créez votre compte en 2 minutes
+                            Compte créé en 2 minutes, sans carte de crédit
                         </li>
                         <li>
                             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9 12l2 2 4-4"/></svg>
-                            Commencez à tester tout de suite
+                            Importez vos premiers projets tout de suite
                         </li>
                         <li>
                             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9 12l2 2 4-4"/></svg>
-                            Support disponible si besoin
+                            Support d'un gars de la construction si besoin
                         </li>
                     </ul>
-                    <a href="https://app.constructoai.ca/" class="btn btn-white">Commencer</a>
+                    <a href="https://app.constructoai.ca/" class="btn btn-white">Créer mon compte</a>
                 </div>
                 <div class="cta-card outline">
                     <div class="cta-card-header">
@@ -1821,23 +2215,23 @@
                             <line x1="3" y1="9" x2="21" y2="9"/>
                             <line x1="9" y1="21" x2="9" y2="9"/>
                         </svg>
-                        <h3>Démo Personnalisée (Recommandé)</h3>
+                        <h3>Démo avec vos vrais projets (Recommandé)</h3>
                     </div>
                     <ul>
                         <li>
                             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9 12l2 2 4-4"/></svg>
-                            30 minutes avec un expert
+                            30 minutes avec Sylvain, entrepreneur lui-même
                         </li>
                         <li>
                             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9 12l2 2 4-4"/></svg>
-                            On utilise VOS vrais documents
+                            On utilise VOS plans et soumissions
                         </li>
                         <li>
                             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9 12l2 2 4-4"/></svg>
-                            Réponses à toutes vos questions
+                            Voyez le résultat sur VOS chiffres
                         </li>
                     </ul>
-                    <a href="#demo" class="btn btn-primary">Voir la demo</a>
+                    <a href="#demo" class="btn btn-primary">Réserver ma démo</a>
                 </div>
             </div>
 
@@ -1846,9 +2240,9 @@
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2">
                         <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
                     </svg>
-                    <h3>Garantie Sans Risque</h3>
+                    <h3>Zéro risque, zéro engagement</h3>
                 </div>
-                <p>Essayez Constructo AI sans engagement et sans risque. Vous êtes le seul juge de la valeur que vous en retirez.</p>
+                <p>J'ai bâti Constructo AI parce que j'en avais besoin moi-même sur mes chantiers. Si ça ne vous aide pas, vous ne payez rien. Point final.</p>
             </div>
         </div>
     </section>
@@ -1856,23 +2250,23 @@
     <!-- Newsletter -->
     <section class="newsletter-section" id="contact">
         <div class="newsletter-inner">
-            <h2>Restez informé</h2>
-            <p>Inscrivez-vous à notre infolettre pour recevoir les dernières nouvelles et mises à jour de Constructo AI</p>
-            
+            <h2>Trucs et astuces pour entrepreneurs</h2>
+            <p>Subventions disponibles, nouveautés RBQ/CCQ, astuces de soumission, et mises à jour Constructo AI — directement dans votre boîte courriel</p>
+
             <form class="newsletter-form">
                 <div class="form-group">
                     <label>Courriel</label>
-                    <input type="email" placeholder="Votre courriel" required>
+                    <input type="email" placeholder="votre@courriel.com" required>
                 </div>
                 <div class="form-group">
-                    <label>Nom (facultatif)</label>
-                    <input type="text" placeholder="Votre nom">
+                    <label>Votre métier (facultatif)</label>
+                    <input type="text" placeholder="Ex: Entrepreneur général, Électricien, Plombier...">
                 </div>
                 <div class="checkbox-group">
                     <input type="checkbox" id="consent">
-                    <label for="consent">J'accepte de recevoir des communications marketing de Constructo AI</label>
+                    <label for="consent">J'accepte de recevoir l'infolettre de Constructo AI (max 2x/mois, désabonnement en 1 clic)</label>
                 </div>
-                <button type="submit" class="btn btn-white" style="width: 100%;">S'abonner</button>
+                <button type="submit" class="btn btn-white" style="width: 100%;">M'inscrire à l'infolettre</button>
             </form>
         </div>
     </section>
@@ -1886,35 +2280,37 @@
                         <img src="logo.png" alt="Constructo AI" style="width: 36px; height: auto;">
                         Constructo AI
                     </a>
-                    <p>L'ERP intelligent conçu pour la construction au Québec. 30+ modules intégrés, 60 experts IA spécialisés, 100% conforme RBQ, CCQ et Loi 16.</p>
+                    <p>Le système de gestion bâti par un entrepreneur, pour les entrepreneurs. 30+ modules pour gérer vos chantiers, 60 experts IA de la construction, 100% conforme RBQ, CCQ et Loi 16.</p>
                 </div>
                 <div class="footer-section">
-                    <h4>Navigation</h4>
+                    <h4>Explorer</h4>
                     <ul>
                         <li><a href="#fonctionnalites">Fonctionnalités</a></li>
-                        <li><a href="#comparaison">Comparaison</a></li>
-                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#experts">Experts IA</a></li>
+                        <li><a href="#comparaison">Pourquoi Constructo AI</a></li>
+                        <li><a href="#faq">Questions fréquentes</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
-                    <h4>Contact</h4>
+                    <h4>Parler à Sylvain</h4>
                     <ul>
                         <li><a href="tel:+15148201972">(514) 820-1972</a></li>
                         <li><a href="mailto:info@constructoai.ca">info@constructoai.ca</a></li>
-                        <li><a href="#contact">Formulaire de contact</a></li>
+                        <li><a href="https://app.constructoai.ca/">Chat en direct</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
-                    <h4>Accès</h4>
+                    <h4>Commencer</h4>
                     <ul>
-                        <li><a href="https://app.constructoai.ca/">Se connecter</a></li>
+                        <li><a href="https://app.constructoai.ca/">Créer un compte</a></li>
                         <li><a href="#demo">Voir la démo</a></li>
+                        <li><a href="#contact">S'inscrire à l'infolettre</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
                     <h4>Légal</h4>
                     <ul>
-                        <li><a href="https://app.constructoai.ca/privacy-policy">Politique de confidentialité</a></li>
+                        <li><a href="https://app.constructoai.ca/privacy-policy">Confidentialité</a></li>
                         <li><a href="https://app.constructoai.ca/terms-of-service">Conditions d'utilisation</a></li>
                     </ul>
                 </div>
@@ -1928,7 +2324,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>© 2025 Constructo AI Inc. - Tous droits réservés | Développé par Sylvain Leduc</p>
+                <p>© 2025 Constructo AI Inc. - Tous droits réservés | Bâti avec fierté au Québec par Sylvain Leduc</p>
             </div>
         </div>
     </footer>

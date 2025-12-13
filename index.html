@@ -538,6 +538,95 @@
             line-height: 1.6;
         }
 
+        /* Soumissions Methods Section */
+        .soumissions-section {
+            padding: 60px 24px;
+            background: var(--white);
+        }
+
+        .soumissions-inner {
+            max-width: 1000px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .soumissions-section .section-title {
+            margin-bottom: 8px;
+        }
+
+        .soumissions-section .section-subtitle {
+            margin-bottom: 40px;
+        }
+
+        .soumissions-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        @media (max-width: 800px) {
+            .soumissions-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .soumission-method {
+            background: var(--gray-50);
+            border-radius: 16px;
+            padding: 32px 24px;
+            text-align: center;
+            border: 2px solid transparent;
+            transition: all 0.3s;
+        }
+
+        .soumission-method:hover {
+            border-color: var(--primary);
+            transform: translateY(-4px);
+        }
+
+        .soumission-method-icon {
+            width: 64px;
+            height: 64px;
+            background: var(--primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+        }
+
+        .soumission-method-icon svg {
+            width: 32px;
+            height: 32px;
+            color: var(--white);
+        }
+
+        .soumission-method h3 {
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--gray-900);
+            margin-bottom: 12px;
+        }
+
+        .soumission-method p {
+            font-size: 14px;
+            color: var(--gray-500);
+            line-height: 1.6;
+        }
+
+        .soumission-method .method-number {
+            display: inline-block;
+            width: 28px;
+            height: 28px;
+            background: var(--primary);
+            color: var(--white);
+            border-radius: 50%;
+            font-size: 14px;
+            font-weight: 600;
+            line-height: 28px;
+            margin-bottom: 16px;
+        }
+
         /* Experts */
         .experts-section {
             padding: 50px 24px;
@@ -1997,6 +2086,58 @@
                     </div>
                     <h4>Fonds de Prévoyance</h4>
                     <p>Vous faites des condos ou du multi-logements? Module Loi 16 complet: études financières 25 ans, composantes majeures, réserves. Rapports prêts pour les syndicats.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Soumissions Methods Section -->
+    <section class="soumissions-section">
+        <div class="soumissions-inner">
+            <div class="section-header">
+                <h2 class="section-title">3 façons de faire vos soumissions</h2>
+                <p class="section-subtitle">Choisissez la méthode qui vous convient — ou combinez-les selon le projet</p>
+            </div>
+
+            <div class="soumissions-grid">
+                <div class="soumission-method">
+                    <div class="soumission-method-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/>
+                            <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/>
+                        </svg>
+                    </div>
+                    <span class="method-number">1</span>
+                    <h3>Saisie manuelle</h3>
+                    <p>Vous connaissez vos prix? Entrez vos items directement avec notre base de 140+ items de construction. Simple et rapide.</p>
+                </div>
+
+                <div class="soumission-method">
+                    <div class="soumission-method-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2a10 10 0 1 0 10 10H12V2z"/>
+                            <path d="M12 2a10 10 0 0 1 10 10"/>
+                            <circle cx="12" cy="12" r="3"/>
+                        </svg>
+                    </div>
+                    <span class="method-number">2</span>
+                    <h3>Estimation par IA</h3>
+                    <p>Décrivez votre projet en quelques mots et l'IA génère une estimation complète avec main-d'œuvre, matériaux et marges. En 30 secondes.</p>
+                </div>
+
+                <div class="soumission-method">
+                    <div class="soumission-method-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                            <polyline points="14,2 14,8 20,8"/>
+                            <line x1="16" y1="13" x2="8" y2="13"/>
+                            <line x1="16" y1="17" x2="8" y2="17"/>
+                            <line x1="10" y1="9" x2="8" y2="9"/>
+                        </svg>
+                    </div>
+                    <span class="method-number">3</span>
+                    <h3>Métré sur plans PDF</h3>
+                    <p>Uploadez vos plans d'architecte et mesurez directement à l'écran. Murs, planchers, ouvertures — tout se calcule automatiquement.</p>
                 </div>
             </div>
         </div>

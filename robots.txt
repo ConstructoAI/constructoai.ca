@@ -1,0 +1,11 @@
+# Robots.txt pour Constructo AI
+# https://constructoai.ca
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://constructoai.ca/sitemap.xml
+
+# Crawl-delay (optionnel - respecté par certains robots)
+Crawl-delay: 1

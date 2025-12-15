@@ -13,6 +13,24 @@
         <priority>0.9</priority>
     </url>
     <url>
+        <loc>https://constructoai.ca/logiciel-soumission-construction.html</loc>
+        <lastmod>2025-12-15</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://constructoai.ca/gestion-chantier-quebec.html</loc>
+        <lastmod>2025-12-15</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://constructoai.ca/conformite-rbq-ccq.html</loc>
+        <lastmod>2025-12-15</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
         <loc>https://app.constructoai.ca/</loc>
         <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>

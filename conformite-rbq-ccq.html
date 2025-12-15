@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logiciel Conforme RBQ CCQ Loi 16 | Conformité construction Québec - Constructo AI</title>
+    <meta name="description" content="Logiciel de construction 100% conforme aux exigences RBQ, CCQ et Loi 16. Gérez vos licences, conventions collectives et carnets d'entretien automatiquement.">
+    <meta name="keywords" content="logiciel RBQ, logiciel CCQ, conformité construction Québec, Loi 16 copropriété, licence RBQ, convention collective CCQ, carnet entretien">
+    <meta name="author" content="Sylvain Leduc - Constructo AI Inc.">
+    <meta name="robots" content="index, follow">
+
+    <link rel="canonical" href="https://constructoai.ca/conformite-rbq-ccq.html">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://constructoai.ca/conformite-rbq-ccq.html">
+    <meta property="og:title" content="Logiciel Conforme RBQ CCQ Loi 16 | Construction Québec">
+    <meta property="og:description" content="Restez conforme aux réglementations québécoises avec un logiciel qui intègre automatiquement les exigences RBQ, CCQ et Loi 16.">
+    <meta property="og:image" content="https://constructoai.ca/og-image.png">
+    <meta property="og:locale" content="fr_CA">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Logiciel Conforme RBQ CCQ Loi 16 | Construction Québec">
+    <meta name="twitter:image" content="https://constructoai.ca/og-image.png">
+
+    <link rel="icon" type="image/png" href="logo.png">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "Qu'est-ce que la RBQ?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "La Régie du bâtiment du Québec (RBQ) est l'organisme gouvernemental qui réglemente le domaine de la construction au Québec. Elle délivre les licences d'entrepreneur, veille à la qualité des travaux et à la sécurité du public. Tout entrepreneur doit détenir une licence RBQ valide pour exercer."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Qu'est-ce que la CCQ?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "La Commission de la construction du Québec (CCQ) est l'organisme qui administre les conventions collectives de l'industrie de la construction. Elle gère les avantages sociaux, la formation professionnelle et veille à l'application des règles sur les chantiers."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Qu'est-ce que la Loi 16?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "La Loi 16 (Loi visant principalement l'encadrement des inspections en bâtiment et de la copropriété divise) impose de nouvelles obligations aux copropriétés, incluant le carnet d'entretien obligatoire, le fonds de prévoyance et les études de fonds de prévoyance. Les entrepreneurs qui travaillent sur des copropriétés doivent connaître ces exigences."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Comment rester conforme aux réglementations?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Constructo AI intègre automatiquement les exigences RBQ, CCQ et Loi 16 dans ses modules. Le système vérifie les licences des sous-traitants, calcule les avantages sociaux selon les conventions collectives et génère les documents requis pour la conformité."
+                }
+            }
+        ]
+    }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --primary: #2563eb;
+            --primary-dark: #1d4ed8;
+            --gray-900: #0f172a;
+            --gray-700: #334155;
+            --gray-600: #475569;
+            --gray-200: #e2e8f0;
+            --gray-100: #f1f5f9;
+            --gray-50: #f8fafc;
+            --white: #ffffff;
+            --purple: #7c3aed;
+        }
+        body { font-family: 'Inter', sans-serif; color: var(--gray-900); line-height: 1.7; }
+        a { text-decoration: none; color: var(--primary); }
+        a:hover { text-decoration: underline; }
+
+        .header { background: var(--white); padding: 16px 24px; border-bottom: 1px solid var(--gray-200); position: sticky; top: 0; z-index: 100; }
+        .header-inner { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+        .logo { display: flex; align-items: center; gap: 10px; font-weight: 700; font-size: 18px; color: var(--gray-900); }
+        .logo img { width: 40px; height: 40px; }
+        .btn { display: inline-flex; align-items: center; padding: 12px 24px; border-radius: 8px; font-size: 14px; font-weight: 600; border: none; cursor: pointer; text-decoration: none; }
+        .btn-primary { background: var(--primary); color: var(--white); }
+        .btn-primary:hover { background: var(--primary-dark); text-decoration: none; }
+        .btn-white { background: var(--white); color: var(--primary); }
+
+        .hero { background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%); color: var(--white); padding: 80px 24px; text-align: center; }
+        .hero h1 { font-size: 2.75rem; font-weight: 800; margin-bottom: 20px; }
+        .hero p { font-size: 1.25rem; opacity: 0.9; max-width: 700px; margin: 0 auto 30px; }
+        .hero-buttons { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+
+        .content { max-width: 900px; margin: 0 auto; padding: 60px 24px; }
+        .content h2 { font-size: 2rem; font-weight: 700; margin: 50px 0 20px; }
+        .content h3 { font-size: 1.5rem; font-weight: 600; margin: 40px 0 15px; }
+        .content p { margin-bottom: 20px; color: var(--gray-700); font-size: 1.1rem; }
+        .content ul { margin: 20px 0 30px 30px; color: var(--gray-700); }
+        .content li { margin-bottom: 12px; font-size: 1.05rem; }
+
+        .compliance-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin: 40px 0; }
+        .compliance-box { background: var(--gray-50); border: 1px solid var(--gray-200); border-radius: 12px; padding: 30px; text-align: center; }
+        .compliance-box h4 { font-size: 1.3rem; font-weight: 700; margin-bottom: 12px; color: var(--primary); }
+        .compliance-box p { font-size: 0.95rem; color: var(--gray-600); margin: 0; }
+        .compliance-icon { font-size: 3rem; margin-bottom: 15px; }
+
+        .feature-list { margin: 30px 0; }
+        .feature-item { display: flex; gap: 15px; padding: 20px 0; border-bottom: 1px solid var(--gray-200); }
+        .feature-check { width: 28px; height: 28px; background: #dcfce7; color: #22c55e; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; flex-shrink: 0; }
+        .feature-text h4 { font-size: 1.1rem; margin-bottom: 5px; }
+        .feature-text p { font-size: 0.95rem; color: var(--gray-600); margin: 0; }
+
+        .alert-box { background: #fef3c7; border: 1px solid #fcd34d; border-radius: 12px; padding: 25px; margin: 30px 0; }
+        .alert-box h4 { color: #92400e; margin-bottom: 10px; }
+        .alert-box p { color: #78350f; margin: 0; font-size: 1rem; }
+
+        .cta-box { background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%); color: var(--white); padding: 50px 40px; border-radius: 16px; text-align: center; margin: 50px 0; }
+        .cta-box h3 { color: var(--white); font-size: 1.75rem; margin-bottom: 15px; }
+        .cta-box p { color: rgba(255,255,255,0.9); margin-bottom: 25px; }
+
+        .faq-item { border-bottom: 1px solid var(--gray-200); padding: 25px 0; }
+        .faq-question { font-weight: 600; font-size: 1.15rem; margin-bottom: 12px; }
+        .faq-answer { color: var(--gray-600); }
+
+        .footer { background: var(--gray-900); color: #94a3b8; padding: 40px 24px; text-align: center; }
+        .footer a { color: #cbd5e1; }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2rem; }
+            .compliance-grid { grid-template-columns: 1fr; }
+            .header .btn { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <div class="header-inner">
+            <a href="/" class="logo">
+                <img src="logo.png" alt="Constructo AI">
+                Constructo AI
+            </a>
+            <div>
+                <a href="https://app.constructoai.ca" class="btn btn-primary">Essai gratuit</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <h1>Conformité RBQ, CCQ et Loi 16</h1>
+        <p>Le seul logiciel de construction qui intègre automatiquement toutes les exigences réglementaires du Québec. Restez conforme sans effort.</p>
+        <div class="hero-buttons">
+            <a href="https://app.constructoai.ca" class="btn btn-white">Essai gratuit 7 jours</a>
+            <a href="/" class="btn" style="border: 1px solid rgba(255,255,255,0.3); color: white;">En savoir plus</a>
+        </div>
+    </section>
+
+    <main class="content">
+
+        <div class="compliance-grid">
+            <div class="compliance-box">
+                <div class="compliance-icon">🏛️</div>
+                <h4>RBQ</h4>
+                <p>Régie du bâtiment du Québec - Licences et qualité des travaux</p>
+            </div>
+            <div class="compliance-box">
+                <div class="compliance-icon">👷</div>
+                <h4>CCQ</h4>
+                <p>Commission de la construction du Québec - Conventions collectives</p>
+            </div>
+            <div class="compliance-box">
+                <div class="compliance-icon">🏢</div>
+                <h4>Loi 16</h4>
+                <p>Encadrement des copropriétés - Carnets d'entretien</p>
+            </div>
+        </div>
+
+        <h2>Pourquoi la conformité est-elle cruciale?</h2>
+
+        <p>Au Québec, l'industrie de la construction est l'une des plus réglementées au Canada. Les entrepreneurs doivent respecter un ensemble complexe de lois et de règlements sous peine de <strong>sanctions sévères</strong> : amendes, suspension de licence, poursuites judiciaires et atteinte à la réputation.</p>
+
+        <p>Constructo AI a été conçu dès le départ pour intégrer ces exigences. Plutôt que de vous laisser gérer la conformité manuellement, notre système automatise les vérifications et vous alerte en cas de problème potentiel.</p>
+
+        <div class="alert-box">
+            <h4>Le saviez-vous?</h4>
+            <p>En 2024, la RBQ a imposé plus de 3 millions de dollars en amendes aux entrepreneurs non conformes. Ne prenez pas de risques avec votre licence.</p>
+        </div>
+
+        <h2>Conformité RBQ intégrée</h2>
+
+        <p>La <strong>Régie du bâtiment du Québec (RBQ)</strong> est l'organisme responsable de la délivrance des licences d'entrepreneur et de la surveillance de la qualité des travaux de construction. Constructo AI vous aide à rester conforme :</p>
+
+        <div class="feature-list">
+            <div class="feature-item">
+                <div class="feature-check">✓</div>
+                <div class="feature-text">
+                    <h4>Vérification des licences sous-traitants</h4>
+                    <p>Le système vérifie automatiquement que vos sous-traitants possèdent une licence RBQ valide avant de leur confier des travaux.</p>
+                </div>
+            </div>
+            <div class="feature-item">
+                <div class="feature-check">✓</div>
+                <div class="feature-text">
+                    <h4>Rappels de renouvellement</h4>
+                    <p>Recevez des alertes avant l'expiration de votre licence ou de vos cautionnements.</p>
+                </div>
+            </div>
+            <div class="feature-item">
+                <div class="feature-check">✓</div>
+                <div class="feature-text">
+                    <h4>Documentation des travaux</h4>
+                    <p>Conservez une trace complète de tous vos projets pour répondre aux exigences de la RBQ en cas d'inspection.</p>
+                </div>
+            </div>
+            <div class="feature-item">
+                <div class="feature-check">✓</div>
+                <div class="feature-text">
+                    <h4>Plans de garantie</h4>
+                    <p>Gérez vos obligations envers les plans de garantie (GCR) directement depuis la plateforme.</p>
+                </div>
+            </div>
+        </div>
+
+        <h2>Conformité CCQ automatisée</h2>
+
+        <p>La <strong>Commission de la construction du Québec (CCQ)</strong> administre les conventions collectives de l'industrie. Le module RH de Constructo AI intègre automatiquement les règles CCQ :</p>
+
+        <div class="feature-list">
+            <div class="feature-item">
+                <div class="feature-check">✓</div>
+                <div class="feature-text">
+                    <h4>Classification des métiers</h4>
+                    <p>Assignez correctement vos employés selon leur classification (compagnon, apprenti, manoeuvre) avec les taux horaires appropriés.</p>
+                </div>
+            </div>
+            <div class="feature-item">
+                <div class="feature-check">✓</div>
+                <div class="feature-text">
+                    <h4>Calcul des avantages sociaux</h4>
+                    <p>Le système calcule automatiquement les contributions aux régimes d'avantages sociaux selon les conventions en vigueur.</p>
+                </div>
+            </div>
+            <div class="feature-item">
+                <div class="feature-check">✓</div>
+                <div class="feature-text">
+                    <h4>Vacances de la construction</h4>
+                    <p>Gestion automatique des 4 semaines de vacances obligatoires et calcul des indemnités.</p>
+                </div>
+            </div>
+            <div class="feature-item">
+                <div class="feature-check">✓</div>
+                <div class="feature-text">
+                    <h4>Rapports mensuels CCQ</h4>
+                    <p>Générez les rapports requis par la CCQ en quelques clics pour vos déclarations.</p>
+                </div>
+            </div>
+        </div>
+
+        <h2>Loi 16 : Nouvelles obligations pour les copropriétés</h2>
+
+        <p>La <strong>Loi 16</strong> (adoptée en 2019, entrée en vigueur progressivement) impose de nouvelles obligations aux syndicats de copropriété et aux professionnels qui travaillent sur ces immeubles :</p>
+
+        <ul>
+            <li><strong>Carnet d'entretien obligatoire</strong> : Tout immeuble en copropriété doit tenir un carnet d'entretien documentant les travaux effectués</li>
+            <li><strong>Étude du fonds de prévoyance</strong> : Une étude doit être réalisée pour planifier les travaux majeurs futurs</li>
+            <li><strong>Fonds de prévoyance minimal</strong> : Les copropriétés doivent maintenir un fonds suffisant pour les travaux</li>
+            <li><strong>Inspection obligatoire</strong> : Certaines copropriétés doivent faire inspecter leur immeuble par un professionnel</li>
+        </ul>
+
+        <p>Si vous travaillez sur des projets de copropriété, Constructo AI vous aide à documenter vos travaux conformément à la Loi 16 et à générer les rapports nécessaires pour le carnet d'entretien du syndicat.</p>
+
+        <h2>Comment Constructo AI assure votre conformité</h2>
+
+        <p>Notre système est conçu pour que la conformité soit automatique, pas un fardeau administratif :</p>
+
+        <ul>
+            <li><strong>Mises à jour automatiques</strong> : Lorsque les règlements changent, le système est mis à jour automatiquement</li>
+            <li><strong>Alertes proactives</strong> : Recevez des notifications avant les échéances importantes</li>
+            <li><strong>Vérifications en temps réel</strong> : Le système bloque les actions non conformes avant qu'elles ne se produisent</li>
+            <li><strong>Documentation complète</strong> : Conservez une trace de tout pour prouver votre conformité en cas d'audit</li>
+            <li><strong>Experts IA disponibles</strong> : Nos assistants IA peuvent répondre à vos questions sur la conformité 24/7</li>
+        </ul>
+
+        <div class="cta-box">
+            <h3>Restez conforme sans effort</h3>
+            <p>Laissez Constructo AI gérer la conformité pour vous concentrer sur ce que vous faites de mieux : construire.</p>
+            <a href="https://app.constructoai.ca" class="btn btn-white">Commencer l'essai gratuit</a>
+        </div>
+
+        <h2>Questions fréquentes</h2>
+
+        <div class="faq-item">
+            <div class="faq-question">Qu'est-ce que la RBQ?</div>
+            <div class="faq-answer">La Régie du bâtiment du Québec (RBQ) est l'organisme gouvernemental qui réglemente le domaine de la construction au Québec. Elle délivre les licences d'entrepreneur, veille à la qualité des travaux et à la sécurité du public. Tout entrepreneur doit détenir une licence RBQ valide pour exercer.</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">Qu'est-ce que la CCQ?</div>
+            <div class="faq-answer">La Commission de la construction du Québec (CCQ) est l'organisme qui administre les conventions collectives de l'industrie de la construction. Elle gère les avantages sociaux, la formation professionnelle et veille à l'application des règles sur les chantiers.</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">Qu'est-ce que la Loi 16?</div>
+            <div class="faq-answer">La Loi 16 (Loi visant principalement l'encadrement des inspections en bâtiment et de la copropriété divise) impose de nouvelles obligations aux copropriétés, incluant le carnet d'entretien obligatoire, le fonds de prévoyance et les études de fonds de prévoyance. Les entrepreneurs qui travaillent sur des copropriétés doivent connaître ces exigences.</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">Comment Constructo AI vérifie-t-il les licences RBQ?</div>
+            <div class="faq-answer">Lorsque vous ajoutez un sous-traitant dans le système, Constructo AI peut vérifier automatiquement sa licence auprès du registre de la RBQ. Vous êtes alerté si la licence est expirée, suspendue ou si les catégories de travaux ne correspondent pas.</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">Le logiciel est-il mis à jour quand les règlements changent?</div>
+            <div class="faq-answer">Oui, notre équipe surveille les changements réglementaires et met à jour le système automatiquement. Vous n'avez rien à faire - votre logiciel reste toujours conforme aux dernières exigences.</div>
+        </div>
+
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2025 Constructo AI Inc. Tous droits réservés.</p>
+        <p style="margin-top: 10px;">
+            <a href="/">Accueil</a> ·
+            <a href="/erp-construction-quebec.html">ERP Construction</a> ·
+            <a href="mailto:info@constructoai.ca">Contact</a>
+        </p>
+    </footer>
+
+</body>
+</html>

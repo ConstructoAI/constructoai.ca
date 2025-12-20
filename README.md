@@ -7,6 +7,8 @@
 
 Site web officiel de **Constructo AI** - Système ERP complet pour l'industrie de la construction au Québec.
 
+> ⚠️ **PROJET PROPRIÉTAIRE** - Ce code est la propriété exclusive de Constructo AI Inc. et n'est pas open source. Toute utilisation, reproduction ou distribution non autorisée est strictement interdite.
+
 ## 📋 Table des Matières
 
 - [À Propos](#-à-propos)
@@ -18,7 +20,7 @@ Site web officiel de **Constructo AI** - Système ERP complet pour l'industrie d
 - [SEO & Performance](#-seo--performance)
 - [Tests](#-tests)
 - [Déploiement](#-déploiement)
-- [Contribution](#-contribution)
+- [Usage Interne](#-usage-interne)
 - [Auteur](#-auteur)
 - [Licence](#-licence)
 
@@ -228,13 +230,16 @@ const theme = document.documentElement.getAttribute('data-theme');
 
 ## 🚀 Installation
 
+> ⚠️ **ACCÈS RESTREINT** - Cette section est réservée aux membres autorisés de l'équipe Constructo AI Inc.
+
 ### Prérequis
 
 Aucun ! Le site est entièrement statique.
 
-### Cloner le Dépôt
+### Cloner le Dépôt (Équipe Interne Seulement)
 
 ```bash
+# Nécessite des permissions d'accès au dépôt privé
 git clone https://github.com/ConstructoAI/constructoai.ca.git
 cd constructoai.ca
 ```
@@ -492,29 +497,35 @@ server {
 
 ---
 
-## 🤝 Contribution
+## 🔒 Usage Interne
 
-### Workflow Git
+> **Ce dépôt est PRIVÉ et réservé à l'usage interne de Constructo AI Inc.**
 
-1. **Créer une branche** :
+### Workflow Git (Équipe Interne)
+
+Pour l'équipe de développement autorisée :
+
+1. **Créer une branche de travail** :
    ```bash
    git checkout -b feature/ma-fonctionnalite
    ```
 
-2. **Faire les modifications** :
+2. **Développer et tester localement** :
    ```bash
+   # Faire les modifications
+   # Tester dans le navigateur
    git add .
-   git commit -m "Ajout de ma fonctionnalité"
+   git commit -m "Description des changements"
    ```
 
-3. **Pousser** :
+3. **Pousser vers le dépôt** :
    ```bash
    git push -u origin feature/ma-fonctionnalite
    ```
 
-4. **Créer une Pull Request** sur GitHub
+4. **Demander une revue de code** avant fusion
 
-### Convention de Commit
+### Convention de Commit (Interne)
 
 ```
 Type: Description courte
@@ -522,27 +533,17 @@ Type: Description courte
 - Détail 1
 - Détail 2
 
-Types possibles:
+Types:
 - feat: Nouvelle fonctionnalité
 - fix: Correction de bug
 - docs: Documentation
 - style: Formatage, CSS
 - refactor: Refactorisation
 - test: Ajout de tests
-- chore: Tâches de maintenance
+- chore: Maintenance
 ```
 
-**Exemple** :
-```
-feat: Ajout du mode sombre
-
-- Variables CSS pour mode clair/sombre
-- Bouton toggle avec icônes
-- JavaScript pour persistance localStorage
-- Détection préférence système
-```
-
-### Standards de Code
+### Standards de Code (Interne)
 
 - ✅ HTML valide W3C
 - ✅ CSS sans erreurs
@@ -550,6 +551,18 @@ feat: Ajout du mode sombre
 - ✅ Indentation : 4 espaces
 - ✅ UTF-8 encoding
 - ✅ LF line endings (Unix)
+- ✅ Tests avant chaque commit
+- ✅ Revue de code obligatoire
+
+### Accès et Permissions
+
+**Accès restreint** : Seuls les membres autorisés de Constructo AI Inc. peuvent :
+- Cloner ce dépôt
+- Créer des branches
+- Pousser des modifications
+- Consulter le code source
+
+Pour obtenir un accès, contactez : [info@constructoai.ca](mailto:info@constructoai.ca)
 
 ---
 
@@ -625,15 +638,17 @@ Ce projet est propriétaire et confidentiel. Toute reproduction, distribution ou
 
 ## 🆘 Support
 
-### Documentation
+### Support Interne (Équipe)
 
-- 📖 [Guide de Contribution](CONTRIBUTING.md) (à créer)
-- 🐛 [Signaler un Bug](https://github.com/ConstructoAI/constructoai.ca/issues)
-- 💡 [Demander une Fonctionnalité](https://github.com/ConstructoAI/constructoai.ca/issues)
+Pour les membres de l'équipe Constructo AI :
 
-### Contact
+- 📖 Documentation technique interne
+- 🐛 Rapport de bugs : Via email interne
+- 💡 Demandes de fonctionnalités : Via réunions d'équipe
 
-Pour toute question ou assistance :
+### Contact Public
+
+Pour les questions concernant le site web public :
 
 - **Email** : info@constructoai.ca
 - **Téléphone** : (514) 820-1972

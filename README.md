@@ -40,12 +40,12 @@ Site web officiel de **Constructo AI** - Système ERP complet pour l'industrie d
 
 ### Proposition de Valeur
 
-> "Le seul ERP 100% conforme RBQ/CCQ/Loi 16 avec 60 experts IA pour entrepreneurs québécois"
+> "Le seul ERP 100% conforme RBQ/CCQ/Loi 16 avec 61 experts IA pour entrepreneurs québécois"
 
 **Piliers principaux** :
 - ✅ Conformité réglementaire automatique (RBQ, CCQ, Loi 16)
-- ✅ 30+ modules intégrés
-- ✅ 60 experts IA spécialisés
+- ✅ 31+ modules intégrés (incluant le nouveau module Immobilier v2.5)
+- ✅ 61 experts IA spécialisés
 - ✅ Pricing transparent : 139,99$/mois tout inclus
 - ✅ Support 100% français québécois
 
@@ -75,6 +75,29 @@ Site web officiel de **Constructo AI** - Système ERP complet pour l'industrie d
 - ✅ **Performance optimisée** (HTML statique, CSS inline)
 - ✅ **Accessibilité WCAG 2.1** niveau AA
 
+### 🏗️ Nouveau Module Immobilier v2.5
+
+Le site web présente maintenant le **module Immobilier** récemment ajouté à la plateforme ERP :
+
+**Fonctionnalités principales** :
+- 🏗️ **Gestion projets construction multi-logements** - Cycle complet de prospection terrains à remise des clés
+- 💰 **Financement bancaire** - 7 banques québécoises (Desjardins, BNC, RBC, TD, Scotia, BMO, CIBC)
+- 📊 **Déblocages progressifs** - Calendrier automatique 7 étapes (terrain 10%, fondations 15%, charpente 25%, toiture 15%, plomberie/élec/CVC 20%, finitions 10%, final 5%)
+- 🧮 **6 calculateurs financiers** - Mensualité, amortissement, intérêts intercalaires, assurance SCHL, ROI, coût crédit
+- 🧠 **Expert IA Claude Opus 4.5** - Analyse projets, optimisation financement, conseils construction spécialisés
+
+**Intégration site web** :
+- Nouvelle carte "Immobilier & Financement" dans la section fonctionnalités (index.html:2234-2245)
+- Badge "NOUVEAU" en violet avec gradient
+- Description complète des capacités IA et financières
+- Mise à jour des statistiques : 31+ modules, 61 experts IA
+
+**Validation** :
+- ✅ 59/59 tests production réussis (100%)
+- ✅ 10 tables base de données
+- ✅ 2,889 lignes de code (immobilier.py)
+- ✅ Documentation complète dans README.md du projet ERP
+
 ---
 
 ## 🏗️ Architecture
@@ -83,7 +106,7 @@ Site web officiel de **Constructo AI** - Système ERP complet pour l'industrie d
 
 ```
 constructoai.ca/
-├── index.html                               # Page d'accueil (3,014 lignes)
+├── index.html                               # Page d'accueil (3,025+ lignes) ⬆️ Nouvelle carte Immobilier
 ├── erp-construction-quebec.html             # Landing ERP (691 lignes)
 ├── conformite-rbq-ccq.html                  # Landing conformité (334 lignes)
 ├── gestion-chantier-quebec.html             # Landing chantier (308 lignes)
@@ -97,7 +120,7 @@ constructoai.ca/
 ├── CNAME                                    # Configuration domaine
 └── README.md                                # Ce fichier
 
-Total: 4,874 lignes de code HTML, ~200 KB
+Total: 4,885+ lignes de code HTML, ~200 KB
 ```
 
 ### Stack Technique
@@ -593,35 +616,41 @@ Ce projet est propriétaire et confidentiel. Toute reproduction, distribution ou
 | Métrique | Valeur |
 |----------|--------|
 | **Fichiers HTML** | 6 pages |
-| **Lignes de code** | 4,874 lignes |
+| **Lignes de code** | 4,885+ lignes |
 | **Taille totale** | ~200 KB (HTML) |
 | **Images** | 3 fichiers (1.31 MB) |
 | **Dépendances** | 1 (Google Fonts) |
 | **Variables CSS** | 41 |
 | **Composants** | 15+ réutilisables |
 | **Pages SEO** | 6 optimisées |
+| **Modules ERP** | 31+ modules |
+| **Experts IA** | 61 experts |
 
 ---
 
 ## 🗺️ Roadmap
 
-### Version Actuelle : 1.1.0
+### Version Actuelle : 1.2.0 (26 Décembre 2025) ✅
 
 - ✅ Site vitrine complet
 - ✅ 6 pages HTML
 - ✅ Mode sombre
 - ✅ SEO optimisé
 - ✅ Responsive design
+- ✅ **Module Immobilier v2.5** - Nouvelle carte fonctionnalité avec badge "NOUVEAU"
+- ✅ **61 experts IA** - Mise à jour partout (était 60)
+- ✅ **31+ modules** - Mise à jour partout (était 30+)
+- ✅ **Expert IA Claude Opus 4.5** - Documentation financement construction
 
 ### Prochaines Versions
 
-#### v1.2.0
+#### v1.3.0
 - [ ] Mode sombre sur toutes les pages (actuellement index.html seulement)
 - [ ] Optimisation image moi.jpg (851 KB → <300 KB)
 - [ ] Conversion images en WebP
 - [ ] Lazy loading des logos clients
 
-#### v1.3.0
+#### v1.4.0
 - [ ] Blog SEO (articles RBQ, CCQ, construction)
 - [ ] Témoignages clients structurés (Schema Review)
 - [ ] Section cas d'utilisation

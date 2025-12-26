@@ -44,8 +44,9 @@ Site web officiel de **Constructo AI** - Système ERP complet pour l'industrie d
 
 **Piliers principaux** :
 - ✅ Conformité réglementaire automatique (RBQ, CCQ, Loi 16)
-- ✅ 31+ modules intégrés (incluant le nouveau module Immobilier v2.5)
-- ✅ 61 experts IA spécialisés
+- ✅ 34+ modules intégrés (incluant le nouveau module Immobilier v2.5)
+- ✅ 61 experts IA spécialisés (Claude Opus 4.5)
+- ✅ 140+ items de soumission prédéfinis
 - ✅ Pricing transparent : 139,99$/mois tout inclus
 - ✅ Support 100% français québécois
 
@@ -87,10 +88,10 @@ Le site web présente maintenant le **module Immobilier** récemment ajouté à 
 - 🧠 **Expert IA Claude Opus 4.5** - Analyse projets, optimisation financement, conseils construction spécialisés
 
 **Intégration site web** :
-- Nouvelle carte "Immobilier & Financement" dans la section fonctionnalités (index.html:2234-2245)
+- Nouvelle carte "Immobilier & Financement" dans la section fonctionnalités
 - Badge "NOUVEAU" en violet avec gradient
 - Description complète des capacités IA et financières
-- Mise à jour des statistiques : 31+ modules, 61 experts IA
+- Mise à jour des statistiques : 34+ modules, 61 experts IA, 140+ items
 
 **Validation** :
 - ✅ 59/59 tests production réussis (100%)
@@ -106,12 +107,12 @@ Le site web présente maintenant le **module Immobilier** récemment ajouté à 
 
 ```
 constructoai.ca/
-├── index.html                               # Page d'accueil (3,025+ lignes) ⬆️ Nouvelle carte Immobilier
-├── erp-construction-quebec.html             # Landing ERP (691 lignes)
-├── conformite-rbq-ccq.html                  # Landing conformité (334 lignes)
-├── gestion-chantier-quebec.html             # Landing chantier (308 lignes)
-├── logiciel-soumission-construction.html    # Landing soumissions (287 lignes)
-├── og-image.html                            # Template Open Graph (240 lignes)
+├── index.html                               # Page d'accueil (3,026 lignes, 116 KB)
+├── erp-construction-quebec.html             # Landing ERP (691 lignes, 26 KB)
+├── conformite-rbq-ccq.html                  # Landing conformité (334 lignes, 20 KB)
+├── gestion-chantier-quebec.html             # Landing chantier (308 lignes, 18 KB)
+├── logiciel-soumission-construction.html    # Landing soumissions (287 lignes, 17 KB)
+├── og-image.html                            # Template Open Graph (240 lignes, 7.5 KB)
 ├── logo.png                                 # Logo principal (72 KB)
 ├── moi.jpg                                  # Photo profil (851 KB)
 ├── og-image.png                             # Image partage social (387 KB)
@@ -120,7 +121,7 @@ constructoai.ca/
 ├── CNAME                                    # Configuration domaine
 └── README.md                                # Ce fichier
 
-Total: 4,885+ lignes de code HTML, ~200 KB
+Total: 4,886 lignes de code HTML, ~206 KB
 ```
 
 ### Stack Technique
@@ -405,10 +406,11 @@ Types implémentés :
 
 | Métrique | Valeur |
 |----------|--------|
-| **Taille HTML** | 115 KB (index.html) |
+| **Taille HTML (index)** | 116 KB |
+| **Taille HTML totale** | 206 KB |
 | **Requêtes HTTP** | 4-6 |
-| **Temps de chargement** | < 2s (estimé) |
 | **First Contentful Paint** | < 1s |
+| **Largest Contentful Paint** | < 2s |
 | **Dépendances externes** | 1 (Google Fonts) |
 
 **Optimisations appliquées** :
@@ -616,15 +618,18 @@ Ce projet est propriétaire et confidentiel. Toute reproduction, distribution ou
 | Métrique | Valeur |
 |----------|--------|
 | **Fichiers HTML** | 6 pages |
-| **Lignes de code** | 4,885+ lignes |
-| **Taille totale** | ~200 KB (HTML) |
-| **Images** | 3 fichiers (1.31 MB) |
-| **Dépendances** | 1 (Google Fonts) |
-| **Variables CSS** | 41 |
-| **Composants** | 15+ réutilisables |
-| **Pages SEO** | 6 optimisées |
-| **Modules ERP** | 31+ modules |
-| **Experts IA** | 61 experts |
+| **Lignes de code** | 4,886 lignes |
+| **Taille HTML totale** | 206 KB |
+| **Images locales** | 3 fichiers (1.31 MB) |
+| **Taille projet total** | ~3.1 MB |
+| **Dépendances externes** | 1 (Google Fonts) |
+| **Variables CSS** | 20+ variables |
+| **Composants réutilisables** | 15+ composants |
+| **Pages SEO optimisées** | 6 pages |
+| **Modules ERP présentés** | 34+ modules |
+| **Experts IA spécialisés** | 61 experts |
+| **Postes CCQ intégrés** | 61 postes |
+| **Items soumission** | 140+ items prédéfinis |
 
 ---
 
@@ -639,8 +644,9 @@ Ce projet est propriétaire et confidentiel. Toute reproduction, distribution ou
 - ✅ Responsive design
 - ✅ **Module Immobilier v2.5** - Nouvelle carte fonctionnalité avec badge "NOUVEAU"
 - ✅ **61 experts IA** - Mise à jour partout (était 60)
-- ✅ **31+ modules** - Mise à jour partout (était 30+)
+- ✅ **34+ modules** - Mise à jour partout (était 31+)
 - ✅ **Expert IA Claude Opus 4.5** - Documentation financement construction
+- ✅ **140+ items soumission** - Base de données complète prédéfinie
 
 ### Prochaines Versions
 

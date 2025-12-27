@@ -13,6 +13,9 @@ Site web officiel de **Constructo AI** - Système ERP complet pour l'industrie d
 
 - [À Propos](#-à-propos)
 - [Fonctionnalités](#-fonctionnalités)
+- [Sections de la Page d'Accueil](#-sections-de-la-page-daccueil)
+- [Modules ERP Présentés](#-modules-erp-présentés)
+- [Experts IA](#-experts-ia)
 - [Architecture](#-architecture)
 - [Mode Sombre](#-mode-sombre)
 - [Installation](#-installation)
@@ -34,21 +37,26 @@ Site web officiel de **Constructo AI** - Système ERP complet pour l'industrie d
 
 - **Type** : Site web statique (HTML/CSS/JavaScript pur)
 - **Domaine** : [constructoai.ca](https://constructoai.ca)
+- **Application** : [app.constructoai.ca](https://app.constructoai.ca)
 - **Langue** : 100% Français québécois
 - **Public cible** : Entrepreneurs en construction au Québec
 - **Hébergement** : GitHub Pages
+- **Taille** : 3047 lignes de code (index.html)
 
 ### Proposition de Valeur
 
-> "Le seul ERP 100% conforme RBQ/CCQ/Loi 16 avec 61 experts IA pour entrepreneurs québécois"
+> "L'ERP qui comprend votre métier d'entrepreneur au Québec"
 
 **Piliers principaux** :
-- ✅ Conformité réglementaire automatique (RBQ, CCQ, Loi 16)
-- ✅ 34+ modules intégrés (incluant le nouveau module Immobilier v2.5)
+- ✅ Conformité réglementaire automatique (RBQ, CCQ, CNESST, Loi 16)
+- ✅ 35+ modules intégrés (incluant Immobilier v2.5 et Charge Tributaire)
 - ✅ 61 experts IA spécialisés (Claude Opus 4.5)
+- ✅ 61 postes CCQ intégrés
 - ✅ 140+ items de soumission prédéfinis
-- ✅ Pricing transparent : 139,99$/mois tout inclus
+- ✅ Pricing transparent : 139,99$/mois tout inclus (utilisateurs illimités)
 - ✅ Support 100% français québécois
+- ✅ Prêt en 5 minutes, inscription incluse
+- ✅ SEAOP : Plateforme d'appels d'offres 100% gratuite
 
 ---
 
@@ -58,7 +66,7 @@ Site web officiel de **Constructo AI** - Système ERP complet pour l'industrie d
 
 | Page | URL | Description |
 |------|-----|-------------|
-| **Accueil** | `/index.html` | Hub central - Présentation complète |
+| **Accueil** | `/index.html` | Hub central - Présentation complète (3047 lignes) |
 | **ERP Construction** | `/erp-construction-quebec.html` | Positionnement produit |
 | **Conformité RBQ/CCQ** | `/conformite-rbq-ccq.html` | Conformité réglementaire |
 | **Gestion Chantier** | `/gestion-chantier-quebec.html` | TimeTracker et logistique |
@@ -67,18 +75,91 @@ Site web officiel de **Constructo AI** - Système ERP complet pour l'industrie d
 
 ### Fonctionnalités Techniques
 
-- ✅ **Mode Sombre** avec détection automatique des préférences système
-- ✅ **Design Responsive** (Mobile, Tablette, Desktop)
-- ✅ **Navigation par ancres** (smooth scroll)
-- ✅ **FAQ Accordion** interactif
-- ✅ **Carrousel de logos** clients
-- ✅ **Optimisation SEO** complète (Schema.org, Open Graph, Twitter Cards)
-- ✅ **Performance optimisée** (HTML statique, CSS inline)
-- ✅ **Accessibilité WCAG 2.1** niveau AA
+- ✅ **Mode Sombre** avec détection automatique des préférences système et persistance localStorage
+- ✅ **Design Responsive** (Mobile, Tablette, Desktop) avec breakpoints 600px, 768px, 900px
+- ✅ **Navigation par ancres** (smooth scroll JavaScript)
+- ✅ **FAQ Accordion** interactif (6 questions)
+- ✅ **Carrousel de logos** clients animé (11 entreprises, défilement infini)
+- ✅ **Optimisation SEO** complète (Schema.org SoftwareApplication + LocalBusiness, Open Graph, Twitter Cards)
+- ✅ **Performance optimisée** (HTML statique, CSS inline, JavaScript vanilla)
+- ✅ **Accessibilité WCAG 2.1** niveau AA (contrastes 17:1 à 21:1)
+- ✅ **Header sticky** avec navigation fixe
+- ✅ **Vidéo YouTube intégrée** pour démonstration
 
-### 🏗️ Nouveau Module Immobilier v2.5
+---
 
-Le site web présente maintenant le **module Immobilier** récemment ajouté à la plateforme ERP :
+## 📄 Sections de la Page d'Accueil
+
+La page index.html est structurée en **17 sections distinctes** :
+
+| # | Section | ID | Description |
+|---|---------|-----|-------------|
+| 1 | **Top Banner** | - | Contact téléphone/email urgence |
+| 2 | **Header** | - | Logo, navigation, mode sombre, CTA "Mon compte" |
+| 3 | **Hero** | - | Titre, description, boutons CTA, message "Prêt en 5 minutes" |
+| 4 | **Stats** | - | 4 statistiques clés + carrousel logos clients |
+| 5 | **Problems** | - | 3 défis quotidiens des entrepreneurs |
+| 6 | **Solution** | `#fonctionnalites` | Grille de 10 cartes fonctionnalités |
+| 7 | **Soumissions** | - | 3 méthodes de soumission |
+| 8 | **Experts** | `#experts` | 61 experts IA spécialisés |
+| 9 | **How It Works** | - | Flux de travail intégré |
+| 10 | **Demo** | `#demo` | Vidéo YouTube intégrée |
+| 11 | **Why Section** | `#comparaison` | 4 raisons + SEAOP |
+| 12 | **API/Intégrations** | `#api` | QuickBooks, Sage, Zapier, n8n |
+| 13 | **FAQ** | - | 6 questions fréquentes |
+| 14 | **Chat Fondateur** | - | Interface chat avec Sylvain Leduc |
+| 15 | **CTA** | - | Essai gratuit + démo personnalisée |
+| 16 | **Newsletter** | `#contact` | Formulaire inscription infolettre |
+| 17 | **Footer** | - | 6 colonnes d'informations |
+
+---
+
+## 🛠️ Modules ERP Présentés
+
+### Modules Principaux (10 cartes fonctionnalités)
+
+| Module | Badge | Description |
+|--------|-------|-------------|
+| **Soumissions rapides** | - | 140+ items prédéfinis, Admin 3%, contingences 12%, profit 15%, TPS/TVQ auto |
+| **Suivi de chantiers** | - | Gantt, Kanban, bons de travail automatiques |
+| **Facturation TPS/TVQ** | - | TPS 5%, TVQ 9,975%, suivi paiements, bons de commande |
+| **Pointage CCQ** | - | 61 postes CCQ, pointage mobile, export paie |
+| **Clients & sous-traitants** | - | Carnet d'adresses, historique, suivi leads |
+| **Gestion des stocks** | - | Inventaire temps réel, alertes seuil critique |
+| **Gestion d'équipe** | - | Profils employés, 25 classifications CCQ, dates expiration |
+| **Fonds de Prévoyance** | - | Loi 16, études 25 ans, composantes majeures, rapports syndicats |
+| **Immobilier & Financement** | `NOUVEAU` | Multi-logements, 7 banques, déblocages progressifs, SCHL |
+| **Charge Tributaire** | `NOUVEAU` | Calculs CNBC 2020, CSA O86/S16, charges neige 10 régions QC |
+
+### 3 Méthodes de Soumission
+
+1. **Saisie manuelle** - Base de 140+ items de construction
+2. **Estimation par IA** - Génération en 30 secondes
+3. **Métré sur plans PDF** - Mesure directe sur plans d'architecte
+
+---
+
+## 🧠 Experts IA
+
+**61 experts IA spécialisés** disponibles 24/7 :
+
+| Expert | Spécialités |
+|--------|-------------|
+| **Entrepreneur Général** | Estimation 225-550$/pi², Code de construction, Novoclimat, LEED |
+| **Plombier** | Licence RBQ, CMMTQ, Code de plomberie QC, chauffage hydronique, gaz |
+| **Électricien** | Licence RBQ, CMEQ, Hydro-Québec, bornes VÉ, panneaux solaires |
+| **Revêtement Extérieur** | Écran pare-pluie, vinyle, fibrociment, brique, pierre |
+| **Finition Intérieure** | ASP Construction, gypse niveaux 1-5, planchers, moulures |
+| **Structure de Bois** | CSA O86, poutrelles, fermes, LVL, calcul charges |
+| **CVC / HVAC** | CETAF, ASHRAE, thermopompes, VRC/VRE, géothermie |
+| **Toiture** | AMCQ, bardeaux, membrane, TPO/EPDM, métal |
+| **+ 52 autres** | Architecte, Ingénieur, Fondations, Excavation, Maçonnerie, Subventions... |
+
+---
+
+## 🏗️ Nouveaux Modules 2025
+
+### Module Immobilier v2.5
 
 **Fonctionnalités principales** :
 - 🏗️ **Gestion projets construction multi-logements** - Cycle complet de prospection terrains à remise des clés
@@ -87,17 +168,34 @@ Le site web présente maintenant le **module Immobilier** récemment ajouté à 
 - 🧮 **6 calculateurs financiers** - Mensualité, amortissement, intérêts intercalaires, assurance SCHL, ROI, coût crédit
 - 🧠 **Expert IA Claude Opus 4.5** - Analyse projets, optimisation financement, conseils construction spécialisés
 
-**Intégration site web** :
-- Nouvelle carte "Immobilier & Financement" dans la section fonctionnalités
-- Badge "NOUVEAU" en violet avec gradient
-- Description complète des capacités IA et financières
-- Mise à jour des statistiques : 34+ modules, 61 experts IA, 140+ items
-
 **Validation** :
 - ✅ 59/59 tests production réussis (100%)
 - ✅ 10 tables base de données
 - ✅ 2,889 lignes de code (immobilier.py)
-- ✅ Documentation complète dans README.md du projet ERP
+
+### Module Charge Tributaire
+
+**Fonctionnalités principales** :
+- 📐 **Calculs structuraux conformes** - CNBC 2020, CSA O86, CSA S16
+- 🪵 **Poutres bois** - 2x4 à 2x12, LVL, Glulam
+- 🔩 **Poutres acier** - W8 à W18, HSS
+- ❄️ **Charges de neige** - 10 régions du Québec
+- 🧮 **Dimensionnement automatique** - Linteaux, solives, chevrons, poteaux
+
+---
+
+## ❓ FAQ du Site (6 Questions)
+
+Le site présente 6 questions fréquentes dans sa section FAQ :
+
+| Question | Réponse clé |
+|----------|-------------|
+| **Que comprend l'abonnement à 139,99$/mois?** | Tout inclus : 35+ modules, 61 experts IA, utilisateurs illimités, support téléphone |
+| **Est-ce que mes concurrents vont voir mes prix?** | Non, espace 100% isolé, sécurité bancaire |
+| **Combien d'utilisateurs peuvent accéder?** | Illimités, un tarif fixe |
+| **L'IA, c'est compliqué à utiliser?** | Non, conversation naturelle, pas de configuration |
+| **Y a-t-il des frais supplémentaires?** | Non, 139,99$ + taxes/mois tout inclus, essai 7 jours |
+| **Puis-je résilier à tout moment?** | Oui, sans contrat ni pénalité, données accessibles en lecture |
 
 ---
 
@@ -107,22 +205,40 @@ Le site web présente maintenant le **module Immobilier** récemment ajouté à 
 
 ```
 constructoai.ca/
-├── index.html                               # Page d'accueil (3,026 lignes, 116 KB)
+├── index.html                               # Page d'accueil (3,047 lignes, ~120 KB)
 ├── erp-construction-quebec.html             # Landing ERP (691 lignes, 26 KB)
 ├── conformite-rbq-ccq.html                  # Landing conformité (334 lignes, 20 KB)
 ├── gestion-chantier-quebec.html             # Landing chantier (308 lignes, 18 KB)
 ├── logiciel-soumission-construction.html    # Landing soumissions (287 lignes, 17 KB)
 ├── og-image.html                            # Template Open Graph (240 lignes, 7.5 KB)
 ├── logo.png                                 # Logo principal (72 KB)
-├── moi.jpg                                  # Photo profil (851 KB)
+├── moi.jpg                                  # Photo profil Sylvain Leduc (851 KB)
 ├── og-image.png                             # Image partage social (387 KB)
 ├── sitemap.xml                              # Plan du site (8 URLs)
 ├── robots.txt                               # Configuration crawlers
-├── CNAME                                    # Configuration domaine
+├── CNAME                                    # Configuration domaine (constructoai.ca)
 └── README.md                                # Ce fichier
 
-Total: 4,886 lignes de code HTML, ~206 KB
+Total: ~4,907 lignes de code HTML, ~210 KB
 ```
+
+### Logos Clients Intégrés (Carrousel)
+
+Le site affiche un carrousel animé de **11 logos clients** :
+
+| Entreprise | Logo Source |
+|------------|-------------|
+| Nosco | lirp.cdn-website.com |
+| Avimco | avimco.ca |
+| Empire M | lirp.cdn-website.com |
+| Steeve Doucet | lirp.cdn-website.com |
+| Parallele | parallelegestion.com |
+| Quadra | constructionquadra.com |
+| Goyer | plomberiegoyer.com |
+| Novika | novika.ca |
+| RenoCart | renocart.ca |
+| JF Nadeau | constructionjfnadeau.com |
+| Ricky Loiselle | 2crl.ca |
 
 ### Stack Technique
 
@@ -142,10 +258,10 @@ Total: 4,886 lignes de code HTML, ~206 KB
 ### Architecture Hub-and-Spoke
 
 ```
-        index.html (HUB CENTRAL)
+        index.html (HUB CENTRAL - 3047 lignes)
         ┌───────────┴───────────┐
-        │  Navigation interne   │
-        │  Sections complètes   │
+        │  17 sections internes │
+        │  Navigation complète  │
         └───────────────────────┘
                  │
     ┌────────────┼────────────┬──────────┐
@@ -156,6 +272,23 @@ Landing ERP  Landing      Landing    Landing
 
 [Chaque landing page est autonome et optimisée SEO]
 ```
+
+### Intégrations API Présentées
+
+Le site présente les intégrations disponibles :
+
+| Plateforme | Type |
+|------------|------|
+| **QuickBooks** | Comptabilité |
+| **Sage** | Comptabilité |
+| **n8n** | Automatisation |
+| **Zapier** | Automatisation |
+
+**Fonctionnalités d'intégration** :
+- Élimination de la double saisie
+- Synchronisation automatique des factures
+- Alertes en temps réel
+- Confidentialité garantie (sécurité bancaire)
 
 ### Design System
 
@@ -618,45 +751,66 @@ Ce projet est propriétaire et confidentiel. Toute reproduction, distribution ou
 | Métrique | Valeur |
 |----------|--------|
 | **Fichiers HTML** | 6 pages |
-| **Lignes de code** | 4,886 lignes |
-| **Taille HTML totale** | 206 KB |
+| **Lignes de code (index.html)** | 3,047 lignes |
+| **Lignes de code totales** | ~4,907 lignes |
+| **Taille HTML totale** | ~210 KB |
 | **Images locales** | 3 fichiers (1.31 MB) |
 | **Taille projet total** | ~3.1 MB |
-| **Dépendances externes** | 1 (Google Fonts) |
-| **Variables CSS** | 20+ variables |
-| **Composants réutilisables** | 15+ composants |
+| **Dépendances externes** | 1 (Google Fonts - Inter) |
+| **Variables CSS** | 25+ variables (mode clair/sombre) |
+| **Composants réutilisables** | 17 sections distinctes |
 | **Pages SEO optimisées** | 6 pages |
-| **Modules ERP présentés** | 34+ modules |
-| **Experts IA spécialisés** | 61 experts |
+| **Modules ERP présentés** | 35+ modules (10 cartes visibles) |
+| **Experts IA spécialisés** | 61 experts (8 détaillés + 52 autres) |
 | **Postes CCQ intégrés** | 61 postes |
 | **Items soumission** | 140+ items prédéfinis |
+| **Logos clients affichés** | 11 entreprises |
+| **Questions FAQ** | 6 questions |
+| **Intégrations API** | 4 (QuickBooks, Sage, n8n, Zapier) |
+
+### Statistiques Affichées sur le Site
+
+Le site présente 4 statistiques clés dans la section Stats :
+
+| Statistique | Valeur Affichée |
+|-------------|-----------------|
+| Modules pour vos chantiers | 31+ |
+| Items soumission prêts | 140+ |
+| Experts IA à consulter | 61 |
+| Postes CCQ intégrés | 61 |
 
 ---
 
 ## 🗺️ Roadmap
 
-### Version Actuelle : 1.2.0 (26 Décembre 2025) ✅
+### Version Actuelle : 1.3.0 (27 Décembre 2025) ✅
 
-- ✅ Site vitrine complet
-- ✅ 6 pages HTML
-- ✅ Mode sombre
-- ✅ SEO optimisé
-- ✅ Responsive design
-- ✅ **Module Immobilier v2.5** - Nouvelle carte fonctionnalité avec badge "NOUVEAU"
-- ✅ **61 experts IA** - Mise à jour partout (était 60)
-- ✅ **34+ modules** - Mise à jour partout (était 31+)
+- ✅ Site vitrine complet (3,047 lignes index.html)
+- ✅ 6 pages HTML optimisées SEO
+- ✅ Mode sombre avec persistance localStorage
+- ✅ SEO optimisé (Schema.org SoftwareApplication + LocalBusiness)
+- ✅ Responsive design (breakpoints 600px, 768px, 900px)
+- ✅ **Module Immobilier v2.5** - Badge "NOUVEAU" violet gradient
+- ✅ **Module Charge Tributaire** - Badge "NOUVEAU" orange gradient
+- ✅ **61 experts IA** - 8 détaillés + 52 autres mentionnés
+- ✅ **35+ modules** - Mise à jour dans Hero et Solution sections
 - ✅ **Expert IA Claude Opus 4.5** - Documentation financement construction
 - ✅ **140+ items soumission** - Base de données complète prédéfinie
+- ✅ **SEAOP** - Plateforme appels d'offres gratuite présentée
+- ✅ **Chat Fondateur** - Section interactive avec Sylvain Leduc
+- ✅ **Carrousel logos** - 11 entreprises clientes
+- ✅ **Vidéo YouTube** - Démo intégrée (E6_SLDETv2s)
 
 ### Prochaines Versions
 
-#### v1.3.0
+#### v1.4.0
 - [ ] Mode sombre sur toutes les pages (actuellement index.html seulement)
 - [ ] Optimisation image moi.jpg (851 KB → <300 KB)
 - [ ] Conversion images en WebP
 - [ ] Lazy loading des logos clients
+- [ ] Harmonisation statistiques (31+ vs 35+ modules)
 
-#### v1.4.0
+#### v1.5.0
 - [ ] Blog SEO (articles RBQ, CCQ, construction)
 - [ ] Témoignages clients structurés (Schema Review)
 - [ ] Section cas d'utilisation

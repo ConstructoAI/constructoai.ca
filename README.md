@@ -49,7 +49,7 @@ Site web officiel de **Constructo AI** - Système ERP complet pour l'industrie d
 
 **Piliers principaux** :
 - ✅ Conformité réglementaire automatique (RBQ, CCQ, CNESST, Loi 16)
-- ✅ 35+ modules intégrés (incluant Immobilier v2.5 et Charge Tributaire)
+- ✅ 27+ modules intégrés (incluant Immobilier v2.5, Charge Tributaire, Portail B2B, Visualiseur CAO 3D)
 - ✅ 61 experts IA spécialisés (Claude Opus 4.5)
 - ✅ 61 postes CCQ intégrés
 - ✅ 140+ items de soumission prédéfinis
@@ -130,6 +130,9 @@ La page index.html est structurée en **17 sections distinctes** :
 | **Fonds de Prévoyance** | - | Loi 16, études 25 ans, composantes majeures, rapports syndicats |
 | **Immobilier & Financement** | `NOUVEAU` | Multi-logements, 7 banques, déblocages progressifs, SCHL |
 | **Charge Tributaire** | `NOUVEAU` | Calculs CNBC 2020, CSA O86/S16, charges neige 10 régions QC |
+| **Portail Client B2B** | `NOUVEAU` | Espace client sécurisé, suivi projet, approbation devis tokenisée |
+| **Visualiseur CAO 3D** | `NOUVEAU` | Preview STL, OBJ, DXF, STEP, IFC avec rotation/zoom |
+| **Gestionnaire Emails** | `NOUVEAU` | Notifications automatisées, sync IMAP Office365, templates |
 
 ### 3 Méthodes de Soumission
 
@@ -190,7 +193,7 @@ Le site présente 6 questions fréquentes dans sa section FAQ :
 
 | Question | Réponse clé |
 |----------|-------------|
-| **Que comprend l'abonnement à 139,99$/mois?** | Tout inclus : 35+ modules, 61 experts IA, utilisateurs illimités, support téléphone |
+| **Que comprend l'abonnement à 139,99$/mois?** | Tout inclus : 27+ modules, 61 experts IA, 207+ tables PostgreSQL, utilisateurs illimités, support téléphone |
 | **Est-ce que mes concurrents vont voir mes prix?** | Non, espace 100% isolé, sécurité bancaire |
 | **Combien d'utilisateurs peuvent accéder?** | Illimités, un tarif fixe |
 | **L'IA, c'est compliqué à utiliser?** | Non, conversation naturelle, pas de configuration |
@@ -760,7 +763,7 @@ Ce projet est propriétaire et confidentiel. Toute reproduction, distribution ou
 | **Variables CSS** | 25+ variables (mode clair/sombre) |
 | **Composants réutilisables** | 17 sections distinctes |
 | **Pages SEO optimisées** | 6 pages |
-| **Modules ERP présentés** | 35+ modules (10 cartes visibles) |
+| **Modules ERP présentés** | 27+ modules (13 cartes visibles) |
 | **Experts IA spécialisés** | 61 experts (8 détaillés + 52 autres) |
 | **Postes CCQ intégrés** | 61 postes |
 | **Items soumission** | 140+ items prédéfinis |
@@ -774,7 +777,7 @@ Le site présente 4 statistiques clés dans la section Stats :
 
 | Statistique | Valeur Affichée |
 |-------------|-----------------|
-| Modules pour vos chantiers | 31+ |
+| Modules pour vos chantiers | 27+ |
 | Items soumission prêts | 140+ |
 | Experts IA à consulter | 61 |
 | Postes CCQ intégrés | 61 |
@@ -783,17 +786,21 @@ Le site présente 4 statistiques clés dans la section Stats :
 
 ## 🗺️ Roadmap
 
-### Version Actuelle : 1.3.0 (27 Décembre 2025) ✅
+### Version Actuelle : 1.4.0 (29 Décembre 2025) ✅
 
-- ✅ Site vitrine complet (3,047 lignes index.html)
+- ✅ Site vitrine complet (3,100+ lignes index.html)
 - ✅ 6 pages HTML optimisées SEO
 - ✅ Mode sombre avec persistance localStorage
 - ✅ SEO optimisé (Schema.org SoftwareApplication + LocalBusiness)
 - ✅ Responsive design (breakpoints 600px, 768px, 900px)
 - ✅ **Module Immobilier v2.5** - Badge "NOUVEAU" violet gradient
 - ✅ **Module Charge Tributaire** - Badge "NOUVEAU" orange gradient
-- ✅ **61 experts IA** - 8 détaillés + 52 autres mentionnés
-- ✅ **35+ modules** - Mise à jour dans Hero et Solution sections
+- ✅ **Portail Client B2B** - Badge "NOUVEAU" vert gradient
+- ✅ **Visualiseur CAO 3D** - Badge "NOUVEAU" violet gradient (STL, OBJ, DXF, STEP, IFC)
+- ✅ **Gestionnaire Emails** - Badge "NOUVEAU" rose gradient
+- ✅ **61 experts IA** - 8 détaillés + 52 autres mentionnés (mémoire persistante, CRUD langage naturel)
+- ✅ **27+ modules** - Mise à jour dans Hero et Solution sections
+- ✅ **207+ tables PostgreSQL** - Base de données complète multi-tenant
 - ✅ **Expert IA Claude Opus 4.5** - Documentation financement construction
 - ✅ **140+ items soumission** - Base de données complète prédéfinie
 - ✅ **SEAOP** - Plateforme appels d'offres gratuite présentée
@@ -803,14 +810,11 @@ Le site présente 4 statistiques clés dans la section Stats :
 
 ### Prochaines Versions
 
-#### v1.4.0
+#### v1.5.0
 - [ ] Mode sombre sur toutes les pages (actuellement index.html seulement)
 - [ ] Optimisation image moi.jpg (851 KB → <300 KB)
 - [ ] Conversion images en WebP
 - [ ] Lazy loading des logos clients
-- [ ] Harmonisation statistiques (31+ vs 35+ modules)
-
-#### v1.5.0
 - [ ] Blog SEO (articles RBQ, CCQ, construction)
 - [ ] Témoignages clients structurés (Schema Review)
 - [ ] Section cas d'utilisation

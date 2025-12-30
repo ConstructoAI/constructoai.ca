@@ -15,7 +15,7 @@ Site web officiel de **Constructo AI** - Système ERP complet pour l'industrie d
 - [Fonctionnalités](#-fonctionnalités)
 - [Sections de la Page d'Accueil](#-sections-de-la-page-daccueil)
 - [Modules ERP Présentés](#-modules-erp-présentés)
-- [Experts IA](#-experts-ia)
+- [Conseillers Spécialisés](#-conseillers-spécialisés)
 - [Architecture](#-architecture)
 - [Mode Sombre](#-mode-sombre)
 - [Installation](#-installation)
@@ -45,17 +45,17 @@ Site web officiel de **Constructo AI** - Système ERP complet pour l'industrie d
 
 ### Proposition de Valeur
 
-> "L'ERP qui comprend votre métier d'entrepreneur au Québec"
+> "Le logiciel de gestion conçu pour les entrepreneurs en construction du Québec"
 
 **Piliers principaux** :
 - ✅ Conformité réglementaire automatique (RBQ, CCQ, CNESST, Loi 16)
-- ✅ 27+ modules intégrés (incluant Immobilier v2.5, Charge Tributaire, Portail B2B, Visualiseur CAO 3D)
-- ✅ 61 experts IA spécialisés (Claude Opus 4.5)
+- ✅ 33+ modules intégrés (incluant Immobilier, Charge Tributaire, Boutique B2B, Visionneuse CAO 3D, Logistique, GPS, Paie Québec, Météo Chantier)
+- ✅ 61 conseillers spécialisés disponibles 24/7 (Claude Opus 4.5)
 - ✅ 61 postes CCQ intégrés
 - ✅ 140+ items de soumission prédéfinis
-- ✅ Pricing transparent : 139,99$/mois tout inclus (utilisateurs illimités)
+- ✅ Pricing transparent : 139,99$/mois tout inclus (tous les employés)
 - ✅ Support 100% français québécois
-- ✅ Prêt en 5 minutes, inscription incluse
+- ✅ Prêt en 5 minutes
 - ✅ SEAOP : Plateforme d'appels d'offres 100% gratuite
 
 ---
@@ -79,7 +79,6 @@ Site web officiel de **Constructo AI** - Système ERP complet pour l'industrie d
 - ✅ **Design Responsive** (Mobile, Tablette, Desktop) avec breakpoints 600px, 768px, 900px
 - ✅ **Navigation par ancres** (smooth scroll JavaScript)
 - ✅ **FAQ Accordion** interactif (6 questions)
-- ✅ **Carrousel de logos** clients animé (11 entreprises, défilement infini)
 - ✅ **Optimisation SEO** complète (Schema.org SoftwareApplication + LocalBusiness, Open Graph, Twitter Cards)
 - ✅ **Performance optimisée** (HTML statique, CSS inline, JavaScript vanilla)
 - ✅ **Accessibilité WCAG 2.1** niveau AA (contrastes 17:1 à 21:1)
@@ -90,33 +89,34 @@ Site web officiel de **Constructo AI** - Système ERP complet pour l'industrie d
 
 ## 📄 Sections de la Page d'Accueil
 
-La page index.html est structurée en **17 sections distinctes** :
+La page index.html est structurée en **18 sections distinctes** :
 
 | # | Section | ID | Description |
 |---|---------|-----|-------------|
 | 1 | **Top Banner** | - | Contact téléphone/email urgence |
 | 2 | **Header** | - | Logo, navigation, mode sombre, CTA "Mon compte" |
 | 3 | **Hero** | - | Titre, description, boutons CTA, message "Prêt en 5 minutes" |
-| 4 | **Stats** | - | 4 statistiques clés + carrousel logos clients |
+| 4 | **Stats** | - | 4 statistiques clés |
 | 5 | **Problems** | - | 3 défis quotidiens des entrepreneurs |
-| 6 | **Solution** | `#fonctionnalites` | Grille de 10 cartes fonctionnalités |
+| 6 | **Solution** | `#fonctionnalites` | Grille de 23+ cartes fonctionnalités |
 | 7 | **Soumissions** | - | 3 méthodes de soumission |
-| 8 | **Experts** | `#experts` | 61 experts IA spécialisés |
+| 8 | **Conseillers** | `#experts` | 61 conseillers spécialisés 24/7 |
 | 9 | **How It Works** | - | Flux de travail intégré |
 | 10 | **Demo** | `#demo` | Vidéo YouTube intégrée |
-| 11 | **Why Section** | `#comparaison` | 4 raisons + SEAOP |
-| 12 | **API/Intégrations** | `#api` | QuickBooks, Sage, Zapier, n8n |
-| 13 | **FAQ** | - | 6 questions fréquentes |
-| 14 | **Chat Fondateur** | - | Interface chat avec Sylvain Leduc |
-| 15 | **CTA** | - | Essai gratuit + démo personnalisée |
-| 16 | **Newsletter** | `#contact` | Formulaire inscription infolettre |
-| 17 | **Footer** | - | 6 colonnes d'informations |
+| 11 | **Why Section** | `#comparaison` | 4 raisons de choisir Constructo |
+| 12 | **SEAOP** | `#seaop` | Appels d'offres publics gratuits (section dédiée) |
+| 13 | **API/Intégrations** | `#api` | QuickBooks, Sage, Zapier, n8n |
+| 14 | **FAQ** | - | 6 questions fréquentes |
+| 15 | **Chat Fondateur** | - | Interface chat avec Sylvain Leduc |
+| 16 | **CTA** | - | Essai gratuit + démo personnalisée |
+| 17 | **Newsletter** | `#contact` | Formulaire inscription infolettre |
+| 18 | **Footer** | - | 6 colonnes d'informations |
 
 ---
 
 ## 🛠️ Modules ERP Présentés
 
-### Modules Principaux (10 cartes fonctionnalités)
+### Modules Principaux (23+ cartes fonctionnalités)
 
 | Module | Badge | Description |
 |--------|-------|-------------|
@@ -128,11 +128,20 @@ La page index.html est structurée en **17 sections distinctes** :
 | **Gestion des stocks** | - | Inventaire temps réel, alertes seuil critique |
 | **Gestion d'équipe** | - | Profils employés, 25 classifications CCQ, dates expiration |
 | **Fonds de Prévoyance** | - | Loi 16, études 25 ans, composantes majeures, rapports syndicats |
-| **Immobilier & Financement** | `NOUVEAU` | Multi-logements, 7 banques, déblocages progressifs, SCHL |
-| **Charge Tributaire** | `NOUVEAU` | Calculs CNBC 2020, CSA O86/S16, charges neige 10 régions QC |
-| **Portail Client B2B** | `NOUVEAU` | Espace client sécurisé, suivi projet, approbation devis tokenisée |
-| **Visualiseur CAO 3D** | `NOUVEAU` | Preview STL, OBJ, DXF, STEP, IFC avec rotation/zoom |
-| **Gestionnaire Emails** | `NOUVEAU` | Notifications automatisées, sync IMAP Office365, templates |
+| **Immobilier & Financement** | - | Multi-logements, 7 banques, déblocages progressifs, SCHL |
+| **Charge Tributaire** | - | Calculs CNBC 2020, CSA O86/S16, charges neige 10 régions QC |
+| **Boutique B2B E-commerce** | - | Catalogue avec images, favoris, remises volume, panier, checkout, PDF bon de livraison, analytics ventes |
+| **Visualiseur CAO 3D** | - | Preview STL, OBJ, DXF, STEP, IFC avec rotation/zoom |
+| **Gestionnaire Emails** | - | Notifications automatisées, sync IMAP Office365, templates |
+| **Logistique Construction** | - | Livraisons matériaux, équipements, véhicules, coordination chantier |
+| **GPS & Géolocalisation** | - | Géocodage, itinéraires, suivi flotte, API mobile conducteurs |
+| **Paie Québec complète** | - | Impôts fédéral/provincial, RRQ, RQAP, AE, T4/Relevé 1, taux 2025 |
+| **Grand Livre & États financiers** | - | Bilan, résultats, flux de trésorerie, ratios financiers automatisés |
+| **Météo Chantier** | - | Prévisions temps réel, alertes intempéries, planification travaux extérieurs |
+| **Calculatrice Construction** | - | Volumes béton, surfaces, pentes, matériaux, conversions métriques/impériales |
+| **Notes de chantier** | - | Journal quotidien, photos, conditions, main-d'œuvre, partage instantané |
+| **Qualification B.A.T.** | - | Évaluation prospects Budget-Autorité-Timing, priorisation automatique |
+| **Subventions Québec 2025** | - | Programmes gouvernementaux, écoénergétiques, critères admissibilité, aide demandes |
 
 ### 3 Méthodes de Soumission
 
@@ -142,9 +151,9 @@ La page index.html est structurée en **17 sections distinctes** :
 
 ---
 
-## 🧠 Experts IA
+## 🧠 Conseillers Spécialisés
 
-**61 experts IA spécialisés** disponibles 24/7 :
+**61 conseillers spécialisés** disponibles 24/7 :
 
 | Expert | Spécialités |
 |--------|-------------|
@@ -185,6 +194,70 @@ La page index.html est structurée en **17 sections distinctes** :
 - ❄️ **Charges de neige** - 10 régions du Québec
 - 🧮 **Dimensionnement automatique** - Linteaux, solives, chevrons, poteaux
 
+### Boutique B2B E-commerce v2.5.1
+
+**Fonctionnalités Phase 2** :
+- 🛒 **Catalogue avec images** - Affichage visuel des produits avec photos
+- ⭐ **Produits en vedette** - Mise en avant des produits populaires
+- ❤️ **Système de favoris** - Liste de souhaits personnalisée par client
+- 💰 **Remises en volume** - Réductions automatiques selon quantité commandée
+- 🛍️ **Panier d'achat** - Gestion complète avec calcul TPS/TVQ automatique
+- 📦 **Checkout complet** - Processus de commande avec adresse de livraison
+- 📧 **Confirmation email** - Envoi automatique avec récapitulatif commande
+- 📄 **PDF Bon de livraison** - Génération PDF professionnel (ReportLab) téléchargeable
+- 📊 **Analytics ventes** - Dashboard avec KPIs, évolution CA, top produits
+
+**Interface Client** :
+- 6 onglets navigation : Catalogue, Favoris, Panier, Checkout, Commandes, Stats
+- Historique commandes avec suivi statut
+- Téléchargement PDF pour chaque commande
+
+### Module Logistique Construction v2.5
+
+**Fonctionnalités principales** :
+- 🚚 **Livraisons matériaux** - Planification, réception, validation conformité
+- 🔧 **Équipements et outils** - Inventaire, réservations, maintenance, inspections
+- 🚗 **Véhicules et transport** - Gestion flotte, déplacements, carburant, entretien
+- 📍 **Coordination chantier** - Planning, zones de stockage, affectations
+
+**Tables PostgreSQL (7)** :
+- logistics_deliveries, logistics_delivery_items
+- logistics_equipment, logistics_equipment_reservations, logistics_equipment_maintenance
+- logistics_vehicles, logistics_vehicle_trips
+
+**Intégrations** : Inventaire, Projets, Comptabilité, TimeTracker, GPS
+
+### Module GPS & Géolocalisation v2.5
+
+**Services Backend** :
+- 🗺️ **Géocodage** - Conversion adresse → coordonnées GPS (Nominatim/OpenStreetMap)
+- 📍 **Géocodage inverse** - Conversion coordonnées → adresse
+- 🛣️ **Calcul itinéraires** - Routes optimisées avec waypoints (OSRM)
+- 📏 **Distance et durée** - Calculs temps de trajet
+
+**API Mobile Conducteur (FastAPI)** :
+- Authentification conducteur avec token sécurisé
+- Position GPS temps réel (latitude, longitude, vitesse, direction)
+- Itinéraires assignés et waypoints
+- Mise à jour statut livraisons (signature, photo preuve)
+- Alertes géofence (entrée/sortie zones)
+
+**APIs utilisées (gratuites)** : Nominatim, OSRM, Geopy
+
+### SEAOP - Appels d'Offres Publics
+
+**Section dédiée sur la page d'accueil** avec gradient vert distinctif :
+
+**Fonctionnalités principales** :
+- 📋 **Accès gratuit** - Tous les appels d'offres publics du Québec sans frais
+- 🔔 **Alertes personnalisées** - Notifications selon vos métiers et régions
+- 📊 **Analyse automatique** - L'IA résume les documents et identifie les opportunités pertinentes
+
+**Avantages mis en avant** :
+- Plus besoin de surveiller SEAO manuellement
+- Filtrage intelligent par corps de métier
+- Historique des soumissions et taux de succès
+
 ---
 
 ## ❓ FAQ du Site (6 Questions)
@@ -193,7 +266,7 @@ Le site présente 6 questions fréquentes dans sa section FAQ :
 
 | Question | Réponse clé |
 |----------|-------------|
-| **Que comprend l'abonnement à 139,99$/mois?** | Tout inclus : 27+ modules, 61 experts IA, 207+ tables PostgreSQL, utilisateurs illimités, support téléphone |
+| **Que comprend l'abonnement à 139,99$/mois?** | Tout inclus : 33+ modules, 61 conseillers, 207+ tables PostgreSQL, utilisateurs illimités, support téléphone |
 | **Est-ce que mes concurrents vont voir mes prix?** | Non, espace 100% isolé, sécurité bancaire |
 | **Combien d'utilisateurs peuvent accéder?** | Illimités, un tarif fixe |
 | **L'IA, c'est compliqué à utiliser?** | Non, conversation naturelle, pas de configuration |
@@ -224,24 +297,6 @@ constructoai.ca/
 
 Total: ~4,907 lignes de code HTML, ~210 KB
 ```
-
-### Logos Clients Intégrés (Carrousel)
-
-Le site affiche un carrousel animé de **11 logos clients** :
-
-| Entreprise | Logo Source |
-|------------|-------------|
-| Nosco | lirp.cdn-website.com |
-| Avimco | avimco.ca |
-| Empire M | lirp.cdn-website.com |
-| Steeve Doucet | lirp.cdn-website.com |
-| Parallele | parallelegestion.com |
-| Quadra | constructionquadra.com |
-| Goyer | plomberiegoyer.com |
-| Novika | novika.ca |
-| RenoCart | renocart.ca |
-| JF Nadeau | constructionjfnadeau.com |
-| Ricky Loiselle | 2crl.ca |
 
 ### Stack Technique
 
@@ -761,13 +816,12 @@ Ce projet est propriétaire et confidentiel. Toute reproduction, distribution ou
 | **Taille projet total** | ~3.1 MB |
 | **Dépendances externes** | 1 (Google Fonts - Inter) |
 | **Variables CSS** | 25+ variables (mode clair/sombre) |
-| **Composants réutilisables** | 17 sections distinctes |
+| **Composants réutilisables** | 18 sections distinctes |
 | **Pages SEO optimisées** | 6 pages |
-| **Modules ERP présentés** | 27+ modules (13 cartes visibles) |
-| **Experts IA spécialisés** | 61 experts (8 détaillés + 52 autres) |
+| **Modules ERP présentés** | 33+ modules (23+ cartes visibles) |
+| **Conseillers spécialisés** | 61 conseillers (8 détaillés + 52 autres) |
 | **Postes CCQ intégrés** | 61 postes |
 | **Items soumission** | 140+ items prédéfinis |
-| **Logos clients affichés** | 11 entreprises |
 | **Questions FAQ** | 6 questions |
 | **Intégrations API** | 4 (QuickBooks, Sage, n8n, Zapier) |
 
@@ -777,9 +831,9 @@ Le site présente 4 statistiques clés dans la section Stats :
 
 | Statistique | Valeur Affichée |
 |-------------|-----------------|
-| Modules pour vos chantiers | 27+ |
+| Modules pour vos chantiers | 33+ |
 | Items soumission prêts | 140+ |
-| Experts IA à consulter | 61 |
+| Conseillers à consulter | 61 |
 | Postes CCQ intégrés | 61 |
 
 ---
@@ -795,18 +849,27 @@ Le site présente 4 statistiques clés dans la section Stats :
 - ✅ Responsive design (breakpoints 600px, 768px, 900px)
 - ✅ **Module Immobilier v2.5** - Badge "NOUVEAU" violet gradient
 - ✅ **Module Charge Tributaire** - Badge "NOUVEAU" orange gradient
-- ✅ **Portail Client B2B** - Badge "NOUVEAU" vert gradient
+- ✅ **Boutique B2B E-commerce** - Badge "NOUVEAU" vert gradient (images, favoris, remises volume, PDF, analytics)
 - ✅ **Visualiseur CAO 3D** - Badge "NOUVEAU" violet gradient (STL, OBJ, DXF, STEP, IFC)
 - ✅ **Gestionnaire Emails** - Badge "NOUVEAU" rose gradient
-- ✅ **61 experts IA** - 8 détaillés + 52 autres mentionnés (mémoire persistante, CRUD langage naturel)
-- ✅ **27+ modules** - Mise à jour dans Hero et Solution sections
+- ✅ **61 conseillers** - 8 détaillés + 52 autres mentionnés (mémoire persistante, CRUD langage naturel)
+- ✅ **33+ modules** - Mise à jour dans Hero et Solution sections
 - ✅ **207+ tables PostgreSQL** - Base de données complète multi-tenant
 - ✅ **Expert IA Claude Opus 4.5** - Documentation financement construction
 - ✅ **140+ items soumission** - Base de données complète prédéfinie
 - ✅ **SEAOP** - Plateforme appels d'offres gratuite présentée
 - ✅ **Chat Fondateur** - Section interactive avec Sylvain Leduc
-- ✅ **Carrousel logos** - 11 entreprises clientes
 - ✅ **Vidéo YouTube** - Démo intégrée (E6_SLDETv2s)
+
+### Version 1.4.1 (30 Décembre 2025) ✅
+
+- ✅ **Boutique B2B E-commerce Phase 2** - Mise à jour index.html avec nouvelles fonctionnalités
+- ✅ **Meta description** - Ajout version 2.5.1, 217,500+ lignes de code
+- ✅ **Schema.org** - Mise à jour description avec Boutique B2B et CAO 3D
+- ✅ **Open Graph / Twitter** - Métadonnées actualisées
+- ✅ **Section Fonctionnalités** - Portail B2B → Boutique B2B E-commerce
+- ✅ **Footer** - Ajout version 2.5.1 et nouvelles fonctionnalités
+- ✅ **priceValidUntil** - Étendu à 2026-12-31
 
 ### Prochaines Versions
 
@@ -814,7 +877,6 @@ Le site présente 4 statistiques clés dans la section Stats :
 - [ ] Mode sombre sur toutes les pages (actuellement index.html seulement)
 - [ ] Optimisation image moi.jpg (851 KB → <300 KB)
 - [ ] Conversion images en WebP
-- [ ] Lazy loading des logos clients
 - [ ] Blog SEO (articles RBQ, CCQ, construction)
 - [ ] Témoignages clients structurés (Schema Review)
 - [ ] Section cas d'utilisation
@@ -862,7 +924,7 @@ Merci aux technologies et ressources suivantes :
 
 <div align="center">
 
-**Constructo AI** - L'ERP qui comprend votre métier d'entrepreneur au Québec
+**Constructo AI** - Le logiciel de gestion conçu pour les entrepreneurs en construction du Québec
 
 [Site Web](https://constructoai.ca) • [Application](https://app.constructoai.ca) • [Contact](mailto:info@constructoai.ca)
 

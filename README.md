@@ -138,7 +138,7 @@ La page index.html est structurée en **18 sections distinctes** :
 | **Paie Québec complète** | - | Impôts fédéral/provincial, RRQ, RQAP, AE, T4/Relevé 1, taux 2025 |
 | **Grand Livre & États financiers** | - | Bilan, résultats, flux de trésorerie, ratios financiers automatisés |
 | **Météo Chantier** | - | Prévisions temps réel, alertes intempéries, planification travaux extérieurs |
-| **Calculatrice Construction** | - | Volumes béton, surfaces, pentes, matériaux, conversions métriques/impériales |
+| **Calculatrice Construction** | - | Volumes béton, surfaces, pentes, matériaux, conversions métriques/impériales + **6 sous-modules spécialisés** |
 | **Notes de chantier** | - | Journal quotidien, photos, conditions, main-d'œuvre, partage instantané |
 | **Qualification B.A.T.** | - | Évaluation prospects Budget-Autorité-Timing, priorisation automatique |
 | **Subventions Québec 2025** | - | Programmes gouvernementaux, écoénergétiques, critères admissibilité, aide demandes |
@@ -193,6 +193,19 @@ La page index.html est structurée en **18 sections distinctes** :
 - 🔩 **Poutres acier** - W8 à W18, HSS
 - ❄️ **Charges de neige** - 10 régions du Québec
 - 🧮 **Dimensionnement automatique** - Linteaux, solives, chevrons, poteaux
+
+### 6 Sous-Modules de Calcul Spécialisés **NOUVEAU v2.6**
+
+Calculatrices spécialisées conformes aux normes québécoises et canadiennes :
+
+| Sous-Module | Norme | Fonctionnalités |
+|-------------|-------|-----------------|
+| 🏗️ **Béton et Fondations** | CSA A23.1 | Volumes béton semelles/dalles/murs/colonnes, résistance 25-35 MPa, armatures, coffrage, temps cure |
+| 🏠 **Toiture** | AMCQ | Surfaces toiture, pentes, fermes, bardeaux/membrane/tôle/TPO, ventilation entretoit, protection neige/glace |
+| 🪜 **Escaliers** | Code bâtiment QC | Girons, contremarches, volées, paliers, validation dimensions automatique, garde-corps, mains courantes |
+| ⚡ **Électricité** | CSA C22.1 (CCÉ) | Charges électriques, panneau 100A-400A, circuits, calibre fils, prises, luminaires, résidentiel/commercial |
+| 🔧 **Plomberie** | Code QC / CMMTQ | Réseaux plomberie, diamètres tuyaux, pentes évacuation, unités charge, chauffe-eau, drainage |
+| 🌡️ **CVC/Chauffage** | ASHRAE | Charges chauffage/climatisation, thermopompes, fournaises, VRC/VRE, BTU/pièce, conduits, zonage, bi-énergie, géothermie |
 
 ### Boutique B2B E-commerce v2.5.1
 

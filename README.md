@@ -5,7 +5,7 @@
 [![CSS3](https://img.shields.io/badge/CSS3-1572B6?logo=css3&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/CSS)
 [![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 
-Site web officiel de **Constructo AI** - Système ERP complet pour l'industrie de la construction au Québec.
+Site web officiel de **Constructo AI** - Système ERP complet pour les industries de la **construction** et de la **fabrication/soudure** au Québec.
 
 > ⚠️ **PROJET PROPRIÉTAIRE** - Ce code est la propriété exclusive de Constructo AI Inc. et n'est pas open source. Toute utilisation, reproduction ou distribution non autorisée est strictement interdite.
 
@@ -31,7 +31,7 @@ Site web officiel de **Constructo AI** - Système ERP complet pour l'industrie d
 
 ## 🎯 À Propos
 
-**Constructo AI** est une plateforme ERP SaaS dédiée aux entrepreneurs en construction au Québec. Ce dépôt contient le site web marketing vitrine présentant la solution.
+**Constructo AI** est une plateforme ERP SaaS dédiée aux entrepreneurs en construction et fabrication/soudure au Québec. Ce dépôt contient le site web marketing vitrine présentant la solution.
 
 ### Caractéristiques du Projet
 
@@ -39,19 +39,20 @@ Site web officiel de **Constructo AI** - Système ERP complet pour l'industrie d
 - **Domaine** : [constructoai.ca](https://constructoai.ca)
 - **Application** : [app.constructoai.ca](https://app.constructoai.ca)
 - **Langue** : 100% Français québécois
-- **Public cible** : Entrepreneurs en construction au Québec
+- **Public cible** : Entrepreneurs en construction et fabrication/soudure au Québec
 - **Hébergement** : GitHub Pages
 - **Taille** : 3047 lignes de code (index.html)
 
 ### Proposition de Valeur
 
-> "Le logiciel de gestion conçu pour les entrepreneurs en construction du Québec"
+> "Le logiciel de gestion conçu pour les entrepreneurs en construction et fabrication/soudure du Québec"
 
 **Piliers principaux** :
 - ✅ Conformité réglementaire automatique (RBQ, CCQ, CNESST, Loi 16)
+- ✅ Certifications soudure : CWB, CSA W47.1, CSA W47.2, AWS
 - ✅ 33+ modules intégrés (incluant Immobilier, Charge Tributaire, Boutique B2B, Visionneuse CAO 3D, Logistique, GPS, Paie Québec, Météo Chantier)
 - ✅ 61 conseillers spécialisés disponibles 24/7 (Claude Opus 4.5)
-- ✅ 61 postes CCQ intégrés
+- ✅ 61 postes CCQ intégrés + 18 postes fabrication/soudure
 - ✅ 140+ items de soumission prédéfinis
 - ✅ Pricing transparent : 139,99$/mois tout inclus (tous les employés)
 - ✅ Support 100% français québécois
@@ -270,6 +271,36 @@ Calculatrices spécialisées conformes aux normes québécoises et canadiennes :
 - Plus besoin de surveiller SEAO manuellement
 - Filtrage intelligent par corps de métier
 - Historique des soumissions et taux de succès
+
+### Module Fabrication/Soudure **NOUVEAU**
+
+**Section dédiée sur la page d'accueil** avec gradient orange distinctif :
+
+**18 Postes de travail fabrication** (90$/heure) :
+
+| Département | Postes |
+|-------------|--------|
+| **DÉCOUPE** | Débitage, Cisaillement, Poinçonneuse, Plasma, Laser |
+| **FORMAGE** | Pliage, Spotweld |
+| **SOUDURE** | Soudure manuelle |
+| **ROBOTIQUE** | Robot soudeur MIG (16h/jour), Robot soudeur TIG (16h/jour), Robot soudeur par points (16h/jour), Cellule robotisée (16h/jour) |
+| **ASSEMBLAGE** | Assemblage |
+| **FINITION** | Ébavurage, Lavage, Peinture |
+| **QUALITÉ** | Inspection |
+| **EXPÉDITION** | Emballage |
+
+**Certifications soudure Québec** :
+- 🏆 **CWB** - Canadian Welding Bureau
+- 📋 **CSA W47.1** - Certification des compagnies de soudage par fusion de l'acier
+- 📋 **CSA W47.2** - Certification des compagnies de soudage par fusion de l'aluminium
+- 🌎 **AWS** - American Welding Society
+
+**Fonctionnalités** :
+- ✅ Filtrage automatique par type d'industrie (Construction OU Fabrication)
+- ✅ Sélection du type lors de l'inscription client
+- ✅ Postes de travail adaptés au secteur
+- ✅ 4 robots soudeurs avec capacité 16h/jour
+- ✅ Gestion des certifications soudure
 
 ---
 
@@ -833,14 +864,16 @@ Ce projet est propriétaire et confidentiel. Toute reproduction, distribution ou
 | **Pages SEO optimisées** | 6 pages |
 | **Modules ERP présentés** | 33+ modules (23+ cartes visibles) |
 | **Conseillers spécialisés** | 61 conseillers (8 détaillés + 52 autres) |
-| **Postes CCQ intégrés** | 61 postes |
+| **Postes CCQ intégrés** | 61 postes construction |
+| **Postes fabrication/soudure** | 18 postes (incluant 4 robots soudeurs) |
+| **Certifications soudure** | CWB, CSA W47.1, CSA W47.2, AWS |
 | **Items soumission** | 140+ items prédéfinis |
 | **Questions FAQ** | 6 questions |
 | **Intégrations API** | 4 (QuickBooks, Sage, n8n, Zapier) |
 
 ### Statistiques Affichées sur le Site
 
-Le site présente 4 statistiques clés dans la section Stats :
+Le site présente 5 statistiques clés dans la section Stats :
 
 | Statistique | Valeur Affichée |
 |-------------|-----------------|
@@ -848,14 +881,17 @@ Le site présente 4 statistiques clés dans la section Stats :
 | Items soumission prêts | 140+ |
 | Conseillers à consulter | 61 |
 | Postes CCQ intégrés | 61 |
+| Postes fabrication/soudure | 18+ |
 
 ---
 
 ## 🗺️ Roadmap
 
-### Version Actuelle : 1.4.0 (29 Décembre 2025) ✅
+### Version Actuelle : 1.5.0 (Janvier 2026) ✅
 
-- ✅ Site vitrine complet (3,100+ lignes index.html)
+- ✅ **Module Fabrication/Soudure** - 18 postes de travail, 4 robots soudeurs, certifications CWB/CSA/AWS
+- ✅ **Support multi-industrie** - Construction ET Fabrication/Soudure
+- ✅ Site vitrine complet (3,270+ lignes index.html)
 - ✅ 6 pages HTML optimisées SEO
 - ✅ Mode sombre avec persistance localStorage
 - ✅ SEO optimisé (Schema.org SoftwareApplication + LocalBusiness)
@@ -937,7 +973,7 @@ Merci aux technologies et ressources suivantes :
 
 <div align="center">
 
-**Constructo AI** - Le logiciel de gestion conçu pour les entrepreneurs en construction du Québec
+**Constructo AI** - Le logiciel de gestion conçu pour les entrepreneurs en construction et fabrication/soudure du Québec
 
 [Site Web](https://constructoai.ca) • [Application](https://app.constructoai.ca) • [Contact](mailto:info@constructoai.ca)
 

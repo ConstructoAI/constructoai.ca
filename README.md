@@ -99,7 +99,7 @@ La page index.html est structurée en **18 sections distinctes** :
 | 3 | **Hero** | - | Titre, description, boutons CTA, message "Prêt en 5 minutes" |
 | 4 | **Stats** | - | 4 statistiques clés |
 | 5 | **Problems** | - | 3 défis quotidiens des entrepreneurs |
-| 6 | **Solution** | `#fonctionnalites` | Grille de 23+ cartes fonctionnalités |
+| 6 | **Solution** | `#fonctionnalites` | Grille de 24+ cartes fonctionnalités |
 | 7 | **Soumissions** | - | 3 méthodes de soumission |
 | 8 | **Conseillers** | `#experts` | 61 conseillers spécialisés 24/7 |
 | 9 | **How It Works** | - | Flux de travail intégré |
@@ -117,7 +117,7 @@ La page index.html est structurée en **18 sections distinctes** :
 
 ## 🛠️ Modules ERP Présentés
 
-### Modules Principaux (23+ cartes fonctionnalités)
+### Modules Principaux (24+ cartes fonctionnalités)
 
 | Module | Badge | Description |
 |--------|-------|-------------|
@@ -128,6 +128,7 @@ La page index.html est structurée en **18 sections distinctes** :
 | **Clients & sous-traitants** | - | Carnet d'adresses, historique, suivi leads |
 | **Gestion des stocks** | - | Inventaire temps réel, alertes seuil critique |
 | **Gestion d'équipe** | - | Profils employés, 25 classifications CCQ, dates expiration |
+| **Gestion de Dossiers** | - | Organisation documents projet (plans, photos, contrats, factures), checklist 12 étapes, liaison devis/BT, historique automatique |
 | **Fonds de Prévoyance** | - | Loi 16, études 25 ans, composantes majeures, rapports syndicats |
 | **Immobilier & Financement** | - | Multi-logements, 7 banques, déblocages progressifs, SCHL |
 | **Charge Tributaire** | - | Calculs CNBC 2020, CSA O86/S16, charges neige 10 régions QC |
@@ -862,7 +863,7 @@ Ce projet est propriétaire et confidentiel. Toute reproduction, distribution ou
 | **Variables CSS** | 25+ variables (mode clair/sombre) |
 | **Composants réutilisables** | 18 sections distinctes |
 | **Pages SEO optimisées** | 6 pages |
-| **Modules ERP présentés** | 33+ modules (23+ cartes visibles) |
+| **Modules ERP présentés** | 33+ modules (24+ cartes visibles) |
 | **Conseillers spécialisés** | 61 conseillers (8 détaillés + 52 autres) |
 | **Postes CCQ intégrés** | 61 postes construction |
 | **Postes fabrication/soudure** | 18 postes (incluant 4 robots soudeurs) |

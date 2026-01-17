@@ -140,7 +140,7 @@ La page index.html est structurée en **18 sections distinctes** :
 | **Paie Québec complète** | - | Impôts fédéral/provincial, RRQ, RQAP, AE, T4/Relevé 1, taux 2025 |
 | **Grand Livre & États financiers** | - | Bilan, résultats, flux de trésorerie, ratios financiers automatisés |
 | **Météo Chantier** | - | Prévisions temps réel, alertes intempéries, planification travaux extérieurs |
-| **Calculatrice Construction** | - | Volumes béton, surfaces, pentes, matériaux, conversions métriques/impériales + **6 sous-modules spécialisés** |
+| **Calculatrice Construction** | - | Volumes béton, surfaces, pentes, matériaux, conversions métriques/impériales + **11 sous-modules spécialisés** |
 | **Notes de chantier** | - | Journal quotidien, photos, conditions, main-d'œuvre, partage instantané |
 | **Qualification B.A.T.** | - | Évaluation prospects Budget-Autorité-Timing, priorisation automatique |
 | **Subventions Québec 2025** | - | Programmes gouvernementaux, écoénergétiques, critères admissibilité, aide demandes |
@@ -196,7 +196,7 @@ La page index.html est structurée en **18 sections distinctes** :
 - ❄️ **Charges de neige** - 10 régions du Québec
 - 🧮 **Dimensionnement automatique** - Linteaux, solives, chevrons, poteaux
 
-### 6 Sous-Modules de Calcul Spécialisés **NOUVEAU v2.6**
+### 11 Sous-Modules de Calcul Spécialisés **NOUVEAU v2.6**
 
 Calculatrices spécialisées conformes aux normes québécoises et canadiennes :
 
@@ -208,6 +208,11 @@ Calculatrices spécialisées conformes aux normes québécoises et canadiennes :
 | ⚡ **Électricité** | CSA C22.1 (CCÉ) | Charges électriques, panneau 100A-400A, circuits, calibre fils, prises, luminaires, résidentiel/commercial |
 | 🔧 **Plomberie** | Code QC / CMMTQ | Réseaux plomberie, diamètres tuyaux, pentes évacuation, unités charge, chauffe-eau, drainage |
 | 🌡️ **CVC/Chauffage** | ASHRAE | Charges chauffage/climatisation, thermopompes, fournaises, VRC/VRE, BTU/pièce, conduits, zonage, bi-énergie, géothermie |
+| 🔥 **Soudure** | CSA W47.1 / AWS D1.1 | Dimensionnement joints, apport de chaleur, consommation électrodes, préchauffage, MIG/TIG/Arc, certifications CWB |
+| 📐 **Pliage Tôle** | ISO 2768 / DIN 6935 | Facteur K, tolérance pliage (BA/BD), tonnage requis, retour élastique, sélection matrice V, développés |
+| ⚖️ **Poids Métaux** | CSA G40.21 / ASTM | Poids tôles/barres/tubes/profilés, 18 types métaux, acier/inox 304-316/aluminium/cuivre, densités exactes |
+| 🎨 **Peinture** | ASTM D3276 | Surfaces, quantités peinture, épaisseur film sec (DFT), latex/alkyde/époxy/polyuréthane, temps séchage, normes VOC |
+| 📄 **Métré sur Plans PDF** | - | Mesures sur PDF (distance/surface/périmètre/angles), calibration échelle, association produits, génération soumissions |
 
 ### Boutique B2B E-commerce v2.5.1
 

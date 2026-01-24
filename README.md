@@ -41,7 +41,7 @@ Site web officiel de **Constructo AI** - Système ERP complet pour les industrie
 - **Langue** : 100% Français québécois
 - **Public cible** : Entrepreneurs en construction et fabrication/soudure au Québec
 - **Hébergement** : GitHub Pages
-- **Taille** : 3047 lignes de code (index.html)
+- **Taille** : 3079 lignes de code (index.html)
 
 ### Proposition de Valeur
 
@@ -51,7 +51,8 @@ Site web officiel de **Constructo AI** - Système ERP complet pour les industrie
 - ✅ Conformité réglementaire automatique (RBQ, CCQ, CNESST, Loi 16)
 - ✅ Certifications soudure : CWB, CSA W47.1, CSA W47.2, AWS
 - ✅ 33+ modules intégrés (incluant Immobilier, Charge Tributaire, Boutique B2B, Visionneuse CAO 3D, Logistique, GPS, Paie Québec, Météo Chantier)
-- ✅ 61 conseillers spécialisés disponibles 24/7 (Claude Opus 4.5)
+- ✅ 57 conseillers spécialisés disponibles 24/7 (Claude Opus 4.5)
+- ✅ **EXPERTS IA autonome** : 79,99$/mois (57 experts + Soumissions IA)
 - ✅ 61 postes CCQ intégrés + 18 postes fabrication/soudure
 - ✅ 140+ items de soumission prédéfinis
 - ✅ Pricing transparent : 139,99$/mois tout inclus (tous les employés)
@@ -67,7 +68,7 @@ Site web officiel de **Constructo AI** - Système ERP complet pour les industrie
 
 | Page | URL | Description |
 |------|-----|-------------|
-| **Accueil** | `/index.html` | Hub central - Présentation complète (3047 lignes) |
+| **Accueil** | `/index.html` | Hub central - Présentation complète (3079 lignes) |
 | **ERP Construction** | `/erp-construction-quebec.html` | Positionnement produit |
 | **Conformité RBQ/CCQ** | `/conformite-rbq-ccq.html` | Conformité réglementaire |
 | **Gestion Chantier** | `/gestion-chantier-quebec.html` | TimeTracker et logistique |
@@ -99,9 +100,9 @@ La page index.html est structurée en **18 sections distinctes** :
 | 3 | **Hero** | - | Titre, description, boutons CTA, message "Prêt en 5 minutes" |
 | 4 | **Stats** | - | 4 statistiques clés |
 | 5 | **Problems** | - | 3 défis quotidiens des entrepreneurs |
-| 6 | **Solution** | `#fonctionnalites` | Grille de 24+ cartes fonctionnalités |
+| 6 | **Solution** | `#fonctionnalites` | Grille de 27+ cartes fonctionnalités |
 | 7 | **Soumissions** | - | 3 méthodes de soumission |
-| 8 | **Conseillers** | `#experts` | 61 conseillers spécialisés 24/7 |
+| 8 | **Conseillers** | `#experts` | 57 conseillers spécialisés 24/7 |
 | 9 | **How It Works** | - | Flux de travail intégré |
 | 10 | **Demo** | `#demo` | Vidéo YouTube intégrée |
 | 11 | **Why Section** | `#comparaison` | 4 raisons de choisir Constructo |
@@ -117,7 +118,7 @@ La page index.html est structurée en **18 sections distinctes** :
 
 ## 🛠️ Modules ERP Présentés
 
-### Modules Principaux (24+ cartes fonctionnalités)
+### Modules Principaux (27+ cartes fonctionnalités)
 
 | Module | Badge | Description |
 |--------|-------|-------------|
@@ -144,6 +145,9 @@ La page index.html est structurée en **18 sections distinctes** :
 | **Notes de chantier** | - | Journal quotidien, photos, conditions, main-d'œuvre, partage instantané |
 | **Qualification B.A.T.** | - | Évaluation prospects Budget-Autorité-Timing, priorisation automatique |
 | **Subventions Québec 2025** | - | Programmes gouvernementaux, écoénergétiques, critères admissibilité, aide demandes |
+| **Location d'équipement** | NOUVEAU | Gestion locations, contrats automatiques, tarifs dégressifs, retours avec inspection, conseiller IA location vs achat |
+| **Maintenance préventive** | NOUVEAU | Planification entretiens, alertes automatiques, historique machines, diagnostic IA, estimation coûts réparation |
+| **Portail multi-entreprises** | NOUVEAU | Espaces séparés par compagnie, données isolées, connexion sécurisée 2 étapes, parfait divisions multiples |
 
 ### 3 Méthodes de Soumission
 
@@ -155,7 +159,7 @@ La page index.html est structurée en **18 sections distinctes** :
 
 ## 🧠 Conseillers Spécialisés
 
-**61 conseillers spécialisés** disponibles 24/7 :
+**57 conseillers spécialisés** disponibles 24/7 (module autonome EXPERTS IA à 79,99$/mois ou inclus dans l'ERP à 139,99$/mois) :
 
 | Expert | Spécialités |
 |--------|-------------|
@@ -163,11 +167,11 @@ La page index.html est structurée en **18 sections distinctes** :
 | **Plombier** | Licence RBQ, CMMTQ, Code de plomberie QC, chauffage hydronique, gaz |
 | **Électricien** | Licence RBQ, CMEQ, Hydro-Québec, bornes VÉ, panneaux solaires |
 | **Revêtement Extérieur** | Écran pare-pluie, vinyle, fibrociment, brique, pierre |
-| **Finition Intérieure** | ASP Construction, gypse niveaux 1-5, planchers, moulures |
+| **Gypse** | Licence RBQ, cloisons acoustiques, plafonds techniques, murs coupe-feu, finitions niveaux 1-5 |
 | **Structure de Bois** | CSA O86, poutrelles, fermes, LVL, calcul charges |
 | **CVC / HVAC** | CETAF, ASHRAE, thermopompes, VRC/VRE, géothermie |
 | **Toiture** | AMCQ, bardeaux, membrane, TPO/EPDM, métal |
-| **+ 52 autres** | Architecte, Ingénieur, Fondations, Excavation, Maçonnerie, Subventions... |
+| **+ 49 autres** | Architecte, Ingénieur structure, Ingénieur métallurgie, Fondations, Excavation, Maçonnerie, Subventions... |
 
 ---
 
@@ -308,6 +312,43 @@ Calculatrices spécialisées conformes aux normes québécoises et canadiennes :
 - ✅ 4 robots soudeurs avec capacité 16h/jour
 - ✅ Gestion des certifications soudure
 
+### Module Location d'Équipement **NOUVEAU**
+
+**Fonctionnalités principales** :
+- 🚚 **Gestion des items à louer** - Catalogue d'équipements avec tarifs journaliers, hebdomadaires, mensuels
+- 📋 **Contrats automatiques** - Génération de contrats PDF avec TPS/TVQ, conditions, signatures
+- 💰 **Tarifs dégressifs** - Réductions automatiques pour les longues durées de location
+- ↩️ **Gestion des retours** - Inspection, frais de réparation/nettoyage/retard
+- 🤖 **Conseiller IA intégré** - 5 fonctionnalités : recommandation équipements, analyse contrat, checklist, comparaison location vs achat
+- 📦 **Intégration inventaire** - Pré-remplissage automatique depuis le stock
+
+**Tables PostgreSQL (4)** : location_items, location_contrats, location_contrat_lignes, location_mouvements
+
+### Module Maintenance Préventive **NOUVEAU**
+
+**Fonctionnalités principales** :
+- 🔧 **Types de maintenance** - Préventive, corrective, prédictive avec fréquences personnalisables
+- 📅 **Planification automatique** - Calendrier des entretiens avec alertes avant échéance
+- 🎫 **Demandes de maintenance** - Workflow complet : nouvelle → en attente → en cours → terminée
+- 📝 **Fiches d'intervention** - Génération PDF professionnelle avec détails et pièces
+- 🔩 **Gestion des pièces** - Suivi des pièces détachées avec déduction automatique du stock
+- 🤖 **Conseiller IA intégré** - 5 fonctionnalités : diagnostic, plan préventif, checklist, estimation coûts
+
+**Tables PostgreSQL (7)** : maintenance_types, maintenance_planification, maintenance_demandes, maintenance_interventions, maintenance_pieces, maintenance_historique, maintenance_alertes
+
+### Module Portail Multi-Entreprises **NOUVEAU**
+
+**Fonctionnalités principales** :
+- 🏢 **Isolation complète** - Chaque entreprise a son schéma PostgreSQL séparé
+- 🔐 **Authentification 2 étapes** - Connexion entreprise + connexion utilisateur
+- 👥 **Gestion des utilisateurs** - Rôles admin/employé par entreprise
+- 🔒 **Sécurité bancaire** - Données 100% isolées, aucun croisement possible
+- 📊 **Multi-divisions** - Parfait pour entrepreneurs avec plusieurs compagnies (construction + location, etc.)
+
+**Architecture** :
+- Schéma `public` : tables système (entreprises, super_admins)
+- Schéma `tenant_[code]_[uuid]` : données isolées par entreprise
+
 ---
 
 ## ❓ FAQ du Site (6 Questions)
@@ -316,7 +357,7 @@ Le site présente 6 questions fréquentes dans sa section FAQ :
 
 | Question | Réponse clé |
 |----------|-------------|
-| **Que comprend l'abonnement à 139,99$/mois?** | Tout inclus : 33+ modules, 61 conseillers, 207+ tables PostgreSQL, utilisateurs illimités, support téléphone |
+| **Que comprend l'abonnement à 139,99$/mois?** | Tout inclus : 33+ modules, 57 conseillers, TAKEOFF AI, 207+ tables PostgreSQL, utilisateurs illimités, support téléphone |
 | **Est-ce que mes concurrents vont voir mes prix?** | Non, espace 100% isolé, sécurité bancaire |
 | **Combien d'utilisateurs peuvent accéder?** | Illimités, un tarif fixe |
 | **L'IA, c'est compliqué à utiliser?** | Non, conversation naturelle, pas de configuration |
@@ -366,7 +407,7 @@ Total: ~4,907 lignes de code HTML, ~210 KB
 ### Architecture Hub-and-Spoke
 
 ```
-        index.html (HUB CENTRAL - 3047 lignes)
+        index.html (HUB CENTRAL - 3079 lignes)
         ┌───────────┴───────────┐
         │  17 sections internes │
         │  Navigation complète  │
@@ -860,7 +901,7 @@ Ce projet est propriétaire et confidentiel. Toute reproduction, distribution ou
 |----------|--------|
 | **Fichiers HTML** | 6 pages |
 | **Lignes de code (index.html)** | 3,047 lignes |
-| **Lignes de code totales** | ~4,907 lignes |
+| **Lignes de code totales** | ~4,939 lignes |
 | **Taille HTML totale** | ~210 KB |
 | **Images locales** | 3 fichiers (1.31 MB) |
 | **Taille projet total** | ~3.1 MB |
@@ -868,8 +909,8 @@ Ce projet est propriétaire et confidentiel. Toute reproduction, distribution ou
 | **Variables CSS** | 25+ variables (mode clair/sombre) |
 | **Composants réutilisables** | 18 sections distinctes |
 | **Pages SEO optimisées** | 6 pages |
-| **Modules ERP présentés** | 33+ modules (24+ cartes visibles) |
-| **Conseillers spécialisés** | 61 conseillers (8 détaillés + 52 autres) |
+| **Modules ERP présentés** | 36+ modules (27+ cartes visibles) |
+| **Conseillers spécialisés** | 57 conseillers (8 détaillés + 49 autres) |
 | **Postes CCQ intégrés** | 61 postes construction |
 | **Postes fabrication/soudure** | 18 postes (incluant 4 robots soudeurs) |
 | **Certifications soudure** | CWB, CSA W47.1, CSA W47.2, AWS |
@@ -885,7 +926,7 @@ Le site présente 5 statistiques clés dans la section Stats :
 |-------------|-----------------|
 | Modules pour vos chantiers | 33+ |
 | Items soumission prêts | 140+ |
-| Conseillers à consulter | 61 |
+| Conseillers à consulter | 57 |
 | Postes CCQ intégrés | 61 |
 | Postes fabrication/soudure | 18+ |
 
@@ -893,11 +934,14 @@ Le site présente 5 statistiques clés dans la section Stats :
 
 ## 🗺️ Roadmap
 
-### Version Actuelle : 1.5.0 (Janvier 2026) ✅
+### Version Actuelle : 1.5.1 (Janvier 2026) ✅
 
+- ✅ **Module Location d'Équipement** - Contrats automatiques, tarifs dégressifs, retours avec inspection, conseiller IA
+- ✅ **Module Maintenance Préventive** - Planification entretiens, alertes, fiches d'intervention PDF, diagnostic IA
+- ✅ **Module Portail Multi-Entreprises** - Isolation par schéma PostgreSQL, authentification 2 étapes, multi-divisions
 - ✅ **Module Fabrication/Soudure** - 18 postes de travail, 4 robots soudeurs, certifications CWB/CSA/AWS
 - ✅ **Support multi-industrie** - Construction ET Fabrication/Soudure
-- ✅ Site vitrine complet (3,270+ lignes index.html)
+- ✅ Site vitrine complet (3,079+ lignes index.html)
 - ✅ 6 pages HTML optimisées SEO
 - ✅ Mode sombre avec persistance localStorage
 - ✅ SEO optimisé (Schema.org SoftwareApplication + LocalBusiness)
@@ -907,7 +951,7 @@ Le site présente 5 statistiques clés dans la section Stats :
 - ✅ **Boutique B2B E-commerce** - Badge "NOUVEAU" vert gradient (images, favoris, remises volume, PDF, analytics)
 - ✅ **Visualiseur CAO 3D** - Badge "NOUVEAU" violet gradient (STL, OBJ, DXF, STEP, IFC)
 - ✅ **Gestionnaire Emails** - Badge "NOUVEAU" rose gradient
-- ✅ **61 conseillers** - 8 détaillés + 52 autres mentionnés (mémoire persistante, CRUD langage naturel)
+- ✅ **57 conseillers** - 8 détaillés + 49 autres mentionnés (mémoire persistante, CRUD langage naturel)
 - ✅ **33+ modules** - Mise à jour dans Hero et Solution sections
 - ✅ **207+ tables PostgreSQL** - Base de données complète multi-tenant
 - ✅ **Expert IA Claude Opus 4.5** - Documentation financement construction

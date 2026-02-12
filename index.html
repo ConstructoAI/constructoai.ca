@@ -61,13 +61,35 @@
                 "url": "https://constructoai.ca/logo.png"
             }
         },
-        "offers": {
-            "@type": "Offer",
-            "price": "139.99",
-            "priceCurrency": "CAD",
-            "priceValidUntil": "2026-12-31",
-            "availability": "https://schema.org/InStock"
-        },
+        "offers": [
+            {
+                "@type": "Offer",
+                "name": "ERP Complet",
+                "price": "139.99",
+                "priceCurrency": "CAD",
+                "priceValidUntil": "2026-12-31",
+                "availability": "https://schema.org/InStock",
+                "description": "ERP complet avec 40+ modules, 57 conseillers IA, TAKEOFF AI, employes illimites. Essai gratuit 7 jours."
+            },
+            {
+                "@type": "Offer",
+                "name": "EXPERTS IA",
+                "price": "79.99",
+                "priceCurrency": "CAD",
+                "priceValidUntil": "2026-12-31",
+                "availability": "https://schema.org/InStock",
+                "description": "57 conseillers IA specialises en construction, generation de soumissions par IA. Essai gratuit 7 jours. Option pay-as-you-go disponible."
+            },
+            {
+                "@type": "Offer",
+                "name": "SEAOP - Appels d'offres",
+                "price": "0",
+                "priceCurrency": "CAD",
+                "priceValidUntil": "2026-12-31",
+                "availability": "https://schema.org/InStock",
+                "description": "Plateforme d'appels d'offres publics du Quebec. 100% gratuit, sans carte de credit."
+            }
+        ],
         "aggregateRating": {
             "@type": "AggregateRating",
             "ratingValue": "4.8",
@@ -1920,6 +1942,191 @@
             font-size: 14px;
             margin-top: 16px;
         }
+
+        /* Pricing Section */
+        .pricing-section {
+            padding: 80px 0;
+            background: var(--bg-secondary);
+        }
+        .pricing-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            margin-top: 48px;
+        }
+        @media (max-width: 900px) {
+            .pricing-grid {
+                grid-template-columns: 1fr;
+                max-width: 480px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+        .pricing-card {
+            background: var(--bg-primary);
+            border: 2px solid var(--border-color);
+            border-radius: 16px;
+            padding: 32px 28px;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .pricing-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 40px rgba(0,0,0,0.12);
+        }
+        .pricing-card.featured {
+            border-color: var(--primary);
+            box-shadow: 0 8px 30px rgba(37, 99, 235, 0.15);
+        }
+        .pricing-badge {
+            position: absolute;
+            top: -14px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--primary);
+            color: white;
+            padding: 4px 20px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 700;
+            white-space: nowrap;
+        }
+        .pricing-badge.green {
+            background: #22c55e;
+        }
+        .pricing-badge.orange {
+            background: var(--orange);
+        }
+        .pricing-card-header {
+            text-align: center;
+            margin-bottom: 24px;
+        }
+        .pricing-card-header h3 {
+            font-size: 1.3rem;
+            color: var(--text-primary);
+            margin-bottom: 8px;
+        }
+        .pricing-card-header .price {
+            font-size: 2.8rem;
+            font-weight: 800;
+            color: var(--text-primary);
+            line-height: 1.1;
+        }
+        .pricing-card-header .price span {
+            font-size: 0.35em;
+            font-weight: 500;
+            color: var(--text-secondary);
+        }
+        .pricing-card-header .price-sub {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            margin-top: 4px;
+        }
+        .pricing-divider {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin: 4px 0 20px;
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+        }
+        .pricing-divider::before,
+        .pricing-divider::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: var(--border-color);
+        }
+        .pricing-features {
+            list-style: none;
+            flex: 1;
+            margin-bottom: 24px;
+        }
+        .pricing-features li {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            padding: 8px 0;
+            font-size: 0.92rem;
+            color: var(--text-primary);
+        }
+        .pricing-features li svg {
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+        .pricing-card .btn {
+            display: block;
+            text-align: center;
+            padding: 14px;
+            border-radius: 10px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+        .pricing-card .btn-primary {
+            background: var(--primary);
+            color: white;
+        }
+        .pricing-card .btn-primary:hover {
+            background: var(--primary-dark);
+        }
+        .pricing-card .btn-green {
+            background: #22c55e;
+            color: white;
+        }
+        .pricing-card .btn-green:hover {
+            background: #16a34a;
+        }
+        .pricing-card .btn-outline {
+            border: 2px solid var(--primary);
+            color: var(--primary);
+            background: transparent;
+        }
+        .pricing-card .btn-outline:hover {
+            background: var(--primary);
+            color: white;
+        }
+        .pricing-or {
+            text-align: center;
+            margin: 16px 0;
+            padding: 16px;
+            background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+            border-radius: 10px;
+            border: 1px solid #f59e0b;
+        }
+        [data-theme="dark"] .pricing-or {
+            background: linear-gradient(135deg, #78350f 0%, #92400e 100%);
+            border-color: #b45309;
+        }
+        .pricing-or strong {
+            color: #92400e;
+            font-size: 0.95rem;
+        }
+        [data-theme="dark"] .pricing-or strong {
+            color: #fbbf24;
+        }
+        .pricing-or p {
+            font-size: 0.85rem;
+            color: #78350f;
+            margin-top: 4px;
+        }
+        [data-theme="dark"] .pricing-or p {
+            color: #fde68a;
+        }
+        .pricing-note {
+            text-align: center;
+            margin-top: 32px;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
     </style>
 </head>
 <body>
@@ -1940,6 +2147,7 @@
                 <a href="#fonctionnalites">Fonctionnalités</a>
                 <a href="#fabrication" style="color: var(--orange);">Fabrication</a>
                 <a href="#api">Intégrations</a>
+                <a href="#tarifs">Tarifs</a>
                 <a href="#comparaison">Comparaison</a>
                 <a href="#contact">Contact</a>
             </nav>
@@ -2686,8 +2894,8 @@
             <p class="experts-more">+ 49 autres experts disponibles: Architecte, Ingénieur structure, Ingénieur métallurgie, Fondations, Excavation, Maçonnerie, Portes et Fenêtres, Armoires cuisine, Peintre, Escaliers, Structure d'acier, Métallurgie, Soudeur-monteur, RBQ et CCQ, Subventions et financement, Fonds de prévoyance, Après sinistre, Décontamination, Inspecteur bâtiment, Arpenteur-géomètre, Urbaniste, LEED...</p>
             <div style="margin-top: 32px; padding: 20px 24px; background: rgba(255,255,255,0.15); border-radius: 12px; display: inline-block;">
                 <p style="color: white; margin: 0; font-size: 15px;">
-                    <strong>EXPERTS IA disponible en module autonome</strong> — Accédez aux 57 conseillers sans l'ERP complet pour seulement <strong>79,99$/mois</strong>.
-                    <a href="https://app.constructoai.ca/" style="color: #fbbf24; text-decoration: underline; margin-left: 8px;">Essayer gratuitement</a>
+                    <strong>EXPERTS IA disponible en module autonome</strong> — Accédez aux 57 conseillers sans l'ERP complet pour <strong>79,99$/mois</strong> ou en <strong>pay-as-you-go</strong> (payez seulement ce que vous utilisez).
+                    <a href="#tarifs" style="color: #fbbf24; text-decoration: underline; margin-left: 8px;">Voir les tarifs</a>
                 </p>
             </div>
         </div>
@@ -3041,6 +3249,132 @@
         </div>
     </section>
 
+    <!-- Tarification -->
+    <section class="pricing-section" id="tarifs">
+        <div class="pricing-inner">
+            <div class="section-header">
+                <h2 class="section-title">Des forfaits simples, sans surprise</h2>
+                <p class="section-subtitle">Choisissez ce qui convient le mieux a votre entreprise — aucun frais cache, aucun contrat</p>
+            </div>
+
+            <div class="pricing-grid">
+                <!-- SEAOP Gratuit -->
+                <div class="pricing-card">
+                    <div class="pricing-badge green">100% GRATUIT</div>
+                    <div class="pricing-card-header">
+                        <h3>SEAOP</h3>
+                        <div class="price">0$</div>
+                        <p class="price-sub">Appels d'offres publics</p>
+                    </div>
+                    <div class="pricing-divider">Inclus</div>
+                    <ul class="pricing-features">
+                        <li>
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22,4 12,14.01 9,11.01"/></svg>
+                            Consultez les appels d'offres publics du Quebec
+                        </li>
+                        <li>
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22,4 12,14.01 9,11.01"/></svg>
+                            Soumissionnez directement sur la plateforme
+                        </li>
+                        <li>
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22,4 12,14.01 9,11.01"/></svg>
+                            Alertes personnalisees par region et metier
+                        </li>
+                        <li>
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22,4 12,14.01 9,11.01"/></svg>
+                            Pas de carte de credit requise
+                        </li>
+                    </ul>
+                    <a href="https://app.constructoai.ca/" class="btn btn-green">Acceder gratuitement</a>
+                </div>
+
+                <!-- EXPERTS IA -->
+                <div class="pricing-card">
+                    <div class="pricing-badge orange">EXPERTS IA</div>
+                    <div class="pricing-card-header">
+                        <h3>57 conseillers IA</h3>
+                        <div class="price">79,99$<span>/mois</span></div>
+                        <p class="price-sub">Essai gratuit 7 jours</p>
+                    </div>
+                    <div class="pricing-divider">Inclus</div>
+                    <ul class="pricing-features">
+                        <li>
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--orange)" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22,4 12,14.01 9,11.01"/></svg>
+                            57 conseillers specialises en construction
+                        </li>
+                        <li>
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--orange)" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22,4 12,14.01 9,11.01"/></svg>
+                            Generation de soumissions par IA
+                        </li>
+                        <li>
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--orange)" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22,4 12,14.01 9,11.01"/></svg>
+                            Analyse de documents et plans
+                        </li>
+                        <li>
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--orange)" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22,4 12,14.01 9,11.01"/></svg>
+                            Recherche web specialisee construction
+                        </li>
+                        <li>
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--orange)" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22,4 12,14.01 9,11.01"/></svg>
+                            Support technique prioritaire
+                        </li>
+                    </ul>
+
+                    <div class="pricing-or">
+                        <strong>OU : Pay-as-you-go (paiement a l'usage)</strong>
+                        <p>Pas d'abonnement mensuel — payez uniquement quand vous utilisez l'IA. Facturation par tranches de 3,00$ selon votre consommation reelle.</p>
+                    </div>
+
+                    <a href="https://app.constructoai.ca/" class="btn btn-outline" style="border-color: var(--orange); color: var(--orange);">Essayer 7 jours gratuit</a>
+                </div>
+
+                <!-- ERP Complet -->
+                <div class="pricing-card featured">
+                    <div class="pricing-badge">POPULAIRE</div>
+                    <div class="pricing-card-header">
+                        <h3>ERP Complet</h3>
+                        <div class="price">139,99$<span>/mois</span></div>
+                        <p class="price-sub">Essai gratuit 7 jours — tout inclus</p>
+                    </div>
+                    <div class="pricing-divider">Tout ce qui est dans EXPERTS IA, plus</div>
+                    <ul class="pricing-features">
+                        <li>
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22,4 12,14.01 9,11.01"/></svg>
+                            40+ modules de gestion complets
+                        </li>
+                        <li>
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22,4 12,14.01 9,11.01"/></svg>
+                            Soumissions, facturation, bons de commande
+                        </li>
+                        <li>
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22,4 12,14.01 9,11.01"/></svg>
+                            Suivi de projets et chantiers
+                        </li>
+                        <li>
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22,4 12,14.01 9,11.01"/></svg>
+                            Pointage des employes CCQ
+                        </li>
+                        <li>
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22,4 12,14.01 9,11.01"/></svg>
+                            TAKEOFF AI — mesure sur plans
+                        </li>
+                        <li>
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22,4 12,14.01 9,11.01"/></svg>
+                            Employes illimites — aucun frais supplementaire
+                        </li>
+                        <li>
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22,4 12,14.01 9,11.01"/></svg>
+                            Integrations QuickBooks, Sage, n8n, Zapier
+                        </li>
+                    </ul>
+                    <a href="https://app.constructoai.ca/" class="btn btn-primary">Commencer mon essai gratuit</a>
+                </div>
+            </div>
+
+            <p class="pricing-note">Tous les prix sont en dollars canadiens. Carte de credit requise pour les essais gratuits — vous n'etes pas facture si vous annulez avant la fin des 7 jours. Annulez en un clic, quand vous voulez.</p>
+        </div>
+    </section>
+
     <!-- FAQ -->
     <section class="faq-section" id="faq">
         <div class="faq-inner">
@@ -3091,7 +3425,7 @@
                     <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
                 </div>
                 <div class="faq-answer">
-                    <p>Oui! <strong>EXPERTS IA</strong> est disponible en module autonome à <strong>79,99$/mois</strong>. Vous avez accès aux 57 conseillers spécialisés et à la génération de soumissions par IA — sans l'ERP complet. Idéal si vous voulez seulement l'assistance technique et les estimations rapides. Le module TAKEOFF AI (mesure sur plans) est exclusif à l'abonnement ERP complet.</p>
+                    <p>Oui! <strong>EXPERTS IA</strong> est disponible en module autonome à <strong>79,99$/mois</strong> (essai gratuit 7 jours). Vous avez accès aux 57 conseillers spécialisés et à la génération de soumissions par IA — sans l'ERP complet. Vous pouvez aussi choisir le <strong>pay-as-you-go</strong> (paiement à l'usage) : pas d'abonnement mensuel, vous payez uniquement quand vous utilisez l'IA, facturé par tranches de 3,00$. Idéal si vous avez des besoins occasionnels. Le module TAKEOFF AI (mesure sur plans) est exclusif à l'abonnement ERP complet.</p>
                 </div>
             </div>
             <div class="faq-item">
@@ -3100,7 +3434,7 @@
                     <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
                 </div>
                 <div class="faq-answer">
-                    <p>Non. L'ERP complet coûte 139,99$/mois, ou 79,99$/mois pour EXPERTS IA seul (les 57 conseillers + soumissions IA). Pas de frais d'installation, pas de frais par utilisateur, pas de frais cachés. Vous avez 7 jours d'essai (carte de crédit requise, mais vous n'êtes pas facturé si vous annulez). La plateforme SEAOP pour les appels d'offres reste gratuite pour tout le monde.</p>
+                    <p>Non. L'ERP complet coûte 139,99$/mois, ou 79,99$/mois pour EXPERTS IA seul (les 57 conseillers + soumissions IA). Pour les besoins occasionnels, EXPERTS IA offre aussi un mode <strong>pay-as-you-go</strong> : vous payez seulement ce que vous utilisez, par tranches de 3,00$, sans abonnement mensuel. Pas de frais d'installation, pas de frais par utilisateur, pas de frais cachés. Vous avez 7 jours d'essai (carte de crédit requise, mais vous n'êtes pas facturé si vous annulez). La plateforme SEAOP pour les appels d'offres reste gratuite pour tout le monde.</p>
                 </div>
             </div>
             <div class="faq-item">
@@ -3333,6 +3667,7 @@
                         <li><a href="#fonctionnalites">Fonctionnalités</a></li>
                         <li><a href="#fabrication" style="color: var(--orange);">Fabrication</a></li>
                         <li><a href="#experts">Les 57 conseillers</a></li>
+                        <li><a href="#tarifs">Tarifs</a></li>
                         <li><a href="#comparaison">Pourquoi Constructo AI</a></li>
                         <li><a href="#faq">Questions fréquentes</a></li>
                     </ul>

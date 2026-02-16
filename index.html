@@ -1458,6 +1458,178 @@
             scroll-behavior: smooth;
         }
 
+        /* Updates / Changelog Section */
+        .updates-section {
+            padding: 70px 24px;
+            background: var(--bg-secondary);
+        }
+
+        .updates-inner {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .updates-timeline {
+            position: relative;
+            padding-left: 32px;
+        }
+
+        .updates-timeline::before {
+            content: '';
+            position: absolute;
+            left: 7px;
+            top: 8px;
+            bottom: 8px;
+            width: 2px;
+            background: var(--primary);
+            opacity: 0.3;
+            border-radius: 2px;
+        }
+
+        .update-item {
+            position: relative;
+            margin-bottom: 32px;
+        }
+
+        .update-item::before {
+            content: '';
+            position: absolute;
+            left: -29px;
+            top: 6px;
+            width: 12px;
+            height: 12px;
+            background: var(--primary);
+            border-radius: 50%;
+            border: 3px solid var(--bg-secondary);
+            z-index: 1;
+        }
+
+        .update-item.latest::before {
+            background: #22c55e;
+            box-shadow: 0 0 0 4px rgba(34, 197, 94, 0.2);
+        }
+
+        .update-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 10px;
+            flex-wrap: wrap;
+        }
+
+        .update-version {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--text-primary);
+        }
+
+        .update-date {
+            font-size: 13px;
+            color: var(--text-secondary);
+            background: var(--border-color);
+            padding: 2px 10px;
+            border-radius: 20px;
+        }
+
+        .update-badge {
+            font-size: 11px;
+            font-weight: 600;
+            padding: 2px 10px;
+            border-radius: 20px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .update-badge.new {
+            background: rgba(34, 197, 94, 0.15);
+            color: #16a34a;
+        }
+
+        [data-theme="dark"] .update-badge.new {
+            background: rgba(34, 197, 94, 0.25);
+            color: #4ade80;
+        }
+
+        .update-badge.improvement {
+            background: rgba(37, 99, 235, 0.15);
+            color: #2563eb;
+        }
+
+        [data-theme="dark"] .update-badge.improvement {
+            background: rgba(37, 99, 235, 0.25);
+            color: #60a5fa;
+        }
+
+        .update-badge.fix {
+            background: rgba(249, 115, 22, 0.15);
+            color: #ea580c;
+        }
+
+        [data-theme="dark"] .update-badge.fix {
+            background: rgba(249, 115, 22, 0.25);
+            color: #fb923c;
+        }
+
+        .update-changes {
+            list-style: none;
+            padding: 0;
+        }
+
+        .update-changes li {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            padding: 5px 0;
+            font-size: 14px;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        .update-changes li svg {
+            width: 16px;
+            height: 16px;
+            color: var(--primary);
+            flex-shrink: 0;
+            margin-top: 3px;
+        }
+
+        .update-card {
+            background: var(--bg-primary);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 20px 24px;
+        }
+
+        .updates-show-more {
+            text-align: center;
+            margin-top: 12px;
+        }
+
+        .updates-show-more button {
+            background: none;
+            border: 1px solid var(--border-color);
+            padding: 10px 24px;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--text-secondary);
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .updates-show-more button:hover {
+            border-color: var(--primary);
+            color: var(--primary);
+        }
+
+        .update-item.hidden-update {
+            display: none;
+        }
+
+        .update-item.hidden-update.show {
+            display: block;
+        }
+
         /* Founder Chat Section */
         .founder-chat-section {
             padding: 70px 24px;
@@ -2149,6 +2321,7 @@
                 <a href="#api">Intégrations</a>
                 <a href="#tarifs">Tarifs</a>
                 <a href="#comparaison">Comparaison</a>
+                <a href="#mises-a-jour">Mises à jour</a>
                 <a href="#contact">Contact</a>
             </nav>
             <div class="header-right">
@@ -3450,6 +3623,207 @@
     </section>
 
     <!-- Chat avec le Fondateur -->
+    <!-- Mises à jour / Changelog -->
+    <section class="updates-section" id="mises-a-jour">
+        <div class="updates-inner">
+            <div class="section-header">
+                <h2 class="section-title">Mises à jour du programme</h2>
+                <p class="section-subtitle">Constructo AI évolue chaque semaine. Voici les dernières nouveautés et améliorations.</p>
+            </div>
+
+            <div class="updates-timeline">
+
+                <!-- v2.5.1 — Dernière version -->
+                <div class="update-item latest">
+                    <div class="update-card">
+                        <div class="update-header">
+                            <span class="update-version">v2.5.1</span>
+                            <span class="update-date">16 février 2026</span>
+                            <span class="update-badge new">Nouveau</span>
+                        </div>
+                        <ul class="update-changes">
+                            <li>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20,6 9,17 4,12"/></svg>
+                                Ajout de la page publique « Mises à jour » pour suivre l'évolution du programme en temps réel
+                            </li>
+                            <li>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20,6 9,17 4,12"/></svg>
+                                Nouveau tableau de bord « Mises à jour » dans l'interface Super-Admin pour Sylvain Leduc
+                            </li>
+                            <li>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20,6 9,17 4,12"/></svg>
+                                Amélioration de la navigation : lien rapide vers le journal des changements dans le header et le footer
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- v2.5.0 -->
+                <div class="update-item">
+                    <div class="update-card">
+                        <div class="update-header">
+                            <span class="update-version">v2.5.0</span>
+                            <span class="update-date">1 février 2026</span>
+                            <span class="update-badge new">Nouveau</span>
+                        </div>
+                        <ul class="update-changes">
+                            <li>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20,6 9,17 4,12"/></svg>
+                                Module Fabrication métallique complet : postes de travail (18+), certification CWB/CSA W47.1, suivi de production
+                            </li>
+                            <li>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20,6 9,17 4,12"/></svg>
+                                Intégration Stripe pour les paiements et abonnements automatisés (ERP + EXPERTS IA)
+                            </li>
+                            <li>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20,6 9,17 4,12"/></svg>
+                                Nouveau module Dossiers : centralisation des documents de projet avec partage sécurisé par lien temporaire (90 jours)
+                            </li>
+                            <li>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20,6 9,17 4,12"/></svg>
+                                Migration v32 : ajout des tables maintenance_alertes, logistics_alerts, et 15+ nouvelles tables tenant
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- v2.4.0 -->
+                <div class="update-item">
+                    <div class="update-card">
+                        <div class="update-header">
+                            <span class="update-version">v2.4.0</span>
+                            <span class="update-date">14 janvier 2026</span>
+                            <span class="update-badge improvement">Amélioration</span>
+                        </div>
+                        <ul class="update-changes">
+                            <li>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20,6 9,17 4,12"/></svg>
+                                Module Immobilier étendu : financement multi-banques, déblocages chantier, calculs SCHL, suivi ventes et locations
+                            </li>
+                            <li>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20,6 9,17 4,12"/></svg>
+                                Module Subventions : programmes gouvernementaux, suivi d'éligibilité, alertes et gestion documentaire
+                            </li>
+                            <li>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20,6 9,17 4,12"/></svg>
+                                API REST v2 avec documentation complète, clés API et webhooks configurables
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- v2.3.0 — caché par défaut -->
+                <div class="update-item hidden-update">
+                    <div class="update-card">
+                        <div class="update-header">
+                            <span class="update-version">v2.3.0</span>
+                            <span class="update-date">30 décembre 2025</span>
+                            <span class="update-badge improvement">Amélioration</span>
+                        </div>
+                        <ul class="update-changes">
+                            <li>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20,6 9,17 4,12"/></svg>
+                                Module B2B complet : portail client, boutique en ligne, panier d'achat, gestion des contrats et évaluations
+                            </li>
+                            <li>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20,6 9,17 4,12"/></svg>
+                                Messagerie interne style Teams : canaux d'équipe, threads, réactions emoji, correction IA
+                            </li>
+                            <li>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20,6 9,17 4,12"/></svg>
+                                Client email intégré à l'ERP : envoi/réception IMAP/SMTP, liaison CRM, templates personnalisables
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- v2.2.0 — caché par défaut -->
+                <div class="update-item hidden-update">
+                    <div class="update-card">
+                        <div class="update-header">
+                            <span class="update-version">v2.2.0</span>
+                            <span class="update-date">17 décembre 2025</span>
+                            <span class="update-badge new">Nouveau</span>
+                        </div>
+                        <ul class="update-changes">
+                            <li>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20,6 9,17 4,12"/></svg>
+                                Takeoff AI : mesures sur plans PDF avec snap intelligent, calibration, catalogue de 10 catégories de produits
+                            </li>
+                            <li>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20,6 9,17 4,12"/></svg>
+                                Module GPS et Géolocalisation : tracking véhicules en temps réel, routes optimisées OSRM, geofencing
+                            </li>
+                            <li>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20,6 9,17 4,12"/></svg>
+                                Module Météo chantier : prévisions, alertes météo, journaux de chantier automatisés, règles d'impact configurables
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- v2.1.0 — caché par défaut -->
+                <div class="update-item hidden-update">
+                    <div class="update-card">
+                        <div class="update-header">
+                            <span class="update-version">v2.1.0</span>
+                            <span class="update-date">1 décembre 2025</span>
+                            <span class="update-badge improvement">Amélioration</span>
+                        </div>
+                        <ul class="update-changes">
+                            <li>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20,6 9,17 4,12"/></svg>
+                                Module Maintenance complet : préventive, corrective et prédictive avec compteurs d'utilisation et alertes automatiques
+                            </li>
+                            <li>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20,6 9,17 4,12"/></svg>
+                                Module Location d'équipements et d'employés : contrats, tarification jour/semaine/mois, retours et inspections
+                            </li>
+                            <li>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20,6 9,17 4,12"/></svg>
+                                62 profils IA experts couvrant tous les métiers de la construction au Québec (avant : 57)
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- v2.0.0 — caché par défaut -->
+                <div class="update-item hidden-update">
+                    <div class="update-card">
+                        <div class="update-header">
+                            <span class="update-version">v2.0.0</span>
+                            <span class="update-date">15 novembre 2025</span>
+                            <span class="update-badge new">Majeure</span>
+                        </div>
+                        <ul class="update-changes">
+                            <li>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20,6 9,17 4,12"/></svg>
+                                Architecture multi-tenant complète : isolation par schéma PostgreSQL, chaque entreprise a sa propre base de données sécurisée
+                            </li>
+                            <li>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20,6 9,17 4,12"/></svg>
+                                40+ modules ERP : Comptabilité, Devis IA, CRM, Production, Fournisseurs, Gantt, Paie CCQ, Logistique, Conformité RBQ
+                            </li>
+                            <li>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20,6 9,17 4,12"/></svg>
+                                12 calculateurs spécialisés : escaliers, électricité, plomberie, CVAC, béton, toiture, soudure, pliage métal, peinture, poids métal, charge tributaire
+                            </li>
+                            <li>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20,6 9,17 4,12"/></svg>
+                                Plateforme SEAOP : appels d'offres publics gratuits avec système de crédits et messagerie intégrée
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="updates-show-more">
+                <button onclick="toggleOlderUpdates(this)">Voir les versions précédentes</button>
+            </div>
+        </div>
+    </section>
+
     <section class="founder-chat-section">
         <div class="founder-chat-inner">
             <div class="section-header">
@@ -3670,6 +4044,7 @@
                         <li><a href="#tarifs">Tarifs</a></li>
                         <li><a href="#comparaison">Pourquoi Constructo AI</a></li>
                         <li><a href="#faq">Questions fréquentes</a></li>
+                        <li><a href="#mises-a-jour">Mises à jour</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
@@ -3734,6 +4109,22 @@
                 }
             });
         });
+
+        // Toggle older updates
+        function toggleOlderUpdates(btn) {
+            const hiddenItems = document.querySelectorAll('.hidden-update');
+            const isShowing = hiddenItems[0] && hiddenItems[0].classList.contains('show');
+
+            hiddenItems.forEach(item => {
+                if (isShowing) {
+                    item.classList.remove('show');
+                } else {
+                    item.classList.add('show');
+                }
+            });
+
+            btn.textContent = isShowing ? 'Voir les versions précédentes' : 'Masquer les anciennes versions';
+        }
 
         // Gestion du mode sombre
         const themeToggle = document.getElementById('theme-toggle');

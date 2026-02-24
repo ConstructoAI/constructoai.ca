@@ -817,6 +817,20 @@
             background: var(--white);
         }
 
+        .demo-booking-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+            margin-top: 48px;
+            text-align: left;
+        }
+
+        @media (max-width: 700px) {
+            .demo-booking-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
         .demo-inner {
             max-width: 850px;
             margin: 0 auto;
@@ -3093,9 +3107,78 @@
                     style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
                 </iframe>
             </div>
+
+            <!-- Booking Demo -->
+            <div class="demo-booking-grid">
+                <div style="background: var(--white); border: 2px solid var(--primary); border-radius: 16px; padding: 32px;">
+                    <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 20px;">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2">
+                            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                            <line x1="16" y1="2" x2="16" y2="6"/>
+                            <line x1="8" y1="2" x2="8" y2="6"/>
+                            <line x1="3" y1="10" x2="21" y2="10"/>
+                        </svg>
+                        <h3 style="font-size: 18px; font-weight: 700; color: var(--gray-900);">Démo Personnalisée <span style="font-size: 13px; background: var(--primary); color: white; padding: 2px 10px; border-radius: 20px; margin-left: 8px; font-weight: 600;">Recommandé</span></h3>
+                    </div>
+                    <ul style="list-style: none; margin-bottom: 24px;">
+                        <li style="display: flex; align-items: center; gap: 10px; padding: 8px 0; font-size: 15px; color: var(--gray-700);">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22,4 12,14.01 9,11.01"/></svg>
+                            60 minutes avec Sylvain Leduc
+                        </li>
+                        <li style="display: flex; align-items: center; gap: 10px; padding: 8px 0; font-size: 15px; color: var(--gray-700);">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22,4 12,14.01 9,11.01"/></svg>
+                            On utilise VOS vrais documents
+                        </li>
+                        <li style="display: flex; align-items: center; gap: 10px; padding: 8px 0; font-size: 15px; color: var(--gray-700);">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22,4 12,14.01 9,11.01"/></svg>
+                            Réponses à toutes vos questions
+                        </li>
+                        <li style="display: flex; align-items: center; gap: 10px; padding: 8px 0; font-size: 15px; color: var(--gray-700);">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22,4 12,14.01 9,11.01"/></svg>
+                            Par vidéoconférence Google Meet
+                        </li>
+                    </ul>
+                    <a href="https://calendar.app.google/vDb4GnEd59LXN6qSA" target="_blank" class="btn btn-primary" style="width: 100%; padding: 14px; font-size: 16px;">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                            <line x1="16" y1="2" x2="16" y2="6"/>
+                            <line x1="8" y1="2" x2="8" y2="6"/>
+                            <line x1="3" y1="10" x2="21" y2="10"/>
+                        </svg>
+                        Réserver ma démo gratuite
+                    </a>
+                    <p style="text-align: center; font-size: 13px; color: var(--gray-500); margin-top: 10px;">Gratuit • Sans engagement • Choisissez votre plage horaire</p>
+                </div>
+                <div style="background: var(--gray-50); border: 1px solid var(--gray-200); border-radius: 16px; padding: 32px;">
+                    <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 20px;">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--gray-600)" stroke-width="2">
+                            <polygon points="23 7 16 12 23 17 23 7"/>
+                            <rect x="1" y="5" width="15" height="14" rx="2" ry="2"/>
+                        </svg>
+                        <h3 style="font-size: 18px; font-weight: 700; color: var(--gray-900);">Visite autonome</h3>
+                    </div>
+                    <ul style="list-style: none; margin-bottom: 24px;">
+                        <li style="display: flex; align-items: center; gap: 10px; padding: 8px 0; font-size: 15px; color: var(--gray-700);">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--gray-500)" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22,4 12,14.01 9,11.01"/></svg>
+                            Regardez la vidéo ci-dessus à votre rythme
+                        </li>
+                        <li style="display: flex; align-items: center; gap: 10px; padding: 8px 0; font-size: 15px; color: var(--gray-700);">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--gray-500)" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22,4 12,14.01 9,11.01"/></svg>
+                            Créez votre compte et explorez
+                        </li>
+                        <li style="display: flex; align-items: center; gap: 10px; padding: 8px 0; font-size: 15px; color: var(--gray-700);">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--gray-500)" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22,4 12,14.01 9,11.01"/></svg>
+                            Posez vos questions aux 57 conseillers IA
+                        </li>
+                    </ul>
+                    <a href="https://app.constructoai.ca/" class="btn btn-outline" style="width: 100%; padding: 14px; font-size: 16px;">
+                        Créer mon compte
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </a>
+                </div>
+            </div>
         </div>
     </section>
-
     <!-- Why Section -->
     <section class="why-section">
         <div class="why-inner">
@@ -3972,7 +4055,7 @@
                             <line x1="3" y1="9" x2="21" y2="9"/>
                             <line x1="9" y1="21" x2="9" y2="9"/>
                         </svg>
-                        <h3>Une démo personnalisée d'une heure</h3>
+                        <h3>Démo personnalisée de 60 minutes</h3>
                     </div>
                     <ul>
                         <li>
@@ -3988,7 +4071,7 @@
                             Vous voyez des résultats concrets avec vos données
                         </li>
                     </ul>
-                    <a href="/cdn-cgi/l/email-protection#95fcfbf3fad5f6fafbe6e1e7e0f6e1faf4fcbbf6f4aae6e0f7fff0f6e1a8d1f0f8f4fbf1f0b5f1f0b5f1563cf8fab5a3a5b5f8fcfb" class="btn btn-primary">Écrire à <span class="__cf_email__" data-cfemail="bad3d4dcd5fad9d5d4c9cec8cfd9ced5dbd394d9db">[email&#160;protected]</span></a>
+                    <a href="https://calendar.app.google/vDb4GnEd59LXN6qSA" target="_blank" class="btn btn-primary">Réserver ma démo gratuite</a>
                 </div>
             </div>
 

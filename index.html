@@ -82,6 +82,24 @@
             },
             {
                 "@type": "Offer",
+                "name": "Estimation Express",
+                "price": "24.99",
+                "priceCurrency": "CAD",
+                "priceValidUntil": "2026-12-31",
+                "availability": "https://schema.org/InStock",
+                "description": "Estimation budgétaire par IA — sans inscription. Uploadez vos plans, payez une seule fois, recevez votre estimation en quelques minutes."
+            },
+            {
+                "@type": "Offer",
+                "name": "Assistant Express",
+                "price": "14.99",
+                "priceCurrency": "CAD",
+                "priceValidUntil": "2026-12-31",
+                "availability": "https://schema.org/InStock",
+                "description": "Chat avec un expert IA en construction — sans inscription. Posez vos questions, envoyez des photos et plans, obtenez des réponses immédiates."
+            },
+            {
+                "@type": "Offer",
                 "name": "SEAOP - Appels d'offres",
                 "price": "0",
                 "priceCurrency": "CAD",
@@ -2141,12 +2159,25 @@
             gap: 24px;
             margin-top: 48px;
         }
+        .pricing-express-row {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+            margin-top: 24px;
+            max-width: 680px;
+            margin-left: auto;
+            margin-right: auto;
+        }
         @media (max-width: 900px) {
             .pricing-grid {
                 grid-template-columns: 1fr;
                 max-width: 480px;
                 margin-left: auto;
                 margin-right: auto;
+            }
+            .pricing-express-row {
+                grid-template-columns: 1fr;
+                max-width: 480px;
             }
         }
         .pricing-card {
@@ -2182,6 +2213,9 @@
         }
         .pricing-badge.green {
             background: #22c55e;
+        }
+        .pricing-badge.amber {
+            background: linear-gradient(135deg, #f59e0b, #d97706);
         }
         .pricing-badge.orange {
             background: var(--orange);
@@ -2276,6 +2310,14 @@
             background: var(--primary);
             color: white;
         }
+        .pricing-card .btn-amber {
+            background: linear-gradient(135deg, #f59e0b, #d97706);
+            color: white;
+            border: none;
+        }
+        .pricing-card .btn-amber:hover {
+            background: linear-gradient(135deg, #d97706, #b45309);
+        }
         .pricing-or {
             text-align: center;
             margin: 16px 0;
@@ -2309,294 +2351,13 @@
             color: var(--text-secondary);
             font-size: 0.9rem;
         }
-
-        /* Services d'estimation */
-        .estimation-section {
-            padding: 80px 24px;
-            background: var(--bg-primary);
-            border-top: 1px solid var(--border-color);
-        }
-
-        .estimation-inner {
-            max-width: 1100px;
-            margin: 0 auto;
-        }
-
-        .estimation-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            background: rgba(37, 99, 235, 0.1);
-            color: var(--primary);
-            padding: 6px 14px;
-            border-radius: 20px;
-            font-size: 12px;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 16px;
-        }
-
-        [data-theme="dark"] .estimation-badge {
-            background: rgba(59, 130, 246, 0.2);
-        }
-
-        .estimation-services-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 24px;
-            margin-bottom: 56px;
-        }
-
-        @media (max-width: 700px) {
-            .estimation-services-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        .estimation-service-card {
-            background: var(--bg-secondary);
-            border: 1px solid var(--border-color);
-            border-radius: 14px;
-            padding: 28px;
-            transition: transform 0.2s, box-shadow 0.2s;
-        }
-
-        .estimation-service-card:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 24px rgba(0,0,0,0.08);
-        }
-
-        .estimation-service-card .service-icon {
-            width: 44px;
-            height: 44px;
-            background: rgba(37, 99, 235, 0.1);
-            border-radius: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 16px;
-        }
-
-        [data-theme="dark"] .estimation-service-card .service-icon {
-            background: rgba(59, 130, 246, 0.2);
-        }
-
-        .estimation-service-card .service-icon svg {
-            width: 22px;
-            height: 22px;
-            color: var(--primary);
-        }
-
-        .estimation-service-card h4 {
-            font-size: 16px;
-            font-weight: 600;
-            color: var(--text-primary);
-            margin-bottom: 10px;
-        }
-
-        .estimation-service-card ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        .estimation-service-card li {
-            display: flex;
-            align-items: flex-start;
-            gap: 8px;
-            padding: 5px 0;
-            font-size: 13px;
-            color: var(--text-secondary);
-            line-height: 1.5;
-        }
-
-        .estimation-service-card li svg {
-            width: 16px;
-            height: 16px;
-            color: var(--primary);
-            flex-shrink: 0;
-            margin-top: 2px;
-        }
-
-        /* Barème tarifs estimation */
-        .estimation-tarifs {
-            margin-bottom: 48px;
-        }
-
-        .estimation-tarifs .section-title {
-            margin-bottom: 8px;
-        }
-
-        .estimation-tarifs .section-subtitle {
-            margin-bottom: 36px;
-        }
-
-        .tarifs-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 24px;
-        }
-
-        @media (max-width: 800px) {
-            .tarifs-grid {
-                grid-template-columns: 1fr;
-                max-width: 400px;
-                margin: 0 auto;
-            }
-        }
-
-        .tarif-card {
-            background: var(--bg-secondary);
-            border: 2px solid var(--border-color);
-            border-radius: 16px;
-            padding: 28px 24px;
-            text-align: center;
-            transition: transform 0.2s, border-color 0.3s;
-            position: relative;
-        }
-
-        .tarif-card:hover {
-            transform: translateY(-4px);
-        }
-
-        .tarif-card.tarif-featured {
-            border-color: var(--primary);
-            box-shadow: 0 8px 30px rgba(37, 99, 235, 0.12);
-        }
-
-        .tarif-card .tarif-level {
-            display: inline-block;
-            padding: 4px 16px;
-            border-radius: 20px;
-            font-size: 11px;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 16px;
-        }
-
-        .tarif-card.tarif-simple .tarif-level {
-            background: rgba(34, 197, 94, 0.12);
-            color: #16a34a;
-        }
-
-        [data-theme="dark"] .tarif-card.tarif-simple .tarif-level {
-            background: rgba(34, 197, 94, 0.25);
-            color: #4ade80;
-        }
-
-        .tarif-card.tarif-moyen .tarif-level {
-            background: rgba(37, 99, 235, 0.12);
-            color: #2563eb;
-        }
-
-        [data-theme="dark"] .tarif-card.tarif-moyen .tarif-level {
-            background: rgba(37, 99, 235, 0.25);
-            color: #60a5fa;
-        }
-
-        .tarif-card.tarif-complexe .tarif-level {
-            background: rgba(249, 115, 22, 0.12);
-            color: #ea580c;
-        }
-
-        [data-theme="dark"] .tarif-card.tarif-complexe .tarif-level {
-            background: rgba(249, 115, 22, 0.25);
-            color: #fb923c;
-        }
-
-        .tarif-card .tarif-price {
-            font-size: 42px;
-            font-weight: 800;
-            color: var(--text-primary);
-            line-height: 1.1;
-            margin-bottom: 4px;
-        }
-
-        .tarif-card .tarif-price span {
-            font-size: 16px;
-            font-weight: 500;
-            color: var(--text-secondary);
-        }
-
-        .tarif-card .tarif-per {
-            font-size: 13px;
-            color: var(--text-secondary);
-            margin-bottom: 20px;
-        }
-
-        .tarif-card .tarif-desc {
-            font-size: 13px;
-            color: var(--text-secondary);
-            line-height: 1.6;
-            padding-top: 16px;
-            border-top: 1px solid var(--border-color);
-        }
-
-        .estimation-bonus {
-            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
-            border-radius: 16px;
-            padding: 32px 36px;
-            display: flex;
-            align-items: center;
-            gap: 28px;
-            margin-bottom: 40px;
-        }
-
-        @media (max-width: 700px) {
-            .estimation-bonus {
-                flex-direction: column;
-                text-align: center;
-                padding: 28px 24px;
-            }
-        }
-
-        .estimation-bonus .bonus-icon {
-            width: 56px;
-            height: 56px;
-            background: rgba(255,255,255,0.2);
-            border-radius: 14px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-shrink: 0;
-        }
-
-        .estimation-bonus .bonus-icon svg {
-            width: 28px;
-            height: 28px;
-            color: white;
-        }
-
-        .estimation-bonus .bonus-text h3 {
-            color: white;
-            font-size: 17px;
-            font-weight: 700;
-            margin-bottom: 6px;
-        }
-
-        .estimation-bonus .bonus-text p {
-            color: rgba(255,255,255,0.85);
-            font-size: 14px;
-            line-height: 1.6;
-        }
-
-        .estimation-cta {
-            text-align: center;
-        }
-
-        .estimation-cta p {
-            font-size: 14px;
-            color: var(--text-secondary);
-            margin-top: 12px;
-        }
     </style>
 </head>
 <body>
 
     <!-- Top Banner -->
     <div class="top-banner">
-        Pour tout problème, contactez <a href="tel:+15148201972">(514) 820-1972</a> ou <a href="mailto:info@constructoai.ca">info@constructoai.ca</a>
+        Pour tout problème, contactez <a href="tel:+15148201972">(514) 820-1972</a> ou <a href="/cdn-cgi/l/email-protection#deb7b0b8b19ebdb1b0adaaacabbdaab1bfb7f0bdbf"><span class="__cf_email__" data-cfemail="452c2b232a05262a2b3631373026312a242c6b2624">[email&#160;protected]</span></a>
     </div>
 
     <!-- Header -->
@@ -2611,7 +2372,6 @@
                 <a href="#fabrication" style="color: var(--orange);">Fabrication</a>
                 <a href="#api">Intégrations</a>
                 <a href="#tarifs">Tarifs</a>
-                <a href="#estimation" style="color: #22c55e; font-weight: 600;">Estimation</a>
                 <a href="#comparaison">Comparaison</a>
                 <a href="#mises-a-jour">Mises à jour</a>
                 <a href="#contact">Contact</a>
@@ -3908,7 +3668,83 @@
                 </div>
             </div>
 
-            <p class="pricing-note">Tous les prix sont en dollars canadiens + taxes. Carte de crédit requise. Facturation immédiate à l'inscription. Annulez en un clic, quand vous voulez.</p>
+            <!-- Séparateur Express -->
+            <div class="pricing-or">
+                <strong>Pas prêt pour un abonnement? Essayez nos services Express — sans inscription</strong>
+                <p>Payez une seule fois, obtenez des résultats immédiats. Aucun engagement.</p>
+            </div>
+
+            <div class="pricing-express-row">
+                <!-- Estimation Express -->
+                <div class="pricing-card">
+                    <div class="pricing-badge amber">EXPRESS</div>
+                    <div class="pricing-card-header">
+                        <h3>Estimation Express</h3>
+                        <div class="price">24,99$<span> à 89,99$</span></div>
+                        <p class="price-sub">Paiement unique — sans inscription</p>
+                    </div>
+                    <div class="pricing-divider">Inclus</div>
+                    <ul class="pricing-features">
+                        <li>
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#d97706" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22,4 12,14.01 9,11.01"/></svg>
+                            Uploadez vos plans et documents (max 10 fichiers)
+                        </li>
+                        <li>
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#d97706" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22,4 12,14.01 9,11.01"/></svg>
+                            Estimation budgétaire par IA (rapide ou approfondie)
+                        </li>
+                        <li>
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#d97706" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22,4 12,14.01 9,11.01"/></svg>
+                            Document HTML professionnel téléchargeable
+                        </li>
+                        <li>
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#d97706" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22,4 12,14.01 9,11.01"/></svg>
+                            62 profils d'experts IA spécialisés
+                        </li>
+                        <li>
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#d97706" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22,4 12,14.01 9,11.01"/></svg>
+                            Remboursé automatiquement si échec
+                        </li>
+                    </ul>
+                    <a href="https://app.constructoai.ca/" class="btn btn-amber">Obtenir mon estimation</a>
+                </div>
+
+                <!-- Assistant Express -->
+                <div class="pricing-card">
+                    <div class="pricing-badge amber">EXPRESS</div>
+                    <div class="pricing-card-header">
+                        <h3>Assistant Express</h3>
+                        <div class="price">14,99$<span> par session</span></div>
+                        <p class="price-sub">Paiement unique — sans inscription</p>
+                    </div>
+                    <div class="pricing-divider">Inclus</div>
+                    <ul class="pricing-features">
+                        <li>
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#d97706" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22,4 12,14.01 9,11.01"/></svg>
+                            Chat interactif avec un expert IA construction
+                        </li>
+                        <li>
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#d97706" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22,4 12,14.01 9,11.01"/></svg>
+                            Envoyez des photos, plans et croquis (Claude Vision)
+                        </li>
+                        <li>
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#d97706" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22,4 12,14.01 9,11.01"/></svg>
+                            62 profils d'experts spécialisés
+                        </li>
+                        <li>
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#d97706" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22,4 12,14.01 9,11.01"/></svg>
+                            Conversation persistante (6 mois)
+                        </li>
+                        <li>
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#d97706" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22,4 12,14.01 9,11.01"/></svg>
+                            Accessible par lien unique — aucun compte requis
+                        </li>
+                    </ul>
+                    <a href="https://app.constructoai.ca/" class="btn btn-amber">Parler à un expert</a>
+                </div>
+            </div>
+
+            <p class="pricing-note">Tous les prix sont en dollars canadiens + taxes applicables (TPS + TVQ). Les abonnements mensuels nécessitent une carte de crédit et sont facturés immédiatement. Les services Express sont des paiements uniques — aucun abonnement ni inscription requis.</p>
 
             <!-- Politique de remboursement dépliable -->
             <div id="remboursement" style="max-width: 800px; margin: 32px auto 0;">
@@ -3945,30 +3781,36 @@
                             <p style="font-size: 14px; color: var(--gray-600); margin-bottom: 24px; line-height: 1.7;">Les crédits IA achetés sont non remboursables et non transférables. Les crédits inutilisés restent disponibles dans votre compte tant que votre abonnement est actif.</p>
 
                             <h4 style="font-size: 16px; font-weight: 700; color: var(--gray-900); margin-bottom: 12px; display: flex; align-items: center; gap: 8px;">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#d97706" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+                                3. Services Express (Estimation Express et Assistant Express)
+                            </h4>
+                            <p style="font-size: 14px; color: var(--gray-600); margin-bottom: 24px; line-height: 1.7;">Les services Express (Estimation Express et Assistant Express) sont des paiements uniques, sans abonnement. <strong style="color: var(--gray-900);">En cas d'échec technique de l'analyse (erreur du pipeline IA), le paiement est automatiquement remboursé en totalité via Stripe.</strong> Aucune démarche n'est requise de la part du client. Les estimations et résultats livrés avec succès ne sont pas remboursables. Les prix affichés sont des estimations — le montant final est calculé en fonction de la complexité de l'analyse et facturé avant le traitement.</p>
+
+                            <h4 style="font-size: 16px; font-weight: 700; color: var(--gray-900); margin-bottom: 12px; display: flex; align-items: center; gap: 8px;">
                                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
-                                3. Erreurs de facturation
+                                4. Erreurs de facturation
                             </h4>
                             <p style="font-size: 14px; color: var(--gray-600); margin-bottom: 24px; line-height: 1.7;">En cas d'erreur de facturation manifeste imputable à Constructo AI (ex. : double facturation, montant incorrect), un remboursement partiel ou complet peut être accordé à la seule discrétion de notre équipe. Le client doit soumettre une demande par écrit à <a href="mailto:info@constructoai.ca" style="color: var(--primary); text-decoration: underline;">info@constructoai.ca</a> dans un délai de 7 jours suivant la transaction contestée.</p>
 
                             <h4 style="font-size: 16px; font-weight: 700; color: var(--gray-900); margin-bottom: 12px; display: flex; align-items: center; gap: 8px;">
                                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M4.93 4.93l14.14 14.14"/></svg>
-                                4. Résiliation et suspension
+                                5. Résiliation et suspension
                             </h4>
                             <p style="font-size: 14px; color: var(--gray-600); margin-bottom: 24px; line-height: 1.7;">En cas de résiliation volontaire d'un abonnement ou de suppression de compte, aucun remboursement ne sera émis en dehors des conditions énoncées ci-dessus. Si un compte est suspendu pour non-respect des Conditions Générales d'utilisation, aucun remboursement ne sera accordé.</p>
 
                             <h4 style="font-size: 16px; font-weight: 700; color: var(--gray-900); margin-bottom: 12px; display: flex; align-items: center; gap: 8px;">
                                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22,4 12,14.01 9,11.01"/></svg>
-                                5. Plateforme SEAOP
+                                6. Plateforme SEAOP
                             </h4>
                             <p style="font-size: 14px; color: var(--gray-600); margin-bottom: 24px; line-height: 1.7;">La plateforme SEAOP (appels d'offres publics) est entièrement gratuite. Aucune facturation ni remboursement ne s'applique à ce service.</p>
 
                             <h4 style="font-size: 16px; font-weight: 700; color: var(--gray-900); margin-bottom: 12px; display: flex; align-items: center; gap: 8px;">
                                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-                                6. Acceptation
+                                7. Acceptation
                             </h4>
                             <p style="font-size: 14px; color: var(--gray-600); line-height: 1.7;">En utilisant nos services, vous reconnaissez avoir lu, compris et accepté cette politique de remboursement. Constructo AI Inc. se réserve le droit de modifier cette politique à tout moment, sans préavis.</p>
 
-                            <p style="font-size: 13px; color: var(--gray-500); margin-top: 24px; padding-top: 16px; border-top: 1px solid var(--gray-200);">Dernière mise à jour : 24 février 2026 · Pour toute question : <a href="mailto:info@constructoai.ca" style="color: var(--primary);">info@constructoai.ca</a> ou <a href="tel:+15148201972" style="color: var(--primary);">(514) 820-1972</a></p>
+                            <p style="font-size: 13px; color: var(--gray-500); margin-top: 24px; padding-top: 16px; border-top: 1px solid var(--gray-200);">Dernière mise à jour : 27 février 2026 · Pour toute question : <a href="mailto:info@constructoai.ca" style="color: var(--primary);">info@constructoai.ca</a> ou <a href="tel:+15148201972" style="color: var(--primary);">(514) 820-1972</a></p>
                         </div>
                     </div>
                 </div>
@@ -4096,7 +3938,7 @@
                             </h4>
                             <p style="font-size: 14px; color: var(--gray-600); line-height: 1.7;">En utilisant nos services, vous reconnaissez avoir lu, compris et accepté cette politique de confidentialité. Constructo AI Inc. se réserve le droit de modifier cette politique à tout moment. Les changements importants vous seront communiqués par courriel ou par un avis sur notre site. Votre utilisation continue du service après de telles modifications constitue votre acceptation de la politique modifiée.</p>
 
-                            <p style="font-size: 13px; color: var(--gray-500); margin-top: 24px; padding-top: 16px; border-top: 1px solid var(--gray-200);">Dernière mise à jour : 24 février 2026 · Pour toute question : <a href="mailto:info@constructoai.ca" style="color: var(--primary);">info@constructoai.ca</a> ou <a href="tel:+15148201972" style="color: var(--primary);">(514) 820-1972</a></p>
+                            <p style="font-size: 13px; color: var(--gray-500); margin-top: 24px; padding-top: 16px; border-top: 1px solid var(--gray-200);">Dernière mise à jour : 27 février 2026 · Pour toute question : <a href="mailto:info@constructoai.ca" style="color: var(--primary);">info@constructoai.ca</a> ou <a href="tel:+15148201972" style="color: var(--primary);">(514) 820-1972</a></p>
                         </div>
                     </div>
                 </div>
@@ -4189,8 +4031,41 @@
 
             <div class="updates-timeline">
 
-                <!-- v2.5.1 — Dernière version -->
+                <!-- v2.6.0 — Dernière version -->
                 <div class="update-item latest">
+                    <div class="update-card">
+                        <div class="update-header">
+                            <span class="update-version">v2.6.0</span>
+                            <span class="update-date">27 février 2026</span>
+                            <span class="update-badge new">Nouveau</span>
+                        </div>
+                        <ul class="update-changes">
+                            <li>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20,6 9,17 4,12"/></svg>
+                                Nouveau service « Estimation Express » : obtenez une estimation budgétaire par IA en quelques minutes, sans inscription — paiement unique via Stripe
+                            </li>
+                            <li>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20,6 9,17 4,12"/></svg>
+                                Nouveau service « Assistant Express » : chattez avec un expert IA en construction (photos, plans, croquis) — sans inscription, paiement unique
+                            </li>
+                            <li>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20,6 9,17 4,12"/></svg>
+                                Pipeline multi-agent amélioré : 7 étapes avec checkpoints de sécurité et récupération automatique en cas d'interruption
+                            </li>
+                            <li>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20,6 9,17 4,12"/></svg>
+                                Template HTML professionnel pour les estimations rapides : en-tête et pied de page avec logo et coordonnées de l'entreprise
+                            </li>
+                            <li>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20,6 9,17 4,12"/></svg>
+                                Portail de services unifié : 6 services accessibles depuis la page d'accueil (ERP, Experts IA, Estimation Express, Assistant Express, B2B, SEAO)
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- v2.5.1 -->
+                <div class="update-item">
                     <div class="update-card">
                         <div class="update-header">
                             <span class="update-version">v2.5.1</span>
@@ -4462,9 +4337,9 @@
                             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
                             514-820-1972
                         </a>
-                        <a href="mailto:info@constructoai.ca" class="contact-item">
+                        <a href="/cdn-cgi/l/email-protection#4f262129200f2c20213c3b3d3a2c3b202e26612c2e" class="contact-item">
                             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-                            info@constructoai.ca
+                            <span class="__cf_email__" data-cfemail="3b52555d547b585455484f494e584f545a5215585a">[email&#160;protected]</span>
                         </a>
                         <a href="https://www.facebook.com/constructoai.sylvainleduc" target="_blank" class="contact-item">
                             <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
@@ -4482,160 +4357,6 @@
                     Écrire à Sylvain
                 </a>
                 <p class="chat-cta-note">Gratuit • Sans engagement • Réponse rapide</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Services d'estimation -->
-    <section class="estimation-section" id="estimation">
-        <div class="estimation-inner">
-
-            <!-- Intro avec profil -->
-            <div style="max-width: 750px; margin: 0 auto 56px;">
-                <div style="text-align: center;">
-                    <div class="estimation-badge">
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
-                        Service professionnel
-                    </div>
-                    <h2 class="section-title">Un service d'estimation clé en main pour vos projets</h2>
-                </div>
-                <p style="font-size: 15px; color: var(--text-secondary); line-height: 1.7; margin-bottom: 12px; text-align: center;">En plus du logiciel, l'équipe de Constructo AI offre un <strong>service professionnel d'estimation et de suivi de projets</strong> de construction. Avec plus de <strong>3 000 projets résidentiels, commerciaux et publics</strong> à son actif, notre équipe vous livre une soumission complète — analyse des plans, évaluation des coûts, coordination des sous-traitants — sans avoir à embaucher un estimateur à temps plein.</p>
-                <p style="font-size: 15px; color: var(--text-secondary); line-height: 1.7; margin-bottom: 12px; text-align: center;">Concentrez-vous sur le chantier, notre équipe s'occupe de la paperasse.</p>
-                <p style="font-size: 14px; text-align: center;"><strong style="color: var(--text-primary);">Facturation à la soumission complétée</strong> — vous ne payez que pour les résultats livrés, pas pour des heures de bureau.</p>
-            </div>
-
-            <!-- Services offerts -->
-            <div class="section-header">
-                <h2 class="section-title">Ce qui est inclus dans chaque mandat</h2>
-                <p class="section-subtitle">Deux volets complémentaires pour couvrir vos projets du début à la fin — notre équipe s'en charge</p>
-            </div>
-
-            <div class="estimation-services-grid">
-                <div class="estimation-service-card">
-                    <div class="service-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
-                            <polyline points="14,2 14,8 20,8"/>
-                            <line x1="16" y1="13" x2="8" y2="13"/>
-                            <line x1="16" y1="17" x2="8" y2="17"/>
-                        </svg>
-                    </div>
-                    <h4>Services d'estimation</h4>
-                    <ul>
-                        <li>
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22,4 12,14.01 9,11.01"/></svg>
-                            Analyse des plans et devis
-                        </li>
-                        <li>
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22,4 12,14.01 9,11.01"/></svg>
-                            Préparation d'estimations détaillées des coûts
-                        </li>
-                        <li>
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22,4 12,14.01 9,11.01"/></svg>
-                            Analyse comparative des soumissions
-                        </li>
-                        <li>
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22,4 12,14.01 9,11.01"/></svg>
-                            Évaluation des coûts de main-d'œuvre et matériaux
-                        </li>
-                        <li>
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22,4 12,14.01 9,11.01"/></svg>
-                            Préparation de budgets prévisionnels
-                        </li>
-                        <li>
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22,4 12,14.01 9,11.01"/></svg>
-                            Révision et ajustement selon l'évolution du projet
-                        </li>
-                    </ul>
-                </div>
-                <div class="estimation-service-card">
-                    <div class="service-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <polyline points="22,12 18,12 15,21 9,3 6,12 2,12"/>
-                        </svg>
-                    </div>
-                    <h4>Suivi de soumission et gestion de projets</h4>
-                    <ul>
-                        <li>
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22,4 12,14.01 9,11.01"/></svg>
-                            Planification et coordination des projets
-                        </li>
-                        <li>
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22,4 12,14.01 9,11.01"/></svg>
-                            Gestion des échéanciers et des jalons
-                        </li>
-                        <li>
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22,4 12,14.01 9,11.01"/></svg>
-                            Coordination avec les sous-traitants et fournisseurs
-                        </li>
-                        <li>
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22,4 12,14.01 9,11.01"/></svg>
-                            Suivi de l'avancement des travaux
-                        </li>
-                        <li>
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22,4 12,14.01 9,11.01"/></svg>
-                            Gestion de la documentation de projet
-                        </li>
-                        <li>
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22,4 12,14.01 9,11.01"/></svg>
-                            Préparation de rapports d'avancement
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- Barème tarifaire -->
-            <div class="estimation-tarifs">
-                <div class="section-header">
-                    <h2 class="section-title">Tarifs à la soumission complétée</h2>
-                    <p class="section-subtitle">Un tarif fixe par soumission — pas de taux horaire, pas de surprise. Le niveau de complexité est déterminé par notre équipe selon la nature, l'envergure et les contraintes du projet.</p>
-                </div>
-
-                <div class="tarifs-grid">
-                    <div class="tarif-card tarif-simple">
-                        <div class="tarif-level">Simple</div>
-                        <div class="tarif-price">200$<span> /soumission</span></div>
-                        <div class="tarif-per">+ taxes applicables</div>
-                        <div class="tarif-desc">Démolition résidentielle, projet standard, faible envergure. Soumission claire et rapide pour vos projets courants.</div>
-                    </div>
-                    <div class="tarif-card tarif-moyen tarif-featured">
-                        <div class="tarif-level">Moyen</div>
-                        <div class="tarif-price">275$<span> /soumission</span></div>
-                        <div class="tarif-per">+ taxes applicables</div>
-                        <div class="tarif-desc">Projet commercial, multiples corps de métier, envergure modérée. Analyse plus détaillée et coordination élargie.</div>
-                    </div>
-                    <div class="tarif-card tarif-complexe">
-                        <div class="tarif-level">Complexe</div>
-                        <div class="tarif-price">350$<span> /soumission</span></div>
-                        <div class="tarif-per">+ taxes applicables</div>
-                        <div class="tarif-desc">Projet institutionnel, décontamination, contraintes spéciales. Estimation approfondie avec analyse de risques complète.</div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Bonus : accès ERP gratuit -->
-            <div class="estimation-bonus">
-                <div class="bonus-icon">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-                        <path d="M9 12l2 2 4-4"/>
-                    </svg>
-                </div>
-                <div class="bonus-text">
-                    <h3>Accès gratuit à l'ERP Constructo AI inclus avec votre mandat</h3>
-                    <p>Pendant toute la durée de votre contrat d'estimation, vous bénéficiez d'un accès complet à la plateforme Constructo AI pour le suivi de vos projets — sans frais supplémentaires. 40+ outils, 57 conseillers IA, suivi en temps réel. Notre équipe vous accompagne de A à Z.</p>
-                </div>
-            </div>
-
-            <!-- CTA -->
-            <div class="estimation-cta">
-                <a href="tel:+15148201972" class="btn btn-primary btn-large">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
-                    </svg>
-                    Discuter de votre projet — (514) 820-1972
-                </a>
-                <p>Gratuit • Sans engagement • Notre équipe vous répond rapidement</p>
             </div>
         </div>
     </section>
@@ -4752,7 +4473,6 @@
                         <li><a href="#fabrication" style="color: var(--orange);">Fabrication</a></li>
                         <li><a href="#experts">Les 57 conseillers</a></li>
                         <li><a href="#tarifs">Tarifs</a></li>
-                        <li><a href="#estimation" style="color: #22c55e;">Services d'estimation</a></li>
                         <li><a href="#comparaison">Pourquoi Constructo AI</a></li>
                         <li><a href="#faq">Questions fréquentes</a></li>
                         <li><a href="#mises-a-jour">Mises à jour</a></li>
@@ -4762,7 +4482,7 @@
                     <h4>Contactez Sylvain</h4>
                     <ul>
                         <li><a href="tel:+15148201972">(514) 820-1972</a></li>
-                        <li><a href="mailto:info@constructoai.ca">info@constructoai.ca</a></li>
+                        <li><a href="/cdn-cgi/l/email-protection#244d4a424b64474b4a5750565147504b454d0a4745"><span class="__cf_email__" data-cfemail="31585f575e71525e5f4245434452455e50581f5250">[email&#160;protected]</span></a></li>
                         <li><a href="https://app.constructoai.ca/">Clavardage en direct</a></li>
                     </ul>
                 </div>
@@ -4790,7 +4510,7 @@
                         Canada
                     </p>
                     <a href="https://www.dmca.com/Protection/Status.aspx?ID=4cbea599-a7b4-4b49-8c87-c8415fffb753" title="DMCA.com Protection Status" class="dmca-badge" style="margin-top: 10px; display: inline-block;" rel="noopener noreferrer" target="_blank"> <img src="https://images.dmca.com/Badges/dmca_protected_sml_120n.png?ID=4cbea599-a7b4-4b49-8c87-c8415fffb753" alt="DMCA.com Protection Status" loading="lazy" /></a>
-                    <script src="https://images.dmca.com/Badges/DMCABadgeHelper.min.js" async defer></script>
+                    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="https://images.dmca.com/Badges/DMCABadgeHelper.min.js" async defer></script>
                 </div>
             </div>
             <div class="footer-bottom">
@@ -4800,52 +4520,37 @@
     </footer>
 
     <script data-cfasync="false">
-        // === FAQ Accordion & Smooth Scroll ===
-        // Utilise event delegation + readyState check pour compatibilité Cloudflare Rocket Loader
-        (function() {
-            function initPage() {
-                // FAQ Accordion — délégation d'événements (fonctionne même si Rocket Loader retarde l'exécution)
-                document.addEventListener('click', function(e) {
-                    var question = e.target.closest('.faq-question');
-                    if (question) {
-                        var item = question.parentElement;
-                        item.classList.toggle('active');
+        document.addEventListener('DOMContentLoaded', function() {
+            // FAQ Accordion
+            document.querySelectorAll('.faq-question').forEach(function(question) {
+                question.style.cursor = 'pointer';
+                question.addEventListener('click', function() {
+                    var item = this.parentElement;
+                    item.classList.toggle('active');
+                });
+            });
+
+            // Smooth scroll pour les liens d'ancrage
+            document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    var target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
                     }
                 });
-
-                // Smooth scroll pour les liens d'ancrage — délégation d'événements
-                document.addEventListener('click', function(e) {
-                    var anchor = e.target.closest('a[href^="#"]');
-                    if (anchor) {
-                        e.preventDefault();
-                        var href = anchor.getAttribute('href');
-                        if (href && href.length > 1) {
-                            var target = document.querySelector(href);
-                            if (target) {
-                                target.scrollIntoView({
-                                    behavior: 'smooth',
-                                    block: 'start'
-                                });
-                            }
-                        }
-                    }
-                });
-            }
-
-            // Fonctionne même si DOMContentLoaded est déjà passé (cas Rocket Loader)
-            if (document.readyState === 'loading') {
-                document.addEventListener('DOMContentLoaded', initPage);
-            } else {
-                initPage();
-            }
-        })();
+            });
+        });
 
         // Toggle older updates
         function toggleOlderUpdates(btn) {
-            var hiddenItems = document.querySelectorAll('.hidden-update');
-            var isShowing = hiddenItems[0] && hiddenItems[0].classList.contains('show');
+            const hiddenItems = document.querySelectorAll('.hidden-update');
+            const isShowing = hiddenItems[0] && hiddenItems[0].classList.contains('show');
 
-            hiddenItems.forEach(function(item) {
+            hiddenItems.forEach(item => {
                 if (isShowing) {
                     item.classList.remove('show');
                 } else {
@@ -4857,44 +4562,49 @@
         }
 
         // Gestion du mode sombre
-        (function() {
-            var themeToggle = document.getElementById('theme-toggle');
-            var html = document.documentElement;
-            var sunIcon = document.querySelector('.sun-icon');
-            var moonIcon = document.querySelector('.moon-icon');
+        const themeToggle = document.getElementById('theme-toggle');
+        const html = document.documentElement;
+        const sunIcon = document.querySelector('.sun-icon');
+        const moonIcon = document.querySelector('.moon-icon');
 
-            // Fonction pour mettre à jour les icônes
-            function updateIcons(theme) {
-                if (theme === 'dark') {
-                    sunIcon.classList.remove('active');
-                    moonIcon.classList.add('active');
-                } else {
-                    sunIcon.classList.add('active');
-                    moonIcon.classList.remove('active');
-                }
+        // Fonction pour mettre à jour les icônes
+        function updateIcons(theme) {
+            if (theme === 'dark') {
+                sunIcon.classList.remove('active');
+                moonIcon.classList.add('active');
+            } else {
+                sunIcon.classList.add('active');
+                moonIcon.classList.remove('active');
             }
+        }
 
-            // Charger le thème sauvegardé ou détecter la préférence système
-            var savedTheme = localStorage.getItem('theme');
-            var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-            var initialTheme = savedTheme || (prefersDark ? 'dark' : 'light');
+        // Charger le thème sauvegardé ou détecter la préférence système
+        const savedTheme = localStorage.getItem('theme');
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        const initialTheme = savedTheme || (prefersDark ? 'dark' : 'light');
 
-            html.setAttribute('data-theme', initialTheme);
-            updateIcons(initialTheme);
+        html.setAttribute('data-theme', initialTheme);
+        updateIcons(initialTheme);
 
-            // Toggle au clic
-            if (themeToggle) {
-                themeToggle.addEventListener('click', function() {
-                    var currentTheme = html.getAttribute('data-theme');
-                    var newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+        // Toggle au clic
+        themeToggle.addEventListener('click', function() {
+            var currentTheme = html.getAttribute('data-theme');
+            var newTheme = currentTheme === 'dark' ? 'light' : 'dark';
 
-                    html.setAttribute('data-theme', newTheme);
-                    localStorage.setItem('theme', newTheme);
-                    updateIcons(newTheme);
-                });
+            html.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+            updateIcons(newTheme);
+        });
+
+        // Écouter les changements de préférence système
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function(e) {
+            if (!localStorage.getItem('theme')) {
+                var newTheme = e.matches ? 'dark' : 'light';
+                html.setAttribute('data-theme', newTheme);
+                updateIcons(newTheme);
             }
-        })();
+        });
     </script>
+
 </body>
 </html>
-       

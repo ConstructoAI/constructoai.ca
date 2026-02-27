@@ -4790,7 +4790,7 @@
                         Canada
                     </p>
                     <a href="https://www.dmca.com/Protection/Status.aspx?ID=4cbea599-a7b4-4b49-8c87-c8415fffb753" title="DMCA.com Protection Status" class="dmca-badge" style="margin-top: 10px; display: inline-block;" rel="noopener noreferrer" target="_blank"> <img src="https://images.dmca.com/Badges/dmca_protected_sml_120n.png?ID=4cbea599-a7b4-4b49-8c87-c8415fffb753" alt="DMCA.com Protection Status" loading="lazy" /></a>
-                    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="https://images.dmca.com/Badges/DMCABadgeHelper.min.js" async defer></script>
+                    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="https://images.dmca.com/Badges/DMCABadgeHelper.min.js" async defer></script>
                 </div>
             </div>
             <div class="footer-bottom">
@@ -4800,37 +4800,52 @@
     </footer>
 
     <script data-cfasync="false">
-        document.addEventListener('DOMContentLoaded', function() {
-            // FAQ Accordion
-            document.querySelectorAll('.faq-question').forEach(function(question) {
-                question.style.cursor = 'pointer';
-                question.addEventListener('click', function() {
-                    var item = this.parentElement;
-                    item.classList.toggle('active');
-                });
-            });
-
-            // Smooth scroll pour les liens d'ancrage
-            document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
-                anchor.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    var target = document.querySelector(this.getAttribute('href'));
-                    if (target) {
-                        target.scrollIntoView({
-                            behavior: 'smooth',
-                            block: 'start'
-                        });
+        // === FAQ Accordion & Smooth Scroll ===
+        // Utilise event delegation + readyState check pour compatibilité Cloudflare Rocket Loader
+        (function() {
+            function initPage() {
+                // FAQ Accordion — délégation d'événements (fonctionne même si Rocket Loader retarde l'exécution)
+                document.addEventListener('click', function(e) {
+                    var question = e.target.closest('.faq-question');
+                    if (question) {
+                        var item = question.parentElement;
+                        item.classList.toggle('active');
                     }
                 });
-            });
-        });
+
+                // Smooth scroll pour les liens d'ancrage — délégation d'événements
+                document.addEventListener('click', function(e) {
+                    var anchor = e.target.closest('a[href^="#"]');
+                    if (anchor) {
+                        e.preventDefault();
+                        var href = anchor.getAttribute('href');
+                        if (href && href.length > 1) {
+                            var target = document.querySelector(href);
+                            if (target) {
+                                target.scrollIntoView({
+                                    behavior: 'smooth',
+                                    block: 'start'
+                                });
+                            }
+                        }
+                    }
+                });
+            }
+
+            // Fonctionne même si DOMContentLoaded est déjà passé (cas Rocket Loader)
+            if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', initPage);
+            } else {
+                initPage();
+            }
+        })();
 
         // Toggle older updates
         function toggleOlderUpdates(btn) {
-            const hiddenItems = document.querySelectorAll('.hidden-update');
-            const isShowing = hiddenItems[0] && hiddenItems[0].classList.contains('show');
+            var hiddenItems = document.querySelectorAll('.hidden-update');
+            var isShowing = hiddenItems[0] && hiddenItems[0].classList.contains('show');
 
-            hiddenItems.forEach(item => {
+            hiddenItems.forEach(function(item) {
                 if (isShowing) {
                     item.classList.remove('show');
                 } else {
@@ -4842,34 +4857,44 @@
         }
 
         // Gestion du mode sombre
-        const themeToggle = document.getElementById('theme-toggle');
-        const html = document.documentElement;
-        const sunIcon = document.querySelector('.sun-icon');
-        const moonIcon = document.querySelector('.moon-icon');
+        (function() {
+            var themeToggle = document.getElementById('theme-toggle');
+            var html = document.documentElement;
+            var sunIcon = document.querySelector('.sun-icon');
+            var moonIcon = document.querySelector('.moon-icon');
 
-        // Fonction pour mettre à jour les icônes
-        function updateIcons(theme) {
-            if (theme === 'dark') {
-                sunIcon.classList.remove('active');
-                moonIcon.classList.add('active');
-            } else {
-                sunIcon.classList.add('active');
-                moonIcon.classList.remove('active');
+            // Fonction pour mettre à jour les icônes
+            function updateIcons(theme) {
+                if (theme === 'dark') {
+                    sunIcon.classList.remove('active');
+                    moonIcon.classList.add('active');
+                } else {
+                    sunIcon.classList.add('active');
+                    moonIcon.classList.remove('active');
+                }
             }
-        }
 
-        // Charger le thème sauvegardé ou détecter la préférence système
-        const savedTheme = localStorage.getItem('theme');
-        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-        const initialTheme = savedTheme || (prefersDark ? 'dark' : 'light');
+            // Charger le thème sauvegardé ou détecter la préférence système
+            var savedTheme = localStorage.getItem('theme');
+            var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            var initialTheme = savedTheme || (prefersDark ? 'dark' : 'light');
 
-        html.setAttribute('data-theme', initialTheme);
-        updateIcons(initialTheme);
+            html.setAttribute('data-theme', initialTheme);
+            updateIcons(initialTheme);
 
-        // Toggle au clic
-        themeToggle.addEventListener('click', function() {
-            var currentTheme = html.getAttribute('data-theme');
-            var newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            // Toggle au clic
+            if (themeToggle) {
+                themeToggle.addEventListener('click', function() {
+                    var currentTheme = html.getAttribute('data-theme');
+                    var newTheme = currentTheme === 'dark' ? 'light' : 'dark';
 
-            html.setAttribute('data-theme', newTheme);
+                    html.setAttribute('data-theme', newTheme);
+                    localStorage.setItem('theme', newTheme);
+                    updateIcons(newTheme);
+                });
+            }
+        })();
+    </script>
+</body>
+</html>
        

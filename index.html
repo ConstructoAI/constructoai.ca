@@ -2362,7 +2362,7 @@
             font-size: 0.9rem;
         }
 
-        /* --- Estimation Entreprises --- */
+        /* --- Service d'estimation en sous-traitance --- */
         .estimation-entreprise {
             max-width: 900px;
             margin: 56px auto 0;
@@ -2373,79 +2373,118 @@
         }
         .estimation-entreprise-header {
             background: linear-gradient(135deg, #f59e0b, #d97706);
-            padding: 28px 32px;
+            padding: 32px 32px 28px;
             text-align: center;
             color: white;
         }
         .estimation-entreprise-header h3 {
             font-size: 1.4rem;
             font-weight: 800;
-            margin-bottom: 6px;
+            margin-bottom: 8px;
         }
         .estimation-entreprise-header p {
             font-size: 0.95rem;
             opacity: 0.92;
+            max-width: 540px;
+            margin: 0 auto;
         }
-        .estimation-table-wrap {
-            padding: 0;
+        .estimation-bareme {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 0;
+            padding: 32px 28px;
         }
-        .estimation-table {
-            width: 100%;
-            border-collapse: collapse;
+        .bareme-card {
+            text-align: center;
+            padding: 28px 20px;
+            border: 2px solid var(--border-color);
+            border-radius: 16px;
+            margin: 0 6px;
+            background: var(--bg-primary);
+            position: relative;
+            transition: transform 0.2s, box-shadow 0.2s;
         }
-        .estimation-table thead th {
-            background: var(--bg-secondary);
-            padding: 14px 20px;
-            font-size: 0.82rem;
+        .bareme-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+        }
+        .bareme-card.featured {
+            border-color: #f59e0b;
+            box-shadow: 0 4px 20px rgba(245, 158, 11, 0.15);
+        }
+        .bareme-popular {
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: linear-gradient(135deg, #f59e0b, #d97706);
+            color: white;
+            font-size: 0.72rem;
             font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 0.5px;
+            padding: 4px 14px;
+            border-radius: 20px;
+            white-space: nowrap;
+        }
+        .bareme-level {
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
             color: var(--text-secondary);
-            text-align: left;
-            border-bottom: 2px solid var(--border-color);
+            margin-bottom: 12px;
         }
-        .estimation-table thead th:not(:first-child) {
-            text-align: center;
+        .bareme-price {
+            font-size: 2.8rem;
+            font-weight: 800;
+            color: #d97706;
+            line-height: 1;
+            margin-bottom: 16px;
         }
-        .estimation-table tbody td {
-            padding: 14px 20px;
-            font-size: 0.93rem;
-            color: var(--text-primary);
-            border-bottom: 1px solid var(--border-color);
-        }
-        .estimation-table tbody tr:last-child td {
-            border-bottom: none;
-        }
-        .estimation-table tbody tr:hover {
-            background: rgba(245, 158, 11, 0.04);
-        }
-        [data-theme="dark"] .estimation-table tbody tr:hover {
-            background: rgba(245, 158, 11, 0.08);
-        }
-        .estimation-table .cat-name {
+        .bareme-price span {
+            font-size: 1.4rem;
             font-weight: 600;
         }
-        .estimation-table .cat-desc {
-            font-size: 0.8rem;
-            color: var(--text-secondary);
-            margin-top: 2px;
-        }
-        .estimation-table .price-cell {
-            text-align: center;
-            font-weight: 700;
-            font-size: 1rem;
-        }
-        .estimation-table .price-cell.rapide {
-            color: #d97706;
-        }
-        .estimation-table .price-cell.approfondie {
-            color: #b45309;
-        }
-        [data-theme="dark"] .estimation-table .price-cell.rapide {
+        [data-theme="dark"] .bareme-price {
             color: #fbbf24;
         }
-        [data-theme="dark"] .estimation-table .price-cell.approfondie {
-            color: #f59e0b;
+        .bareme-desc {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            line-height: 1.5;
+        }
+        .estimation-details {
+            padding: 24px 32px 28px;
+            border-top: 2px solid var(--border-color);
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 14px 24px;
+        }
+        .detail-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            font-size: 0.88rem;
+            color: var(--text-secondary);
+        }
+        .detail-item svg {
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+        @media (max-width: 768px) {
+            .estimation-bareme {
+                grid-template-columns: 1fr;
+                padding: 20px 16px;
+                gap: 16px;
+            }
+            .bareme-card {
+                margin: 0;
+            }
+            .estimation-details {
+                grid-template-columns: 1fr;
+                padding: 20px 20px 24px;
+            }
         }
         .estimation-table-footer {
             padding: 20px 24px;
@@ -3838,118 +3877,51 @@
             </div>
 
 
-            <!-- Tarifs du service d'estimation par catégorie -->
+            <!-- Service d'estimation en sous-traitance (humain) -->
             <div class="estimation-entreprise">
                 <div class="estimation-entreprise-header">
-                    <h3>Service d'estimation pour entreprises</h3>
-                    <p>Obtenez une estimation budgétaire professionnelle par nos experts IA, adaptée à votre catégorie de projet</p>
+                    <h3>Service d'estimation en sous-traitance</h3>
+                    <p>Confiez vos estimations à des professionnels d'expérience — analyse des plans, devis complet et suivi du projet inclus</p>
                 </div>
-                <div class="estimation-table-wrap">
-                    <table class="estimation-table">
-                        <thead>
-                            <tr>
-                                <th>Catégorie</th>
-                                <th>Rapide (~30 min)</th>
-                                <th>Approfondie (~3h)</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>
-                                    <div class="cat-name">Résidentiel léger</div>
-                                    <div class="cat-desc">Maison, duplex, triplex</div>
-                                </td>
-                                <td class="price-cell rapide">20,00 $</td>
-                                <td class="price-cell approfondie">39,99 $</td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <div class="cat-name">Résidentiel lourd</div>
-                                    <div class="cat-desc">Condo 4+, multilogement</div>
-                                </td>
-                                <td class="price-cell rapide">39,99 $</td>
-                                <td class="price-cell approfondie">79,99 $</td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <div class="cat-name">Commercial léger</div>
-                                    <div class="cat-desc">Bureau, boutique, restaurant</div>
-                                </td>
-                                <td class="price-cell rapide">39,99 $</td>
-                                <td class="price-cell approfondie">79,99 $</td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <div class="cat-name">Commercial lourd</div>
-                                    <div class="cat-desc">Centre commercial, tour de bureaux</div>
-                                </td>
-                                <td class="price-cell rapide">59,99 $</td>
-                                <td class="price-cell approfondie">119,99 $</td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <div class="cat-name">Institutionnel</div>
-                                    <div class="cat-desc">École, hôpital, gouvernement</div>
-                                </td>
-                                <td class="price-cell rapide">59,99 $</td>
-                                <td class="price-cell approfondie">119,99 $</td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <div class="cat-name">Industriel</div>
-                                    <div class="cat-desc">Usine, entrepôt, manufacture</div>
-                                </td>
-                                <td class="price-cell rapide">59,99 $</td>
-                                <td class="price-cell approfondie">119,99 $</td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <div class="cat-name">Génie civil</div>
-                                    <div class="cat-desc">Route, pont, infrastructure</div>
-                                </td>
-                                <td class="price-cell rapide">79,99 $</td>
-                                <td class="price-cell approfondie">159,99 $</td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <div class="cat-name">Rénovation résidentielle</div>
-                                    <div class="cat-desc">Cuisine, salle de bain, sous-sol</div>
-                                </td>
-                                <td class="price-cell rapide">20,00 $</td>
-                                <td class="price-cell approfondie">39,99 $</td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <div class="cat-name">Rénovation commerciale / institutionnelle</div>
-                                    <div class="cat-desc">Espaces commerciaux et institutionnels</div>
-                                </td>
-                                <td class="price-cell rapide">39,99 $</td>
-                                <td class="price-cell approfondie">79,99 $</td>
-                            </tr>
-                        </tbody>
-                    </table>
+                <div class="estimation-bareme">
+                    <div class="bareme-card">
+                        <div class="bareme-level">Simple</div>
+                        <div class="bareme-price">200 <span>$</span></div>
+                        <div class="bareme-desc">Démolition résidentielle, projet standard, faible envergure</div>
+                    </div>
+                    <div class="bareme-card featured">
+                        <div class="bareme-popular">Le plus courant</div>
+                        <div class="bareme-level">Moyen</div>
+                        <div class="bareme-price">275 <span>$</span></div>
+                        <div class="bareme-desc">Projet commercial, multiples corps de métier, envergure modérée</div>
+                    </div>
+                    <div class="bareme-card">
+                        <div class="bareme-level">Complexe</div>
+                        <div class="bareme-price">350 <span>$</span></div>
+                        <div class="bareme-desc">Projet institutionnel, décontamination, contraintes spéciales</div>
+                    </div>
                 </div>
-                <div class="estimation-table-footer">
-                    <span class="footer-badge">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#d97706" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22,4 12,14.01 9,11.01"/></svg>
-                        Paiement unique — aucun abonnement
-                    </span>
-                    <span class="footer-badge">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#d97706" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22,4 12,14.01 9,11.01"/></svg>
-                        Remboursé automatiquement si échec
-                    </span>
-                    <span class="footer-badge">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#d97706" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22,4 12,14.01 9,11.01"/></svg>
-                        Document professionnel téléchargeable
-                    </span>
-                    <span class="footer-badge">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#d97706" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22,4 12,14.01 9,11.01"/></svg>
-                        Différent du programme Estimation Express
-                    </span>
+                <div class="estimation-details">
+                    <div class="detail-item">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#d97706" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22,4 12,14.01 9,11.01"/></svg>
+                        <span>Estimation complète incluse : analyse des plans, devis et coûts détaillés</span>
+                    </div>
+                    <div class="detail-item">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#d97706" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22,4 12,14.01 9,11.01"/></svg>
+                        <span>Suivi du projet soumissionné compris dans le tarif</span>
+                    </div>
+                    <div class="detail-item">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#d97706" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22,4 12,14.01 9,11.01"/></svg>
+                        <span>Le niveau de complexité est déterminé par le consultant assigné</span>
+                    </div>
+                    <div class="detail-item">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#d97706" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22,4 12,14.01 9,11.01"/></svg>
+                        <span>Facturation uniquement à la livraison de la soumission complétée</span>
+                    </div>
                 </div>
             </div>
 
-            <p class="pricing-note">Tous les prix sont en dollars canadiens + taxes applicables (TPS + TVQ). Les abonnements mensuels nécessitent une carte de crédit et sont facturés immédiatement. Le service Estimation Express est un paiement unique — aucun abonnement ni inscription requis.</p>
+            <p class="pricing-note">Tous les prix sont en dollars canadiens + taxes applicables (TPS + TVQ). Les abonnements mensuels nécessitent une carte de crédit et sont facturés immédiatement. Le service d'estimation en sous-traitance est facturé à la livraison de la soumission complétée.</p>
 
             <!-- Politique de remboursement dépliable -->
             <div id="remboursement" style="max-width: 800px; margin: 32px auto 0;">

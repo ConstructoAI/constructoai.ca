@@ -87,7 +87,7 @@
                 "priceCurrency": "CAD",
                 "priceValidUntil": "2026-12-31",
                 "availability": "https://schema.org/InStock",
-                "description": "Estimation budgétaire par IA — sans inscription. Uploadez vos plans, payez une seule fois, recevez votre estimation en quelques minutes."
+                "description": "Estimation budgétaire par IA — sans inscription. Téléversez vos plans, payez une seule fois, recevez votre estimation en quelques minutes."
             },
             {
                 "@type": "Offer",
@@ -2361,6 +2361,131 @@
             color: var(--text-secondary);
             font-size: 0.9rem;
         }
+
+        /* --- Estimation Entreprises --- */
+        .estimation-entreprise {
+            max-width: 900px;
+            margin: 56px auto 0;
+            background: var(--bg-primary);
+            border: 2px solid var(--border-color);
+            border-radius: 20px;
+            overflow: hidden;
+        }
+        .estimation-entreprise-header {
+            background: linear-gradient(135deg, #f59e0b, #d97706);
+            padding: 28px 32px;
+            text-align: center;
+            color: white;
+        }
+        .estimation-entreprise-header h3 {
+            font-size: 1.4rem;
+            font-weight: 800;
+            margin-bottom: 6px;
+        }
+        .estimation-entreprise-header p {
+            font-size: 0.95rem;
+            opacity: 0.92;
+        }
+        .estimation-table-wrap {
+            padding: 0;
+        }
+        .estimation-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .estimation-table thead th {
+            background: var(--bg-secondary);
+            padding: 14px 20px;
+            font-size: 0.82rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: var(--text-secondary);
+            text-align: left;
+            border-bottom: 2px solid var(--border-color);
+        }
+        .estimation-table thead th:not(:first-child) {
+            text-align: center;
+        }
+        .estimation-table tbody td {
+            padding: 14px 20px;
+            font-size: 0.93rem;
+            color: var(--text-primary);
+            border-bottom: 1px solid var(--border-color);
+        }
+        .estimation-table tbody tr:last-child td {
+            border-bottom: none;
+        }
+        .estimation-table tbody tr:hover {
+            background: rgba(245, 158, 11, 0.04);
+        }
+        [data-theme="dark"] .estimation-table tbody tr:hover {
+            background: rgba(245, 158, 11, 0.08);
+        }
+        .estimation-table .cat-name {
+            font-weight: 600;
+        }
+        .estimation-table .cat-desc {
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+            margin-top: 2px;
+        }
+        .estimation-table .price-cell {
+            text-align: center;
+            font-weight: 700;
+            font-size: 1rem;
+        }
+        .estimation-table .price-cell.rapide {
+            color: #d97706;
+        }
+        .estimation-table .price-cell.approfondie {
+            color: #b45309;
+        }
+        [data-theme="dark"] .estimation-table .price-cell.rapide {
+            color: #fbbf24;
+        }
+        [data-theme="dark"] .estimation-table .price-cell.approfondie {
+            color: #f59e0b;
+        }
+        .estimation-table-footer {
+            padding: 20px 24px;
+            background: var(--bg-secondary);
+            border-top: 2px solid var(--border-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 24px;
+            flex-wrap: wrap;
+        }
+        .estimation-table-footer .footer-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            font-weight: 500;
+        }
+        @media (max-width: 640px) {
+            .estimation-entreprise-header {
+                padding: 20px 16px;
+            }
+            .estimation-table thead th,
+            .estimation-table tbody td {
+                padding: 10px 12px;
+                font-size: 0.82rem;
+            }
+            .estimation-table .price-cell {
+                font-size: 0.88rem;
+            }
+            .estimation-table .cat-desc {
+                display: none;
+            }
+            .estimation-table-footer {
+                flex-direction: column;
+                gap: 8px;
+                padding: 16px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -2421,7 +2546,7 @@
                         <path d="M5 12h14M12 5l7 7-7 7"/>
                     </svg>
                 </a>
-                <a href="#demo" class="btn btn-outline">Voir la demo</a>
+                <a href="#demo" class="btn btn-outline">Voir la démo</a>
             </div>
             <p style="margin-top: 16px; font-size: 14px; color: var(--gray-500); display: flex; align-items: center; justify-content: center; gap: 8px;">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color: var(--primary);">
@@ -2962,23 +3087,23 @@
     </section>
 
     <!-- Fabrication Section -->
-    <section class="solution-section" id="fabrication" style="background: linear-gradient(135deg, var(--gray-900) 0%, var(--gray-800) 100%);">
+    <section class="solution-section" id="fabrication" style="background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);">
         <div class="solution-inner">
             <h2 class="section-title" style="color: var(--orange);">Nouveau : Module Fabrication</h2>
-            <p class="section-subtitle" style="color: var(--gray-300);">Conçu spécifiquement pour les ateliers de fabrication métallique et entreprises de soudure du Québec</p>
-            <h3 style="color: var(--white);">18+ postes de travail répartis en 6 catégories</h3>
+            <p class="section-subtitle" style="color: #cbd5e1;">Conçu spécifiquement pour les ateliers de fabrication métallique et entreprises de soudure du Québec</p>
+            <h3 style="color: #ffffff;">18+ postes de travail répartis en 6 catégories</h3>
 
             <div class="features-grid">
-                <div class="feature-card" style="background: var(--gray-800); border-color: var(--gray-700);">
+                <div class="feature-card" style="background: #1e293b; border-color: #334155;">
                     <div class="feature-icon" style="background: rgba(249, 115, 22, 0.15);">
                         <svg viewBox="0 0 24 24" fill="none" stroke="#f97316" stroke-width="2">
                             <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
                         </svg>
                     </div>
-                    <h4 style="color: var(--white);">Postes de découpe</h4>
-                    <p style="color: var(--gray-400);">Débitage, Cisaillement, Poinçonneuse, Plasma, Laser — tous vos postes de découpe configurés avec taux horaire de 90$/h.</p>
+                    <h4 style="color: #ffffff;">Postes de découpe</h4>
+                    <p style="color: #94a3b8;">Débitage, Cisaillement, Poinçonneuse, Plasma, Laser — tous vos postes de découpe configurés avec taux horaire de 90$/h.</p>
                 </div>
-                <div class="feature-card" style="background: var(--gray-800); border-color: var(--gray-700);">
+                <div class="feature-card" style="background: #1e293b; border-color: #334155;">
                     <div class="feature-icon" style="background: rgba(249, 115, 22, 0.15);">
                         <svg viewBox="0 0 24 24" fill="none" stroke="#f97316" stroke-width="2">
                             <path d="M12 2L2 7l10 5 10-5-10-5z"/>
@@ -2986,20 +3111,20 @@
                             <path d="M2 12l10 5 10-5"/>
                         </svg>
                     </div>
-                    <h4 style="color: var(--white);">Formage & Pliage</h4>
-                    <p style="color: var(--gray-400);">Postes de pliage et mise en forme des métaux. Suivi des temps par opération et par projet.</p>
+                    <h4 style="color: #ffffff;">Formage & Pliage</h4>
+                    <p style="color: #94a3b8;">Postes de pliage et mise en forme des métaux. Suivi des temps par opération et par projet.</p>
                 </div>
-                <div class="feature-card" style="background: var(--gray-800); border-color: var(--gray-700);">
+                <div class="feature-card" style="background: #1e293b; border-color: #334155;">
                     <div class="feature-icon" style="background: rgba(249, 115, 22, 0.15);">
                         <svg viewBox="0 0 24 24" fill="none" stroke="#f97316" stroke-width="2">
                             <circle cx="12" cy="12" r="3"/>
                             <path d="M12 1v6M12 17v6M4.22 4.22l4.24 4.24M15.54 15.54l4.24 4.24M1 12h6M17 12h6M4.22 19.78l4.24-4.24M15.54 8.46l4.24-4.24"/>
                         </svg>
                     </div>
-                    <h4 style="color: var(--white);">Soudure manuelle</h4>
-                    <p style="color: var(--gray-400);">MIG/MAG, TIG, Arc, Spotweld — tous les procédés de soudage. Certifications CWB et CSA W47.1/W47.2 intégrées.</p>
+                    <h4 style="color: #ffffff;">Soudure manuelle</h4>
+                    <p style="color: #94a3b8;">MIG/MAG, TIG, Arc, Spotweld — tous les procédés de soudage. Certifications CWB et CSA W47.1/W47.2 intégrées.</p>
                 </div>
-                <div class="feature-card" style="background: var(--gray-800); border-color: var(--gray-700);">
+                <div class="feature-card" style="background: #1e293b; border-color: #334155;">
                     <div class="feature-icon" style="background: rgba(249, 115, 22, 0.15);">
                         <svg viewBox="0 0 24 24" fill="none" stroke="#f97316" stroke-width="2">
                             <rect x="2" y="2" width="20" height="8" rx="2"/>
@@ -3007,20 +3132,20 @@
                             <path d="M6 6h.01M6 18h.01"/>
                         </svg>
                     </div>
-                    <h4 style="color: var(--white);">Robots soudeurs</h4>
-                    <p style="color: var(--gray-400);">Robot MIG, Robot TIG, Robot par points, Cellules robotisées — capacité 16h/jour (2 quarts). Suivi de production automatisé.</p>
+                    <h4 style="color: #ffffff;">Robots soudeurs</h4>
+                    <p style="color: #94a3b8;">Robot MIG, Robot TIG, Robot par points, Cellules robotisées — capacité 16h/jour (2 quarts). Suivi de production automatisé.</p>
                 </div>
-                <div class="feature-card" style="background: var(--gray-800); border-color: var(--gray-700);">
+                <div class="feature-card" style="background: #1e293b; border-color: #334155;">
                     <div class="feature-icon" style="background: rgba(249, 115, 22, 0.15);">
                         <svg viewBox="0 0 24 24" fill="none" stroke="#f97316" stroke-width="2">
                             <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
                             <path d="M9 12l2 2 4-4"/>
                         </svg>
                     </div>
-                    <h4 style="color: var(--white);">Certifications soudure</h4>
-                    <p style="color: var(--gray-400);">CWB (Canadian Welding Bureau), CSA W47.1 (Acier), CSA W47.2 (Aluminium), AWS. Suivi des certifications de vos soudeurs.</p>
+                    <h4 style="color: #ffffff;">Certifications soudure</h4>
+                    <p style="color: #94a3b8;">CWB (Canadian Welding Bureau), CSA W47.1 (Acier), CSA W47.2 (Aluminium), AWS. Suivi des certifications de vos soudeurs.</p>
                 </div>
-                <div class="feature-card" style="background: var(--gray-800); border-color: var(--gray-700);">
+                <div class="feature-card" style="background: #1e293b; border-color: #334155;">
                     <div class="feature-icon" style="background: rgba(249, 115, 22, 0.15);">
                         <svg viewBox="0 0 24 24" fill="none" stroke="#f97316" stroke-width="2">
                             <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
@@ -3028,8 +3153,8 @@
                             <line x1="12" y1="22.08" x2="12" y2="12"/>
                         </svg>
                     </div>
-                    <h4 style="color: var(--white);">Finition & Expédition</h4>
-                    <p style="color: var(--gray-400);">Ébavurage, Lavage, Peinture, Assemblage, Inspection qualité, Emballage — du début à la livraison.</p>
+                    <h4 style="color: #ffffff;">Finition & Expédition</h4>
+                    <p style="color: #94a3b8;">Ébavurage, Lavage, Peinture, Assemblage, Inspection qualité, Emballage — du début à la livraison.</p>
                 </div>
             </div>
         </div>
@@ -3081,7 +3206,7 @@
                     </div>
                     <span class="method-number">3</span>
                     <h3>Métré sur plans PDF</h3>
-                    <p>Uploadez vos plans d'architecte et mesurez directement à l'écran. Murs, planchers, ouvertures — tout se calcule automatiquement.</p>
+                    <p>Téléversez vos plans d'architecte et mesurez directement à l'écran. Murs, planchers, ouvertures — tout se calcule automatiquement.</p>
                 </div>
             </div>
         </div>
@@ -3604,7 +3729,7 @@
                     <ul class="pricing-features">
                         <li>
                             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#d97706" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22,4 12,14.01 9,11.01"/></svg>
-                            Uploadez vos plans et documents (max 10 fichiers)
+                            Téléversez vos plans et documents (max 10 fichiers)
                         </li>
                         <li>
                             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#d97706" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22,4 12,14.01 9,11.01"/></svg>
@@ -3642,7 +3767,7 @@
                         </li>
                         <li>
                             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#7c3aed" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22,4 12,14.01 9,11.01"/></svg>
-                            Generation de soumissions par IA
+                            Génération de soumissions par IA
                         </li>
                         <li>
                             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#7c3aed" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22,4 12,14.01 9,11.01"/></svg>
@@ -3650,7 +3775,7 @@
                         </li>
                         <li>
                             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#7c3aed" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22,4 12,14.01 9,11.01"/></svg>
-                            Recherche web specialisee construction
+                            Recherche web spécialisée construction
                         </li>
                         <li>
                             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#7c3aed" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22,4 12,14.01 9,11.01"/></svg>
@@ -3712,6 +3837,117 @@
                 </div>
             </div>
 
+
+            <!-- Tarifs du service d'estimation par catégorie -->
+            <div class="estimation-entreprise">
+                <div class="estimation-entreprise-header">
+                    <h3>Service d'estimation pour entreprises</h3>
+                    <p>Obtenez une estimation budgétaire professionnelle par nos experts IA, adaptée à votre catégorie de projet</p>
+                </div>
+                <div class="estimation-table-wrap">
+                    <table class="estimation-table">
+                        <thead>
+                            <tr>
+                                <th>Catégorie</th>
+                                <th>Rapide (~30 min)</th>
+                                <th>Approfondie (~3h)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <div class="cat-name">Résidentiel léger</div>
+                                    <div class="cat-desc">Maison, duplex, triplex</div>
+                                </td>
+                                <td class="price-cell rapide">20,00 $</td>
+                                <td class="price-cell approfondie">39,99 $</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="cat-name">Résidentiel lourd</div>
+                                    <div class="cat-desc">Condo 4+, multilogement</div>
+                                </td>
+                                <td class="price-cell rapide">39,99 $</td>
+                                <td class="price-cell approfondie">79,99 $</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="cat-name">Commercial léger</div>
+                                    <div class="cat-desc">Bureau, boutique, restaurant</div>
+                                </td>
+                                <td class="price-cell rapide">39,99 $</td>
+                                <td class="price-cell approfondie">79,99 $</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="cat-name">Commercial lourd</div>
+                                    <div class="cat-desc">Centre commercial, tour de bureaux</div>
+                                </td>
+                                <td class="price-cell rapide">59,99 $</td>
+                                <td class="price-cell approfondie">119,99 $</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="cat-name">Institutionnel</div>
+                                    <div class="cat-desc">École, hôpital, gouvernement</div>
+                                </td>
+                                <td class="price-cell rapide">59,99 $</td>
+                                <td class="price-cell approfondie">119,99 $</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="cat-name">Industriel</div>
+                                    <div class="cat-desc">Usine, entrepôt, manufacture</div>
+                                </td>
+                                <td class="price-cell rapide">59,99 $</td>
+                                <td class="price-cell approfondie">119,99 $</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="cat-name">Génie civil</div>
+                                    <div class="cat-desc">Route, pont, infrastructure</div>
+                                </td>
+                                <td class="price-cell rapide">79,99 $</td>
+                                <td class="price-cell approfondie">159,99 $</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="cat-name">Rénovation résidentielle</div>
+                                    <div class="cat-desc">Cuisine, salle de bain, sous-sol</div>
+                                </td>
+                                <td class="price-cell rapide">20,00 $</td>
+                                <td class="price-cell approfondie">39,99 $</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="cat-name">Rénovation commerciale / institutionnelle</div>
+                                    <div class="cat-desc">Espaces commerciaux et institutionnels</div>
+                                </td>
+                                <td class="price-cell rapide">39,99 $</td>
+                                <td class="price-cell approfondie">79,99 $</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="estimation-table-footer">
+                    <span class="footer-badge">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#d97706" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22,4 12,14.01 9,11.01"/></svg>
+                        Paiement unique — aucun abonnement
+                    </span>
+                    <span class="footer-badge">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#d97706" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22,4 12,14.01 9,11.01"/></svg>
+                        Remboursé automatiquement si échec
+                    </span>
+                    <span class="footer-badge">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#d97706" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22,4 12,14.01 9,11.01"/></svg>
+                        Document professionnel téléchargeable
+                    </span>
+                    <span class="footer-badge">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#d97706" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22,4 12,14.01 9,11.01"/></svg>
+                        Différent du programme Estimation Express
+                    </span>
+                </div>
+            </div>
 
             <p class="pricing-note">Tous les prix sont en dollars canadiens + taxes applicables (TPS + TVQ). Les abonnements mensuels nécessitent une carte de crédit et sont facturés immédiatement. Le service Estimation Express est un paiement unique — aucun abonnement ni inscription requis.</p>
 
@@ -4027,7 +4263,7 @@
                             </li>
                             <li>
                                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20,6 9,17 4,12"/></svg>
-                                Portail de services unifié : 5 services accessibles depuis la page d'accueil (ERP, Experts IA, Estimation Express, B2B, SEAO)
+                                Portail de services unifié : 5 services accessibles depuis la page d'accueil (ERP, Experts IA, Estimation Express, B2B, SEAOP)
                             </li>
                         </ul>
                     </div>
@@ -4483,7 +4719,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>© 2026 Constructo AI - Version 2.5.1 - Tous droits réservés | Développé par Sylvain Leduc</p>
+                <p>© 2026 Constructo AI - Version 2.6.0 - Tous droits réservés | Développé par Sylvain Leduc</p>
             </div>
         </div>
     </footer>

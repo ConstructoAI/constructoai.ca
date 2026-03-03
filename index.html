@@ -4957,4 +4957,24 @@
 
         // Charger le thème sauvegardé ou détecter la préférence système
         const savedTheme = localStorage.getItem('theme');
-        const prefersDark = wi
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+        if (savedTheme) {
+            html.setAttribute('data-theme', savedTheme);
+            updateIcons(savedTheme);
+        } else if (prefersDark) {
+            html.setAttribute('data-theme', 'dark');
+            updateIcons('dark');
+        }
+
+        // Toggle au clic
+        themeToggle.addEventListener('click', function() {
+            const current = html.getAttribute('data-theme');
+            const next = current === 'dark' ? 'light' : 'dark';
+            html.setAttribute('data-theme', next);
+            localStorage.setItem('theme', next);
+            updateIcons(next);
+        });
+    </script>
+</body>
+</html>

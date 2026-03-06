@@ -1617,6 +1617,35 @@
             scroll-behavior: smooth;
         }
 
+        /* Native details/summary for policies */
+        .policy-details {
+            border-bottom: 1px solid var(--gray-200);
+        }
+        .policy-details summary {
+            padding: 20px 24px;
+            font-size: 15px;
+            font-weight: 500;
+            color: var(--gray-900);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: var(--bg-secondary);
+            border-radius: 12px;
+            list-style: none;
+        }
+        .policy-details summary::-webkit-details-marker { display: none; }
+        .policy-details summary::marker { display: none; content: ''; }
+        .policy-details summary .faq-chevron {
+            transition: transform 0.3s;
+        }
+        .policy-details[open] summary .faq-chevron {
+            transform: rotate(180deg);
+        }
+        .policy-details .policy-content {
+            padding: 0 24px 20px;
+        }
+
         /* Updates / Changelog Section */
         .updates-section {
             padding: 70px 24px;
@@ -3645,8 +3674,8 @@
 
             <!-- Politique de remboursement dépliable -->
             <div id="remboursement" style="max-width: 800px; margin: 32px auto 0;">
-                <div class="faq-item">
-                    <div class="faq-question" style="background: var(--bg-secondary); border-radius: 12px; padding: 20px 24px;">
+                <details class="policy-details">
+                    <summary>
                         <span style="display: flex; align-items: center; gap: 10px;">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2">
                                 <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
@@ -3657,8 +3686,8 @@
                             Politique de remboursement
                         </span>
                         <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
-                    </div>
-                    <div class="faq-answer" style="padding: 0 24px;">
+                    </summary>
+                    <div class="policy-content">
                         <div style="padding: 24px 0;">
                             <div style="background: rgba(249, 115, 22, 0.1); border-left: 4px solid var(--orange); padding: 16px 20px; border-radius: 0 8px 8px 0; margin-bottom: 24px;">
                                 <p style="font-size: 13px; font-weight: 600; color: var(--orange); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px;">Important</p>
@@ -3710,13 +3739,13 @@
                             <p style="font-size: 13px; color: var(--gray-500); margin-top: 24px; padding-top: 16px; border-top: 1px solid var(--gray-200);">Dernière mise à jour : 27 février 2026 · Pour toute question : <a href="mailto:info@constructoai.ca" style="color: var(--primary);">info@constructoai.ca</a> ou <a href="tel:+15148201972" style="color: var(--primary);">(514) 820-1972</a></p>
                         </div>
                     </div>
-                </div>
+                </details>
             </div>
 
             <!-- Politique de confidentialité dépliable -->
             <div id="confidentialite" style="max-width: 800px; margin: 16px auto 0;">
-                <div class="faq-item">
-                    <div class="faq-question" style="background: var(--bg-secondary); border-radius: 12px; padding: 20px 24px;">
+                <details class="policy-details">
+                    <summary>
                         <span style="display: flex; align-items: center; gap: 10px;">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2">
                                 <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
@@ -3724,8 +3753,8 @@
                             Politique de confidentialité
                         </span>
                         <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
-                    </div>
-                    <div class="faq-answer" style="padding: 0 24px;">
+                    </summary>
+                    <div class="policy-content">
                         <div style="padding: 24px 0;">
 
                             <p style="font-size: 14px; color: var(--gray-600); margin-bottom: 20px; line-height: 1.7;">Cette politique de confidentialité s'applique à tous les utilisateurs de la plateforme Constructo AI (propriété de Constructo AI Inc.). En utilisant nos services, vous acceptez les conditions énoncées ci-dessous.</p>
@@ -3838,7 +3867,7 @@
                             <p style="font-size: 13px; color: var(--gray-500); margin-top: 24px; padding-top: 16px; border-top: 1px solid var(--gray-200);">Dernière mise à jour : 27 février 2026 · Pour toute question : <a href="mailto:info@constructoai.ca" style="color: var(--primary);">info@constructoai.ca</a> ou <a href="tel:+15148201972" style="color: var(--primary);">(514) 820-1972</a></p>
                         </div>
                     </div>
-                </div>
+                </details>
             </div>
         </div>
     </section>

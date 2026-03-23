@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Constructo AI | Écosystème conçu pour les entrepreneurs en construction du Québec</title>
-    <meta name="description" content="Constructo AI : le logiciel de gestion tout-en-un pour les entrepreneurs en construction ET fabrication au Québec. Soumissions, facturation, suivi de projets, pointage, gestion d'équipe. 40+ modules, 57 conseillers IA disponibles 24/7. Conforme RBQ, CCQ, CWB, CSA W47.1.">
+    <meta name="description" content="Constructo AI : ERP tout-en-un pour la construction au Québec. Soumissions, facturation TPS/TVQ, projets, pointage. 40+ modules, 57 conseillers IA 24/7.">
     <meta name="keywords" content="ERP construction, ERP fabrication, logiciel soudure Québec, logiciel construction Québec, gestion projet construction, gestion atelier fabrication, devis construction, devis soudure, comptabilité construction, RBQ, CCQ, CWB, CSA W47.1, CSA W47.2, AWS, Loi 16, IA construction, Constructo AI, logiciel entrepreneur, soumission construction, gestion chantier, gestion atelier soudure">
     <meta name="author" content="Sylvain Leduc - Constructo AI Inc.">
     <meta name="robots" content="index, follow">
@@ -83,7 +83,7 @@
             {
                 "@type": "Offer",
                 "name": "Estimation Express",
-                "price": "20.00",
+                "price": "19.99",
                 "priceCurrency": "CAD",
                 "priceValidUntil": "2026-12-31",
                 "availability": "https://schema.org/InStock",
@@ -153,7 +153,7 @@
             --gray-800: #1e293b;
             --gray-700: #334155;
             --gray-600: #475569;
-            --gray-500: #64748b;
+            --gray-500: #596778;
             --gray-400: #94a3b8;
             --gray-300: #cbd5e1;
             --gray-200: #e2e8f0;
@@ -268,14 +268,21 @@
             text-decoration: underline;
         }
 
-        /* Header */
+        /* Header — glassmorphism */
         .header {
-            background: var(--white);
+            background: rgba(255, 255, 255, 0.15);
+            -webkit-backdrop-filter: blur(16px) saturate(180%);
+            backdrop-filter: blur(16px) saturate(180%);
             padding: 12px 24px;
-            border-bottom: 1px solid var(--gray-200);
+            border-bottom: 1px solid rgba(226, 232, 240, 0.5);
             position: sticky;
             top: 0;
             z-index: 100;
+        }
+
+        [data-theme="dark"] .header {
+            background: rgba(15, 23, 42, 0.15);
+            border-bottom-color: rgba(51, 65, 85, 0.5);
         }
 
         .header-inner {
@@ -391,6 +398,15 @@
             cursor: pointer;
             transition: all 0.2s;
             border: none;
+        }
+
+        .btn:focus-visible,
+        a:focus-visible,
+        .faq-question:focus-visible,
+        .theme-toggle:focus-visible,
+        .hamburger:focus-visible {
+            outline: 2px solid var(--primary);
+            outline-offset: 2px;
         }
 
         .btn-primary {
@@ -1346,8 +1362,12 @@
         }
 
         .newsletter-form input:focus {
-            outline: none;
             border-color: var(--white);
+        }
+
+        .newsletter-form input:focus-visible {
+            outline: 2px solid var(--white);
+            outline-offset: 2px;
         }
 
         .checkbox-group {
@@ -2773,6 +2793,9 @@
 </head>
 <body>
 
+    <!-- Skip to content (accessibilité) -->
+    <a href="#contenu-principal" class="skip-to-content" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;z-index:10000;padding:12px 24px;background:var(--primary);color:#fff;font-weight:600;text-decoration:none;border-radius:0 0 8px 0;" onfocus="this.style.position='fixed';this.style.left='0';this.style.top='0';this.style.width='auto';this.style.height='auto';this.style.overflow='visible';" onblur="this.style.position='absolute';this.style.left='-9999px';this.style.width='1px';this.style.height='1px';this.style.overflow='hidden';">Aller au contenu principal</a>
+
     <!-- Top Banner -->
     <div class="top-banner">
         Pour tout problème, contactez <a href="tel:+15148201972">(514) 820-1972</a> ou <a href="mailto:info@constructoai.ca">info@constructoai.ca</a>
@@ -2792,6 +2815,7 @@
                 <a href="#mises-a-jour">Mises à jour</a>
                 <a href="#questions">Questions</a>
                 <a href="#contact">Contact</a>
+                <a href="https://mobile.constructoai.ca/" target="_blank" rel="noopener noreferrer">Pointeur</a>
             </nav>
             <div class="header-right">
                 <button class="theme-toggle" id="theme-toggle" aria-label="Changer le thème">
@@ -2802,7 +2826,7 @@
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
                     </svg>
                 </button>
-                <a href="https://calendar.app.google/vDb4GnEd59LXN6qSA" target="_blank" class="btn btn-outline btn-demo-header">Réserver démo</a>
+                <a href="https://calendar.app.google/vDb4GnEd59LXN6qSA" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-demo-header">Réserver démo</a>
                 <a href="https://app.constructoai.ca/" class="btn btn-primary">Mon compte</a>
                 <button class="hamburger" id="hamburger-btn" aria-label="Ouvrir le menu">
                     <span></span>
@@ -2814,7 +2838,7 @@
     </header>
 
     <!-- Mobile Menu Overlay -->
-    <div class="mobile-menu-overlay" id="mobile-menu">
+    <div class="mobile-menu-overlay" id="mobile-menu" aria-hidden="true" role="dialog" aria-label="Menu de navigation">
         <div class="mobile-menu-inner">
             <a href="#fonctionnalites" class="mobile-menu-link">Fonctionnalités</a>
             <a href="#tarifs" class="mobile-menu-link">Tarifs</a>
@@ -2822,12 +2846,16 @@
             <a href="#mises-a-jour" class="mobile-menu-link">Mises à jour</a>
             <a href="#questions" class="mobile-menu-link">Questions</a>
             <a href="#contact" class="mobile-menu-link">Contact</a>
+            <a href="https://mobile.constructoai.ca/" target="_blank" rel="noopener noreferrer" class="mobile-menu-link">Pointeur</a>
             <div class="mobile-menu-buttons">
-                <a href="https://calendar.app.google/vDb4GnEd59LXN6qSA" target="_blank" class="btn btn-demo-header" style="width: 100%;">Réserver démo</a>
+                <a href="https://calendar.app.google/vDb4GnEd59LXN6qSA" target="_blank" rel="noopener noreferrer" class="btn btn-demo-header" style="width: 100%;">Réserver démo</a>
                 <a href="https://app.constructoai.ca/" class="btn btn-primary" style="width: 100%;">Mon compte</a>
             </div>
         </div>
     </div>
+
+    <!-- Contenu principal -->
+    <main id="contenu-principal">
 
     <!-- Hero -->
     <section class="hero">
@@ -2835,7 +2863,7 @@
             <div class="hero-logo">
                 <img src="logo.png" alt="Constructo AI">
             </div>
-            <h1>Constructo AI</h1>
+            <h1>Constructo AI <span style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);">— ERP construction et fabrication Québec</span></h1>
             <p class="hero-subtitle">Un écosystème conçu pour les entrepreneurs en <strong>construction</strong> du Québec</p>
             <p class="hero-description">
                 Regroupez toutes vos opérations au même endroit. <strong>40+ outils pensés pour votre réalité</strong> : faites vos soumissions avec plus de 140 items prêts à l'emploi, suivez vos projets et chantiers en temps réel, gérez votre facturation avec TPS/TVQ automatiques, pointez vos employés (61 métiers CCQ + postes de fabrication), gardez le contrôle sur vos sous-traitants, fournisseurs et inventaires. Tout ça dans un seul logiciel.
@@ -3710,7 +3738,7 @@
                             Par vidéoconférence Google Meet
                         </li>
                     </ul>
-                    <a href="https://calendar.app.google/vDb4GnEd59LXN6qSA" target="_blank" class="btn btn-primary" style="width: 100%; padding: 14px; font-size: 16px;">
+                    <a href="https://calendar.app.google/vDb4GnEd59LXN6qSA" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="width: 100%; padding: 14px; font-size: 16px;">
                         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
                             <line x1="16" y1="2" x2="16" y2="6"/>
@@ -4258,7 +4286,7 @@
                         <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#a855f7" stroke-width="2"><path d="M12 2a4 4 0 0 1 4 4c0 1.95-1.4 3.58-3.25 3.93"/><path d="M8.56 2.75a4 4 0 0 0 1.78 7.19"/><circle cx="12" cy="16" r="1"/><path d="M18 16a6 6 0 0 0-12 0"/><path d="M21 12c0 4.97-4.03 9-9 9s-9-4.03-9-9"/></svg>
                     </div>
                     <h4 style="color: #f1f5f9; font-size: 15px; font-weight: 600; margin-bottom: 6px;">Assistant IA</h4>
-                    <p style="color: #64748b; font-size: 13px; line-height: 1.5;">62 experts IA construction avec support photo — directement dans votre poche</p>
+                    <p style="color: #64748b; font-size: 13px; line-height: 1.5;">57 experts IA construction avec support photo — directement dans votre poche</p>
                 </div>
                 <div style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; padding: 24px 16px;">
                     <div style="width: 44px; height: 44px; background: rgba(14,165,233,0.2); border-radius: 10px; display: flex; align-items: center; justify-content: center; margin: 0 auto 12px;">
@@ -4277,7 +4305,7 @@
                     </div>
                     <div>
                         <h3 style="color: #f1f5f9; font-size: 20px; font-weight: 700; margin: 0;">Assistant IA sur mobile</h3>
-                        <p style="color: #a855f7; font-size: 13px; font-weight: 600; margin: 2px 0 0;">62 experts construction + notes intelligentes — directement dans votre poche</p>
+                        <p style="color: #a855f7; font-size: 13px; font-weight: 600; margin: 2px 0 0;">57 experts construction + notes intelligentes — directement dans votre poche</p>
                     </div>
                 </div>
                 <div class="mobile-ia-grid" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px;">
@@ -5229,7 +5257,7 @@
                             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
                             info@constructoai.ca
                         </a>
-                        <a href="https://www.facebook.com/constructoai.sylvainleduc" target="_blank" class="contact-item">
+                        <a href="https://www.facebook.com/constructoai.sylvainleduc" target="_blank" rel="noopener noreferrer" class="contact-item">
                             <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
                             Facebook
                         </a>
@@ -5302,7 +5330,7 @@
                             Vous voyez des résultats concrets avec vos données
                         </li>
                     </ul>
-                    <a href="https://calendar.app.google/vDb4GnEd59LXN6qSA" target="_blank" class="btn btn-primary">Réserver ma démo gratuite</a>
+                    <a href="https://calendar.app.google/vDb4GnEd59LXN6qSA" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Réserver ma démo gratuite</a>
                 </div>
             </div>
 
@@ -5341,6 +5369,8 @@
             </form>
         </div>
     </section>
+
+    </main>
 
     <!-- Footer -->
     <footer class="footer">
@@ -5412,28 +5442,79 @@
             var mobileMenu = document.getElementById('mobile-menu');
 
             if (hamburgerBtn && mobileMenu) {
+                function openMobileMenu() {
+                    hamburgerBtn.classList.add('active');
+                    mobileMenu.classList.add('active');
+                    mobileMenu.setAttribute('aria-hidden', 'false');
+                    hamburgerBtn.setAttribute('aria-label', 'Fermer le menu');
+                    hamburgerBtn.setAttribute('aria-expanded', 'true');
+                    document.body.style.overflow = 'hidden';
+                    // Focus trap : focus le premier lien
+                    var firstLink = mobileMenu.querySelector('.mobile-menu-link');
+                    if (firstLink) firstLink.focus();
+                }
+                function closeMobileMenu() {
+                    hamburgerBtn.classList.remove('active');
+                    mobileMenu.classList.remove('active');
+                    mobileMenu.setAttribute('aria-hidden', 'true');
+                    hamburgerBtn.setAttribute('aria-label', 'Ouvrir le menu');
+                    hamburgerBtn.setAttribute('aria-expanded', 'false');
+                    document.body.style.overflow = '';
+                    hamburgerBtn.focus();
+                }
                 hamburgerBtn.addEventListener('click', function() {
-                    hamburgerBtn.classList.toggle('active');
-                    mobileMenu.classList.toggle('active');
-                    document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : '';
+                    var isOpen = mobileMenu.classList.contains('active');
+                    isOpen ? closeMobileMenu() : openMobileMenu();
+                });
+
+                // Fermer avec Escape
+                document.addEventListener('keydown', function(e) {
+                    if (e.key === 'Escape' && mobileMenu.classList.contains('active')) {
+                        closeMobileMenu();
+                    }
+                });
+
+                // Focus trap dans le menu mobile
+                mobileMenu.addEventListener('keydown', function(e) {
+                    if (e.key !== 'Tab') return;
+                    var focusable = mobileMenu.querySelectorAll('a, button, [tabindex="0"]');
+                    if (focusable.length === 0) return;
+                    var first = focusable[0];
+                    var last = focusable[focusable.length - 1];
+                    if (e.shiftKey && document.activeElement === first) {
+                        e.preventDefault();
+                        last.focus();
+                    } else if (!e.shiftKey && document.activeElement === last) {
+                        e.preventDefault();
+                        first.focus();
+                    }
                 });
 
                 // Fermer le menu quand on clique sur un lien
                 mobileMenu.querySelectorAll('.mobile-menu-link').forEach(function(link) {
                     link.addEventListener('click', function() {
-                        hamburgerBtn.classList.remove('active');
-                        mobileMenu.classList.remove('active');
-                        document.body.style.overflow = '';
+                        closeMobileMenu();
                     });
                 });
             }
 
-            // FAQ Accordion
+            // FAQ Accordion (accessible)
             document.querySelectorAll('.faq-question').forEach(function(question) {
                 question.style.cursor = 'pointer';
-                question.addEventListener('click', function() {
-                    var item = this.parentElement;
+                question.setAttribute('role', 'button');
+                question.setAttribute('tabindex', '0');
+                question.setAttribute('aria-expanded', 'false');
+                function toggleFaq() {
+                    var item = question.parentElement;
                     item.classList.toggle('active');
+                    question.setAttribute('aria-expanded', item.classList.contains('active') ? 'true' : 'false');
+                }
+                question.addEventListener('click', toggleFaq);
+                question.addEventListener('keydown', function(e) {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                        e.preventDefault();
+                        toggleFaq();
+                    }
                 });
             });
 
@@ -5454,23 +5535,34 @@
             // Theme toggle
             var themeToggle = document.getElementById('theme-toggle');
             if (themeToggle) {
+                var sunIcon = themeToggle.querySelector('.sun-icon');
+                var moonIcon = themeToggle.querySelector('.moon-icon');
+                function updateThemeIcons() {
+                    var isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+                    if (sunIcon) { sunIcon.classList.toggle('active', !isDark); }
+                    if (moonIcon) { moonIcon.classList.toggle('active', isDark); }
+                }
                 themeToggle.addEventListener('click', function() {
                     var isDark = document.documentElement.getAttribute('data-theme') === 'dark';
                     document.documentElement.setAttribute('data-theme', isDark ? 'light' : 'dark');
                     localStorage.setItem('theme', isDark ? 'light' : 'dark');
+                    updateThemeIcons();
                 });
                 if (localStorage.getItem('theme') === 'dark' || (!localStorage.getItem('theme') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
                     document.documentElement.setAttribute('data-theme', 'dark');
                 }
+                updateThemeIcons();
             }
 
             // toggleOlderUpdates
             window.toggleOlderUpdates = function(btn) {
-                var container = btn.previousElementSibling;
-                if (container) {
-                    container.style.display = container.style.display === 'none' ? 'block' : 'none';
-                    btn.textContent = container.style.display === 'none' ? 'Voir les versions précédentes' : 'Masquer les versions précédentes';
-                }
+                var hiddenUpdates = document.querySelectorAll('.hidden-update');
+                if (hiddenUpdates.length === 0) return;
+                var isHidden = !hiddenUpdates[0].classList.contains('show');
+                hiddenUpdates.forEach(function(el) {
+                    el.classList.toggle('show', isHidden);
+                });
+                btn.textContent = isHidden ? 'Masquer les versions précédentes' : 'Voir les versions précédentes';
             };
         });
     </script>

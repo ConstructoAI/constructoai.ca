@@ -118,7 +118,7 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Segoe UI is system font on Windows; fallback to system-ui for Mac/Linux -->
     <style>
         * {
             margin: 0;
@@ -127,15 +127,17 @@
         }
 
         :root {
-            --primary: #2563eb;
-            --primary-dark: #1d4ed8;
-            --primary-light: #3b82f6;
-            --dark: #1e293b;
+            /* ERP D365 Blue palette */
+            --primary: #0078D4;
+            --primary-dark: #005EA2;
+            --primary-light: #2B88D8;
+            --primary-lighter: #DEECF9;
+            --dark: #002050;
             --gray-900: #0f172a;
             --gray-800: #1e293b;
             --gray-700: #334155;
             --gray-600: #475569;
-            --gray-500: #596778;
+            --gray-500: #64748b;
             --gray-400: #94a3b8;
             --gray-300: #cbd5e1;
             --gray-200: #e2e8f0;
@@ -143,38 +145,40 @@
             --gray-50: #f8fafc;
             --white: #ffffff;
             --orange: #f97316;
+            --success: #22c55e;
+            --danger: #ef4444;
 
-            /* Variables pour le mode clair (par défaut) */
+            /* Mode clair */
             --bg-primary: #ffffff;
             --bg-secondary: #f8fafc;
-            --text-primary: #0f172a;
-            --text-secondary: #475569;
-            --border-color: #e2e8f0;
+            --text-primary: #323130;
+            --text-secondary: #605E5C;
+            --border-color: #EDEBE9;
         }
 
         /* Mode sombre */
         [data-theme="dark"] {
-            --primary: #3b82f6;
-            --primary-dark: #2563eb;
-            --primary-light: #60a5fa;
-            --gray-900: #f1f5f9;
-            --gray-800: #e2e8f0;
-            --gray-700: #cbd5e1;
-            --gray-600: #94a3b8;
+            --primary: #58A6FF;
+            --primary-dark: #0078D4;
+            --primary-light: #6CB8F6;
+            --gray-900: #F3F2F1;
+            --gray-800: #E2E8F0;
+            --gray-700: #C8C6C4;
+            --gray-600: #A19F9D;
             --gray-500: #64748b;
-            --gray-400: #475569;
-            --gray-300: #334155;
-            --gray-200: #1e293b;
-            --gray-100: #1e293b;
-            --gray-50: #0f172a;
-            --white: #0f172a;
+            --gray-400: #605E5C;
+            --gray-300: #3B3A39;
+            --gray-200: #252423;
+            --gray-100: #1B1A19;
+            --gray-50: #0F1923;
+            --white: #0F1923;
             --orange: #fb923c;
 
-            --bg-primary: #0f172a;
-            --bg-secondary: #1e293b;
-            --text-primary: #f1f5f9;
-            --text-secondary: #94a3b8;
-            --border-color: #334155;
+            --bg-primary: #0F1923;
+            --bg-secondary: #1B1A19;
+            --text-primary: #F3F2F1;
+            --text-secondary: #A19F9D;
+            --border-color: #3B3A39;
         }
 
         /* Animated background shimmer */
@@ -190,20 +194,20 @@
         }
 
         body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            font-family: "Segoe UI", system-ui, -apple-system, Roboto, sans-serif;
             color: var(--gray-900);
             line-height: 1.5;
             background-color: #ffffff;
             background-image: linear-gradient(-45deg, #ffffff, #bfdbfe, #ffffff, #dbeafe, #ffffff, #bfdbfe);
             background-size: 400% 400%;
             background-attachment: fixed;
-            -webkit-animation: bgShimmer 15s ease infinite;
-            animation: bgShimmer 15s ease infinite;
+            -webkit-animation: bgShimmer 20s ease infinite;
+            animation: bgShimmer 20s ease infinite;
         }
 
         [data-theme="dark"] body {
-            background-color: #0f172a;
-            background-image: linear-gradient(-45deg, #0f172a, #131b2e, #0f172a, #151428, #0f172a, #131b2e);
+            background-color: #0F1923;
+            background-image: linear-gradient(-45deg, #0F1923, #132744, #0F1923, #162340, #0F1923, #132744);
         }
 
         /* White sections transparent so body gradient shows through */
@@ -1798,7 +1802,7 @@
 
         .update-badge.improvement {
             background: rgba(37, 99, 235, 0.15);
-            color: #2563eb;
+            color: #0078D4;
         }
 
         [data-theme="dark"] .update-badge.improvement {
@@ -2373,10 +2377,10 @@
         }
         .pricing-grid {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
+            grid-template-columns: 1fr;
             gap: 24px;
             margin-top: 48px;
-            max-width: 800px;
+            max-width: 480px;
             margin-left: auto;
             margin-right: auto;
         }
@@ -3328,17 +3332,6 @@
                     <h4>Maintenance préventive</h4>
                     <p>Évitez les bris coûteux en chantier. Planifiez vos entretiens préventifs et correctifs avec alertes automatiques (5 niveaux de priorité). Créez des fiches d'intervention PDF professionnelles. Gérez les pièces détachées avec déduction automatique du stock. Le conseiller IA diagnostique vos pannes, génère des checklists LOTO et estime pièces + main-d'œuvre.</p>
                 </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
-                            <path d="M9 22V12h6v10"/>
-                            <circle cx="12" cy="7" r="2"/>
-                        </svg>
-                    </div>
-                    <h4>Portail multi-entreprises</h4>
-                    <p>Vous avez plusieurs compagnies ou divisions? Chacune a son espace séparé avec ses propres données, clients et projets. Connexion sécurisée en 2 étapes. Vos chiffres ne se mélangent jamais. Parfait pour les entrepreneurs qui ont une compagnie de construction ET une compagnie de location, ou plusieurs divisions par métier.</p>
-                </div>
             </div>
         </div>
     </section>
@@ -3537,16 +3530,6 @@
                 </div>
             </div>
 
-            <!-- CTA -->
-            <a href="https://app.constructoai.ca/" style="display: inline-flex; align-items: center; gap: 10px; background: linear-gradient(135deg, #3b82f6, #2563eb); color: white; padding: 16px 36px; border-radius: 10px; font-weight: 700; text-decoration: none; font-size: 1.1rem; box-shadow: 0 4px 20px rgba(59,130,246,0.3); transition: transform 0.2s, box-shadow 0.2s;" onmouseover="this.style.transform='translateY(-2px)';this.style.boxShadow='0 6px 24px rgba(59,130,246,0.4)'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 4px 20px rgba(59,130,246,0.3)'">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
-                    <polyline points="14,2 14,8 20,8"/>
-                    <line x1="9" y1="15" x2="15" y2="15"/>
-                </svg>
-                Essayer Métré
-            </a>
-            <p style="margin-top: 16px; color: #64748b; font-size: 0.9rem;">Gratuit et sans inscription — aucune carte de crédit requise</p>
         </div>
     </section>
 
@@ -3734,45 +3717,7 @@
                     <a href="https://app.constructoai.ca/" class="btn btn-green">Accéder gratuitement</a>
                 </div>
 
-                <!-- Métré PDF Gratuit -->
-                <div class="pricing-card">
-                    <div class="pricing-badge red">MÉTRÉ PDF GRATUIT</div>
-                    <div class="pricing-card-header">
-                        <h3>Métré PDF</h3>
-                        <div class="price">0$</div>
-                        <p class="price-sub">Takeoff sur plans PDF</p>
-                    </div>
-                    <div class="pricing-divider">Inclus</div>
-                    <ul class="pricing-features">
-                        <li>
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22,4 12,14.01 9,11.01"/></svg>
-                            8 outils de mesure — distance, surface, périmètre, angle, comptage, cercle, rectangle et polyligne
-                        </li>
-                        <li>
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22,4 12,14.01 9,11.01"/></svg>
-                            566 produits dans 17 catégories — prix unitaires québécois avec facteur de perte
-                        </li>
-                        <li>
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22,4 12,14.01 9,11.01"/></svg>
-                            30 métiers CCQ avec taux horaires convention 2025-2029
-                        </li>
-                        <li>
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22,4 12,14.01 9,11.01"/></svg>
-                            Calibration métrique et impérial — calques, déductions intelligentes
-                        </li>
-                        <li>
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22,4 12,14.01 9,11.01"/></svg>
-                            Sommaire multi-pages — export CSV, JSON, PDF — 7 outils d'annotation
-                        </li>
-                        <li>
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22,4 12,14.01 9,11.01"/></svg>
-                            Gratuit, sans inscription — aucune carte de crédit
-                        </li>
-                    </ul>
-                    <a href="https://app.constructoai.ca/" class="btn" style="background: linear-gradient(135deg, #ef4444, #dc2626); color: white;">Ouvrir Metre PDF</a>
-                </div>
-
-                <!-- ERP AI Complet (deplace ici pour grille 2 colonnes) -->
+                <!-- ERP AI Complet (seule carte visible) -->
                 <div class="pricing-card featured">
                     <div class="pricing-badge">POPULAIRE</div>
                     <div class="pricing-card-header">
@@ -4112,7 +4057,7 @@
 
             <!-- Title -->
             <h2 style="font-size: 36px; font-weight: 800; color: #f8fafc; margin-bottom: 16px; line-height: 1.2;">
-                <span style="color: #3b82f6;">Pointage</span>, <span style="color: #22c55e;">Notes IA</span> & <span style="color: #8b5cf6;">Assistant IA</span>
+                <span style="color: #0078D4;">Pointage</span>, <span style="color: #22c55e;">Notes IA</span> & <span style="color: #8b5cf6;">Assistant IA</span>
             </h2>
             <p style="font-size: 18px; color: #94a3b8; max-width: 650px; margin: 0 auto 40px; line-height: 1.7;">
                 Vos employés punchent, prennent des notes vocales enrichies par l'IA et communiquent directement sur leur téléphone. Pointage GPS avec météo, notes intelligentes avec photos et dictée vocale, messagerie d'équipe et assistant IA — le tout synchronisé avec votre ERP.
@@ -4123,7 +4068,7 @@
                 <!-- Row 1: Pointage -->
                 <div style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; padding: 24px 16px;">
                     <div style="width: 44px; height: 44px; background: rgba(37,99,235,0.2); border-radius: 10px; display: flex; align-items: center; justify-content: center; margin: 0 auto 12px;">
-                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12,6 12,12 16,14"/></svg>
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0078D4" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12,6 12,12 16,14"/></svg>
                     </div>
                     <h4 style="color: #f1f5f9; font-size: 15px; font-weight: 600; margin-bottom: 6px;">Punch In / Out</h4>
                     <p style="color: #64748b; font-size: 13px; line-height: 1.5;">Un tap pour pointer avec GPS et météo automatiques. Photo de chantier au punch in.</p>
@@ -4336,7 +4281,7 @@
                 <div class="info-card">
                     <div class="info-card-header">
                         <div class="info-card-icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="#0078D4" stroke-width="2">
                                 <polyline points="23,6 13.5,15.5 8.5,10.5 1,18"/>
                                 <polyline points="17,6 23,6 23,12"/>
                             </svg>
@@ -4420,8 +4365,8 @@
                     <div style="font-size: 2.5rem; font-weight: 700; color: #1e293b; margin-bottom: 12px;">200 <span style="font-size: 1.2rem;">$</span></div>
                     <p style="color: #64748b; font-size: 0.95rem;">Démolition résidentielle, projet standard, faible envergure</p>
                 </div>
-                <div style="background: #f8fafc; border: 2px solid #3b82f6; padding: 24px; border-radius: 12px; position: relative;">
-                    <div style="position: absolute; top: -10px; left: 50%; transform: translateX(-50%); background: #3b82f6; color: white; padding: 4px 14px; border-radius: 12px; font-size: 0.75rem; font-weight: 700;">Le plus courant</div>
+                <div style="background: #f8fafc; border: 2px solid #0078D4; padding: 24px; border-radius: 12px; position: relative;">
+                    <div style="position: absolute; top: -10px; left: 50%; transform: translateX(-50%); background: #0078D4; color: white; padding: 4px 14px; border-radius: 12px; font-size: 0.75rem; font-weight: 700;">Le plus courant</div>
                     <div style="font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; color: #64748b; margin-bottom: 12px;">Moyen</div>
                     <div style="font-size: 2.5rem; font-weight: 700; color: #1e293b; margin-bottom: 12px;">275 <span style="font-size: 1.2rem;">$</span></div>
                     <p style="color: #64748b; font-size: 0.95rem;">Projet commercial, multiples corps de métier, envergure modérée</p>
@@ -4461,7 +4406,7 @@
                 </a>
             </div>
 
-            <a href="mailto:info@constructoai.ca" style="display: inline-flex; align-items: center; gap: 8px; background: #3b82f6; color: white; padding: 14px 32px; border-radius: 8px; font-weight: 600; text-decoration: none; font-size: 1.1rem;">
+            <a href="mailto:info@constructoai.ca" style="display: inline-flex; align-items: center; gap: 8px; background: #0078D4; color: white; padding: 14px 32px; border-radius: 8px; font-weight: 600; text-decoration: none; font-size: 1.1rem;">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                     <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
                     <polyline points="22,6 12,13 2,6"/>
@@ -4915,7 +4860,7 @@
                 </div>
                 <div class="cta-card outline">
                     <div class="cta-card-header">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0078D4" stroke-width="2">
                             <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
                             <line x1="3" y1="9" x2="21" y2="9"/>
                             <line x1="9" y1="21" x2="9" y2="9"/>
@@ -4924,15 +4869,15 @@
                     </div>
                     <ul>
                         <li>
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9 12l2 2 4-4"/></svg>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0078D4" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9 12l2 2 4-4"/></svg>
                             Rencontre en tête-à-tête avec Sylvain Leduc
                         </li>
                         <li>
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9 12l2 2 4-4"/></svg>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0078D4" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9 12l2 2 4-4"/></svg>
                             On utilise vos vrais plans et soumissions
                         </li>
                         <li>
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9 12l2 2 4-4"/></svg>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0078D4" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9 12l2 2 4-4"/></svg>
                             Vous voyez des résultats concrets avec vos données
                         </li>
                     </ul>
@@ -4942,7 +4887,7 @@
 
             <div class="guarantee">
                 <div class="guarantee-header">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0078D4" stroke-width="2">
                         <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
                     </svg>
                     <h3>Pas de risque, pas d'engagement</h3>

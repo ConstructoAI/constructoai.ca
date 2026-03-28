@@ -34,8 +34,8 @@
     <!-- Favicon - URLs absolues pour Google -->
     <link rel="icon" type="image/png" sizes="32x32" href="https://constructoai.ca/logo.png">
     <link rel="icon" type="image/png" sizes="16x16" href="https://constructoai.ca/logo.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="https://constructoai.ca/logo.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="https://constructoai.ca/logo.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="https://constructoai.ca/icon-192x192.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://constructoai.ca/apple-touch-icon.png">
     <link rel="shortcut icon" href="https://constructoai.ca/logo.png">
     <link rel="manifest" href="https://constructoai.ca/manifest.json">
 
@@ -69,16 +69,7 @@
                 "priceCurrency": "CAD",
                 "priceValidUntil": "2026-12-31",
                 "availability": "https://schema.org/InStock",
-                "description": "ERP complet avec 40+ modules, 57 conseillers IA, Métré, employés illimités."
-            },
-            {
-                "@type": "Offer",
-                "name": "EXPERTS IA",
-                "price": "39.99",
-                "priceCurrency": "CAD",
-                "priceValidUntil": "2026-12-31",
-                "availability": "https://schema.org/InStock",
-                "description": "57 conseillers IA spécialisés en construction, génération de soumissions par IA."
+                "description": "ERP complet avec 40+ modules, 57 conseillers IA, Métré PDF, génération de soumissions, employés illimités."
             },
             {
                 "@type": "Offer",
@@ -88,15 +79,6 @@
                 "priceValidUntil": "2026-12-31",
                 "availability": "https://schema.org/InStock",
                 "description": "Estimation budgétaire par IA — sans inscription. Téléversez vos plans, payez une seule fois, recevez votre estimation en quelques minutes."
-            },
-            {
-                "@type": "Offer",
-                "name": "SEAOP - Appels d'offres",
-                "price": "0",
-                "priceCurrency": "CAD",
-                "priceValidUntil": "2026-12-31",
-                "availability": "https://schema.org/InStock",
-                "description": "Plateforme d'appels d'offres publics du Québec. 100% gratuit, sans carte de crédit."
             }
         ],
         "inLanguage": "fr-CA"
@@ -3675,7 +3657,7 @@
                 </div>
             </div>
             <p class="experts-more">+ 49 autres experts disponibles: Architecte, Ingénieur structure, Ingénieur métallurgie, Fondations, Excavation, Maçonnerie, Portes et Fenêtres, Armoires cuisine, Peintre, Escaliers, Structure d'acier, Métallurgie, Soudeur-monteur, RBQ et CCQ, Subventions et financement, Fonds de prévoyance, Après sinistre, Décontamination, Inspecteur bâtiment, Arpenteur-géomètre, Urbaniste, LEED...</p>
-            <div style="margin-top: 32px; padding: 20px 24px; background: rgba(255,255,255,0.15); border-radius: 12px; display: inline-block;">
+            <div style="margin-top: 32px; padding: 20px 24px; background: rgba(255,255,255,0.15); border-radius: 12px; display: none;">
                 <p style="color: white; margin: 0; font-size: 15px;">
                     <strong>EXPERTS IA disponible en module autonome</strong> — Accédez aux 57 conseillers sans l'ERP complet pour <strong>39,99$/mois</strong>.
                     <a href="#tarifs" style="color: #fbbf24; text-decoration: underline; margin-left: 8px;">Voir les tarifs</a>
@@ -3790,7 +3772,7 @@
 
             <div class="pricing-grid">
                 <!-- SEAOP Gratuit -->
-                <div class="pricing-card">
+                <div class="pricing-card" style="display: none;">
                     <div class="pricing-badge green">100% GRATUIT</div>
                     <div class="pricing-card-header">
                         <h3>SEAOP</h3>
@@ -3857,8 +3839,8 @@
                     <a href="https://app.constructoai.ca/" class="btn" style="background: linear-gradient(135deg, #ef4444, #dc2626); color: white;">Ouvrir Métré PDF</a>
                 </div>
 
-                <!-- Estimation Express -->
-                <div class="pricing-card">
+                <!-- Estimation Express (désactivé) -->
+                <div class="pricing-card" style="display: none;">
                     <div class="pricing-badge amber">EXPRESS</div>
                     <div class="pricing-card-header">
                         <h3>Estimation Express</h3>
@@ -3894,7 +3876,7 @@
 
             <div class="pricing-grid-row2">
                 <!-- EXPERTS IA -->
-                <div class="pricing-card">
+                <div class="pricing-card" style="display: none;">
                     <div class="pricing-badge purple">EXPERTS IA</div>
                     <div class="pricing-card-header">
                         <h3>57 conseillers IA</h3>
@@ -3940,11 +3922,23 @@
                         <div class="price">79,99$<span>/mois</span></div>
                         <p class="price-sub">Tout inclus</p>
                     </div>
-                    <div class="pricing-divider">Tout ce qui est dans EXPERTS IA, plus</div>
+                    <div class="pricing-divider">Tout inclus</div>
                     <ul class="pricing-features">
                         <li>
                             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22,4 12,14.01 9,11.01"/></svg>
                             40+ modules de gestion complets
+                        </li>
+                        <li>
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22,4 12,14.01 9,11.01"/></svg>
+                            Métré PDF — mesure sur plans
+                        </li>
+                        <li>
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22,4 12,14.01 9,11.01"/></svg>
+                            57 conseillers IA spécialisés
+                        </li>
+                        <li>
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22,4 12,14.01 9,11.01"/></svg>
+                            Génération de soumissions par IA
                         </li>
                         <li>
                             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22,4 12,14.01 9,11.01"/></svg>
@@ -5147,7 +5141,7 @@
                     <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
                 </div>
                 <div class="faq-answer">
-                    <p>Oui! <strong>EXPERTS IA</strong> est disponible en module autonome à <strong>39,99$/mois</strong>. Vous avez accès aux 57 conseillers spécialisés et à la génération de soumissions par IA — sans l'ERP complet. Le module Métré (mesure sur plans PDF) est gratuit et accessible sans compte — aucun abonnement requis.</p>
+                    <p>Toutes les fonctionnalités incluant les 57 conseillers IA, le Métré PDF et la génération de soumissions sont incluses dans l'abonnement ERP AI à <strong>79,99$/mois</strong>.</p>
                 </div>
             </div>
             <div class="faq-item">
@@ -5156,7 +5150,7 @@
                     <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
                 </div>
                 <div class="faq-answer">
-                    <p>Non. L'ERP complet coûte 79,99$/mois, ou 39,99$/mois pour EXPERTS IA seul (les 57 conseillers + soumissions IA). L'utilisation de l'IA est facturée via des crédits prépayés. Pas de frais d'installation, pas de frais par utilisateur. Annulez à tout moment. La plateforme SEAOP pour les appels d'offres reste gratuite pour tout le monde.</p>
+                    <p>Non. L'ERP complet coûte 79,99$/mois et inclut tout : 40+ modules, 57 conseillers IA, Métré PDF, soumissions. L'utilisation de l'IA est facturée via des crédits prépayés. Pas de frais d'installation, pas de frais par utilisateur. Annulez à tout moment.</p>
                 </div>
             </div>
             <div class="faq-item">

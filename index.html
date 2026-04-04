@@ -234,6 +234,23 @@
             background: transparent !important;
         }
 
+        /* Navy sections: semi-transparent overlay so breathing gradient shows through */
+        .stats-section,
+        .solution-section,
+        .experts-section,
+        .how-section {
+            background: rgba(0, 32, 80, 0.88) !important;
+            backdrop-filter: blur(2px);
+            -webkit-backdrop-filter: blur(2px);
+        }
+
+        [data-theme="dark"] .stats-section,
+        [data-theme="dark"] .solution-section,
+        [data-theme="dark"] .experts-section,
+        [data-theme="dark"] .how-section {
+            background: rgba(10, 15, 26, 0.92) !important;
+        }
+
         a {
             text-decoration: none;
             color: inherit;
@@ -4671,8 +4688,33 @@
 
             <div class="updates-timeline">
 
-                <!-- v3.0.0 — Dernière version -->
+                <!-- v3.1.0 — Dernière version -->
                 <div class="update-item latest">
+                    <div class="update-card">
+                        <div class="update-header">
+                            <span class="update-version">v3.1.0</span>
+                            <span class="update-date">4 avril 2026</span>
+                            <span class="update-badge improvement">Qualite</span>
+                        </div>
+                        <ul class="update-changes">
+                            <li>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20,6 9,17 4,12"/></svg>
+                                Audit QA complet multi-agent : 89 imports et variables inutilises retires, 4 fuites de connexion BD corrigees, 36 fichiers nettoyes (-1 803 lignes de code mort)
+                            </li>
+                            <li>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20,6 9,17 4,12"/></svg>
+                                Verification triple : TypeScript strict 0 erreurs, TypeScript unused-vars 0 erreurs, build Vite production 0 erreurs
+                            </li>
+                            <li>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20,6 9,17 4,12"/></svg>
+                                Backend Python : connexions BD securisees avec try/finally dans erp_api.py et stripe_routes.py, import inutilise retire dans integration.py
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- v3.0.0 -->
+                <div class="update-item">
                     <div class="update-card">
                         <div class="update-header">
                             <span class="update-version">v3.0.0</span>
@@ -5235,7 +5277,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>© 2026 Constructo AI - Version 3.0.0 - Tous droits réservés | Développé par Sylvain Leduc</p>
+                <p>© 2026 Constructo AI - Version 3.1.0 - Tous droits réservés | Développé par Sylvain Leduc</p>
             </div>
         </div>
     </footer>

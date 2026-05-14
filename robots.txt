@@ -9,6 +9,9 @@ Disallow: /og-image.html
 Disallow: /*.json$
 Disallow: /Modifier HTML.html
 
+# Bloquer les URLs Cloudflare email protection (causent des 404 inutiles)
+Disallow: /cdn-cgi/
+
 # Bloquer les bots agressifs IA (optionnel - décommenter si souhaité)
 # User-agent: GPTBot
 # Disallow: /

@@ -4,8 +4,19 @@
 User-agent: *
 Allow: /
 
-# Sitemap
+# Bloquer les fichiers techniques et templates internes
+Disallow: /og-image.html
+Disallow: /*.json$
+Disallow: /Modifier HTML.html
+
+# Bloquer les bots agressifs IA (optionnel - décommenter si souhaité)
+# User-agent: GPTBot
+# Disallow: /
+# User-agent: CCBot
+# Disallow: /
+
+# Sitemap principal
 Sitemap: https://constructoai.ca/sitemap.xml
 
-# Crawl-delay (optionnel - respecté par certains robots)
+# Crawl-delay (respecté par certains robots)
 Crawl-delay: 1

@@ -1,50 +1,78 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
     <url>
         <loc>https://constructoai.ca/</loc>
-        <lastmod>2025-12-15</lastmod>
+        <lastmod>2026-05-14</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
+        <image:image>
+            <image:loc>https://constructoai.ca/og-image.png</image:loc>
+            <image:title>Constructo AI - ERP construction Québec</image:title>
+            <image:caption>Dashboard ERP pour entrepreneurs en construction au Québec</image:caption>
+        </image:image>
+        <image:image>
+            <image:loc>https://constructoai.ca/logo.png</image:loc>
+            <image:title>Logo Constructo AI</image:title>
+        </image:image>
     </url>
     <url>
         <loc>https://constructoai.ca/erp-construction-quebec.html</loc>
-        <lastmod>2025-12-15</lastmod>
+        <lastmod>2026-05-14</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
     </url>
     <url>
         <loc>https://constructoai.ca/logiciel-soumission-construction.html</loc>
-        <lastmod>2025-12-15</lastmod>
+        <lastmod>2026-05-14</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://constructoai.ca/gestion-chantier-quebec.html</loc>
-        <lastmod>2025-12-15</lastmod>
+        <lastmod>2026-05-14</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://constructoai.ca/conformite-rbq-ccq.html</loc>
-        <lastmod>2025-12-15</lastmod>
+        <lastmod>2026-05-14</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
+        <loc>https://constructoai.ca/calculateurs-construction-quebec.html</loc>
+        <lastmod>2026-05-14</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://constructoai.ca/blog/</loc>
+        <lastmod>2026-05-14</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://constructoai.ca/blog/choisir-logiciel-soumission-construction-quebec-2026.html</loc>
+        <lastmod>2026-05-14</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
         <loc>https://app.constructoai.ca/</loc>
-        <lastmod>2025-12-15</lastmod>
+        <lastmod>2026-05-14</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
     </url>
     <url>
         <loc>https://app.constructoai.ca/privacy-policy</loc>
-        <lastmod>2025-12-15</lastmod>
+        <lastmod>2026-05-14</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.5</priority>
     </url>
     <url>
         <loc>https://app.constructoai.ca/terms-of-service</loc>
-        <lastmod>2025-12-15</lastmod>
+        <lastmod>2026-05-14</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.5</priority>
     </url>

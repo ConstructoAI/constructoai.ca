@@ -8,14 +8,30 @@
     <meta name="keywords" content="gestion chantier Québec, logiciel gestion projet construction, suivi chantier, planification construction, gestion équipe chantier, TimeTracker construction">
     <meta name="author" content="Sylvain Leduc - Constructo AI Inc.">
     <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#2563eb">
+
+    <!-- Google Analytics 4 (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-0YR5DE1V9W"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-0YR5DE1V9W');
+    </script>
 
     <link rel="canonical" href="https://constructoai.ca/gestion-chantier-quebec.html">
+    <link rel="alternate" hreflang="fr-ca" href="https://constructoai.ca/gestion-chantier-quebec.html">
+    <link rel="alternate" hreflang="x-default" href="https://constructoai.ca/gestion-chantier-quebec.html">
 
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://constructoai.ca/gestion-chantier-quebec.html">
     <meta property="og:title" content="Gestion de Chantier Québec | Suivi de projets en temps réel">
     <meta property="og:description" content="Gérez vos chantiers de construction efficacement. Planification, suivi des heures, rapports automatisés.">
     <meta property="og:image" content="https://constructoai.ca/og-image.png">
+    <meta property="og:image:width" content="915">
+    <meta property="og:image:height" content="626">
+    <meta property="og:image:alt" content="Constructo AI - Gestion de chantier mobile au Québec">
+    <meta property="og:site_name" content="Constructo AI">
     <meta property="og:locale" content="fr_CA">
 
     <meta name="twitter:card" content="summary_large_image">
@@ -23,6 +39,28 @@
     <meta name="twitter:image" content="https://constructoai.ca/og-image.png">
 
     <link rel="icon" type="image/png" href="logo.png">
+
+    <!-- Schema.org - BreadcrumbList -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Accueil",
+                "item": "https://constructoai.ca/"
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Gestion de Chantier Québec",
+                "item": "https://constructoai.ca/gestion-chantier-quebec.html"
+            }
+        ]
+    }
+    </script>
 
     <script type="application/ld+json">
     {
@@ -59,6 +97,7 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
     <style>
@@ -134,13 +173,21 @@
 <body>
 
     <header class="header">
-        <div class="header-inner">
+        <div class="header-inner" style="gap: 24px; flex-wrap: wrap;">
             <a href="/" class="logo">
-                <img src="logo.png" alt="Constructo AI">
+                <img src="logo.png" alt="Constructo AI" width="497" height="502" decoding="async" fetchpriority="high">
                 Constructo AI
             </a>
+            <nav style="display:flex; gap:18px; font-size:14px; flex-wrap:wrap;" aria-label="Navigation guides">
+                <a href="/erp-construction-quebec.html" style="color: var(--gray-700);">ERP Construction</a>
+                <a href="/logiciel-soumission-construction.html" style="color: var(--gray-700);">Soumissions</a>
+                <a href="/gestion-chantier-quebec.html" style="color: var(--primary); font-weight: 600;">Chantier</a>
+                <a href="/calculateurs-construction-quebec.html" style="color: var(--gray-700);">Calculateurs</a>
+                <a href="/conformite-rbq-ccq.html" style="color: var(--gray-700);">Conformité RBQ</a>
+                <a href="/blog/" style="color: var(--gray-700);">Blog</a>
+            </nav>
             <div>
-                <a href="https://app.constructoai.ca" class="btn btn-primary">Essai gratuit</a>
+                <a href="https://app.constructoai.ca" class="btn btn-primary">S'abonner</a>
             </div>
         </div>
     </header>
@@ -149,7 +196,7 @@
         <h1>Gestion de Chantier au Québec</h1>
         <p>Planifiez, suivez et contrôlez tous vos projets de construction en temps réel. Application mobile pour votre équipe, rapports automatisés, communication simplifiée.</p>
         <div class="hero-buttons">
-            <a href="https://app.constructoai.ca" class="btn btn-white">Essai gratuit 7 jours</a>
+            <a href="https://app.constructoai.ca" class="btn btn-white">S'abonner maintenant</a>
             <a href="/" class="btn btn-outline" style="border-color: rgba(255,255,255,0.3); color: white;">Découvrir Constructo AI</a>
         </div>
     </section>
@@ -268,7 +315,7 @@
         <div class="cta-box">
             <h3>Simplifiez la gestion de vos chantiers</h3>
             <p>Rejoignez les entrepreneurs québécois qui ont modernisé leur gestion de chantier avec Constructo AI.</p>
-            <a href="https://app.constructoai.ca" class="btn btn-white">Commencer l'essai gratuit</a>
+            <a href="https://app.constructoai.ca" class="btn btn-white">Commencer maintenant</a>
         </div>
 
         <h2>Questions fréquentes</h2>
@@ -290,18 +337,43 @@
 
         <div class="faq-item">
             <div class="faq-question">Le logiciel est-il adapté aux petites entreprises?</div>
-            <div class="faq-answer">Oui, Constructo AI convient autant aux petits entrepreneurs qu'aux grandes entreprises. Le forfait unique à 139,99$/mois inclut tous les modules sans limite d'utilisateurs ou de projets.</div>
+            <div class="faq-answer">Oui, Constructo AI convient autant aux petits entrepreneurs qu'aux grandes entreprises. Le forfait unique à 79,99$/mois inclut tous les modules sans limite d'utilisateurs ou de projets.</div>
         </div>
 
         <div class="faq-item">
             <div class="faq-question">Puis-je essayer avant d'acheter?</div>
-            <div class="faq-answer">Absolument. Nous offrons un essai gratuit de 7 jours avec accès complet à tous les modules, incluant la gestion de chantier et le TimeTracker. Aucune carte de crédit requise.</div>
+            <div class="faq-answer">Absolument. La facturation debute immediatement a l'inscription, mais vous pouvez annuler a tout moment sans penalite. Tous les modules sont accessibles des le premier jour, incluant la gestion de chantier et le TimeTracker.</div>
         </div>
 
     </main>
 
-    <footer class="footer">
-        <p>&copy; 2025 Constructo AI - Tous droits réservés | Développé par Sylvain Leduc</p>
+    <footer style="background: #0f172a; color: #cbd5e1; padding: 40px 24px;">
+        <div style="max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 32px;">
+            <div>
+                <strong style="color: #fff; font-size: 1.1rem;">Constructo AI</strong>
+                <p style="margin-top: 8px; font-size: 0.9rem; color: #94a3b8;">L'ERP conçu pour les entrepreneurs en construction et fabrication au Québec.</p>
+            </div>
+            <div>
+                <h4 style="color: #fff; font-size: 0.95rem; margin-bottom: 12px;">Guides</h4>
+                <ul style="list-style: none; padding: 0; margin: 0;">
+                    <li style="margin-bottom: 8px;"><a href="/erp-construction-quebec.html" style="color: #cbd5e1; font-size: 0.9rem;">ERP Construction</a></li>
+                    <li style="margin-bottom: 8px;"><a href="/logiciel-soumission-construction.html" style="color: #cbd5e1; font-size: 0.9rem;">Soumissions</a></li>
+                    <li style="margin-bottom: 8px;"><a href="/calculateurs-construction-quebec.html" style="color: #cbd5e1; font-size: 0.9rem;">Calculateurs</a></li>
+                    <li style="margin-bottom: 8px;"><a href="/conformite-rbq-ccq.html" style="color: #cbd5e1; font-size: 0.9rem;">Conformité RBQ</a></li>
+                    <li style="margin-bottom: 8px;"><a href="/blog/" style="color: #cbd5e1; font-size: 0.9rem;">Blog</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 style="color: #fff; font-size: 0.95rem; margin-bottom: 12px;">Contact</h4>
+                <ul style="list-style: none; padding: 0; margin: 0;">
+                    <li style="margin-bottom: 8px;"><a href="tel:+15148201972" style="color: #cbd5e1; font-size: 0.9rem;">(514) 820-1972</a></li>
+                    <li style="margin-bottom: 8px;"><a href="mailto:info@constructoai.ca" style="color: #cbd5e1; font-size: 0.9rem;">info@constructoai.ca</a></li>
+                </ul>
+            </div>
+        </div>
+        <div style="max-width: 1100px; margin: 30px auto 0; padding-top: 20px; border-top: 1px solid #1e293b; text-align: center; font-size: 0.85rem; color: #64748b;">
+            <p>&copy; 2026 Constructo AI Inc. Tous droits réservés.</p>
+        </div>
     </footer>
 
 </body>

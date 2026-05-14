@@ -51,11 +51,11 @@ Site web officiel de **Constructo AI** - Système ERP complet pour les industrie
 - ✅ Conformité réglementaire automatique (RBQ, CCQ, CNESST, Loi 16)
 - ✅ Certifications soudure : CWB, CSA W47.1, CSA W47.2, AWS
 - ✅ 33+ modules intégrés (incluant Immobilier, Charge Tributaire, Boutique B2B, Visionneuse CAO 3D, Logistique, GPS, Paie Québec, Météo Chantier)
-- ✅ 57 conseillers spécialisés disponibles 24/7 (Claude Opus 4.5)
-- ✅ **EXPERTS IA autonome** : 79,99$/mois (57 experts + Soumissions IA)
+- ✅ 57 conseillers spécialisés disponibles 24/7 (Claude Opus 4.6)
+- ✅ **EXPERTS IA autonome** : 49,99$/mois (57 experts + Soumissions IA)
 - ✅ 61 postes CCQ intégrés + 18 postes fabrication/soudure
 - ✅ 140+ items de soumission prédéfinis
-- ✅ Pricing transparent : 139,99$/mois tout inclus (tous les employés)
+- ✅ Pricing transparent : 79,99$/mois tout inclus (tous les employés)
 - ✅ Support 100% français québécois
 - ✅ Prêt en 5 minutes
 - ✅ SEAOP : Plateforme d'appels d'offres 100% gratuite
@@ -110,7 +110,7 @@ La page index.html est structurée en **18 sections distinctes** :
 | 13 | **API/Intégrations** | `#api` | QuickBooks, Sage, Zapier, n8n |
 | 14 | **FAQ** | - | 6 questions fréquentes |
 | 15 | **Chat Fondateur** | - | Interface chat avec Sylvain Leduc |
-| 16 | **CTA** | - | Essai gratuit + démo personnalisée |
+| 16 | **CTA** | - | Inscription + demo personnalisee |
 | 17 | **Newsletter** | `#contact` | Formulaire inscription infolettre |
 | 18 | **Footer** | - | 6 colonnes d'informations |
 
@@ -159,7 +159,7 @@ La page index.html est structurée en **18 sections distinctes** :
 
 ## 🧠 Conseillers Spécialisés
 
-**57 conseillers spécialisés** disponibles 24/7 (module autonome EXPERTS IA à 79,99$/mois ou inclus dans l'ERP à 139,99$/mois) :
+**57 conseillers spécialisés** disponibles 24/7 (module autonome EXPERTS IA à 49,99$/mois ou inclus dans l'ERP à 79,99$/mois) :
 
 | Expert | Spécialités |
 |--------|-------------|
@@ -184,7 +184,7 @@ La page index.html est structurée en **18 sections distinctes** :
 - 💰 **Financement bancaire** - 7 banques québécoises (Desjardins, BNC, RBC, TD, Scotia, BMO, CIBC)
 - 📊 **Déblocages progressifs** - Calendrier automatique 7 étapes (terrain 10%, fondations 15%, charpente 25%, toiture 15%, plomberie/élec/CVC 20%, finitions 10%, final 5%)
 - 🧮 **6 calculateurs financiers** - Mensualité, amortissement, intérêts intercalaires, assurance SCHL, ROI, coût crédit
-- 🧠 **Expert IA Claude Opus 4.5** - Analyse projets, optimisation financement, conseils construction spécialisés
+- 🧠 **Expert IA Claude Opus 4.6** - Analyse projets, optimisation financement, conseils construction spécialisés
 
 **Validation** :
 - ✅ 59/59 tests production réussis (100%)
@@ -357,11 +357,11 @@ Le site présente 6 questions fréquentes dans sa section FAQ :
 
 | Question | Réponse clé |
 |----------|-------------|
-| **Que comprend l'abonnement à 139,99$/mois?** | Tout inclus : 33+ modules, 57 conseillers, TAKEOFF AI, 207+ tables PostgreSQL, utilisateurs illimités, support téléphone |
+| **Que comprend l'abonnement à 79,99$/mois?** | Tout inclus : 40+ modules, 57 conseillers, TAKEOFF AI, 207+ tables PostgreSQL, utilisateurs illimités, support téléphone |
 | **Est-ce que mes concurrents vont voir mes prix?** | Non, espace 100% isolé, sécurité bancaire |
 | **Combien d'utilisateurs peuvent accéder?** | Illimités, un tarif fixe |
 | **L'IA, c'est compliqué à utiliser?** | Non, conversation naturelle, pas de configuration |
-| **Y a-t-il des frais supplémentaires?** | Non, 139,99$ + taxes/mois tout inclus, essai 7 jours |
+| **Y a-t-il des frais supplémentaires?** | Non, 79,99$ + taxes/mois tout inclus, annulez a tout moment |
 | **Puis-je résilier à tout moment?** | Oui, sans contrat ni pénalité, données accessibles en lecture |
 
 ---
@@ -889,7 +889,7 @@ Fondateur & Développeur - Constructo AI Inc.
 
 ## 📄 Licence
 
-© 2025 Constructo AI - Tous droits réservés
+© 2026 Constructo AI - Tous droits réservés
 
 Ce projet est propriétaire et confidentiel. Toute reproduction, distribution ou utilisation non autorisée est strictement interdite.
 
@@ -954,7 +954,7 @@ Le site présente 5 statistiques clés dans la section Stats :
 - ✅ **57 conseillers** - 8 détaillés + 49 autres mentionnés (mémoire persistante, CRUD langage naturel)
 - ✅ **33+ modules** - Mise à jour dans Hero et Solution sections
 - ✅ **207+ tables PostgreSQL** - Base de données complète multi-tenant
-- ✅ **Expert IA Claude Opus 4.5** - Documentation financement construction
+- ✅ **Expert IA Claude Opus 4.6** - Documentation financement construction
 - ✅ **140+ items soumission** - Base de données complète prédéfinie
 - ✅ **SEAOP** - Plateforme appels d'offres gratuite présentée
 - ✅ **Chat Fondateur** - Section interactive avec Sylvain Leduc

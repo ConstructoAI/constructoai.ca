@@ -1,7 +1,7 @@
 {
   "name": "Constructo AI - ERP Construction",
   "short_name": "Constructo AI",
-  "description": "ERP intelligent pour entreprises de construction",
+  "description": "ERP intelligent pour entreprises de construction au Québec",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#FFFFFF",
@@ -9,16 +9,28 @@
   "orientation": "portrait-primary",
   "icons": [
     {
-      "src": "https://constructoai.ca/logo.png",
+      "src": "/icon-192x192.png",
       "sizes": "192x192",
       "type": "image/png",
-      "purpose": "any maskable"
+      "purpose": "any"
     },
     {
-      "src": "https://constructoai.ca/logo.png",
+      "src": "/icon-maskable-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/icon-512x512.png",
       "sizes": "512x512",
       "type": "image/png",
-      "purpose": "any maskable"
+      "purpose": "any"
+    },
+    {
+      "src": "/icon-maskable-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
     }
   ]
 }

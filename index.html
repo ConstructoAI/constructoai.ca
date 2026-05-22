@@ -5263,15 +5263,10 @@
                         });
                     });
 
-                    var titleEl = document.querySelector('title');
-                    if (titleEl && titleEl.hasAttribute('data-i18n-en')) {
-                        if (!titleEl.hasAttribute('data-i18n-fr-text')) {
-                            titleEl.setAttribute('data-i18n-fr-text', titleEl.textContent);
-                        }
-                        titleEl.textContent = isEn
-                            ? titleEl.getAttribute('data-i18n-en')
-                            : titleEl.getAttribute('data-i18n-fr-text');
-                    }
+                    // Note: <title> est géré par la boucle générale [data-i18n-en] ci-dessus
+                    // (innerHTML de <title> == son textContent puisqu'il ne contient que du texte).
+                    // Un handler title-spécifique séparé corromprait le stash car le general loop
+                    // a déjà swappé la valeur avant qu'il s'exécute.
 
                     var ogLocale = document.querySelector('meta[property="og:locale"]');
                     if (ogLocale) ogLocale.setAttribute('content', isEn ? 'en_CA' : 'fr_CA');

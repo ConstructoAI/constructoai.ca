@@ -78,6 +78,71 @@
         <xhtml:link rel="alternate" hreflang="fr-CA" href="https://constructoai.ca/calculateurs-construction-quebec.html"/>
     </url>
 
+    <!-- Comparison landing pages (English, Canada + USA targeting) -->
+    <url>
+        <loc>https://constructoai.ca/vs-procore.html</loc>
+        <lastmod>2026-05-22</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.85</priority>
+        <xhtml:link rel="alternate" hreflang="en-CA" href="https://constructoai.ca/vs-procore.html"/>
+        <xhtml:link rel="alternate" hreflang="en-US" href="https://constructoai.ca/vs-procore.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://constructoai.ca/vs-procore.html"/>
+    </url>
+    <url>
+        <loc>https://constructoai.ca/vs-buildertrend.html</loc>
+        <lastmod>2026-05-22</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.85</priority>
+        <xhtml:link rel="alternate" hreflang="en-CA" href="https://constructoai.ca/vs-buildertrend.html"/>
+        <xhtml:link rel="alternate" hreflang="en-US" href="https://constructoai.ca/vs-buildertrend.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://constructoai.ca/vs-buildertrend.html"/>
+    </url>
+    <url>
+        <loc>https://constructoai.ca/vs-sage-construction.html</loc>
+        <lastmod>2026-05-22</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.85</priority>
+        <xhtml:link rel="alternate" hreflang="en-CA" href="https://constructoai.ca/vs-sage-construction.html"/>
+        <xhtml:link rel="alternate" hreflang="en-US" href="https://constructoai.ca/vs-sage-construction.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://constructoai.ca/vs-sage-construction.html"/>
+    </url>
+    <url>
+        <loc>https://constructoai.ca/vs-autodesk-construction-cloud.html</loc>
+        <lastmod>2026-05-22</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.85</priority>
+        <xhtml:link rel="alternate" hreflang="en-CA" href="https://constructoai.ca/vs-autodesk-construction-cloud.html"/>
+        <xhtml:link rel="alternate" hreflang="en-US" href="https://constructoai.ca/vs-autodesk-construction-cloud.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://constructoai.ca/vs-autodesk-construction-cloud.html"/>
+    </url>
+    <url>
+        <loc>https://constructoai.ca/vs-cmic.html</loc>
+        <lastmod>2026-05-22</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.85</priority>
+        <xhtml:link rel="alternate" hreflang="en-CA" href="https://constructoai.ca/vs-cmic.html"/>
+        <xhtml:link rel="alternate" hreflang="en-US" href="https://constructoai.ca/vs-cmic.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://constructoai.ca/vs-cmic.html"/>
+    </url>
+    <url>
+        <loc>https://constructoai.ca/vs-jobber.html</loc>
+        <lastmod>2026-05-22</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.85</priority>
+        <xhtml:link rel="alternate" hreflang="en-CA" href="https://constructoai.ca/vs-jobber.html"/>
+        <xhtml:link rel="alternate" hreflang="en-US" href="https://constructoai.ca/vs-jobber.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://constructoai.ca/vs-jobber.html"/>
+    </url>
+    <url>
+        <loc>https://constructoai.ca/vs-bluebeam.html</loc>
+        <lastmod>2026-05-22</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.85</priority>
+        <xhtml:link rel="alternate" hreflang="en-CA" href="https://constructoai.ca/vs-bluebeam.html"/>
+        <xhtml:link rel="alternate" hreflang="en-US" href="https://constructoai.ca/vs-bluebeam.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://constructoai.ca/vs-bluebeam.html"/>
+    </url>
+
     <!-- Blog (francophone) -->
     <url>
         <loc>https://constructoai.ca/blog/</loc>

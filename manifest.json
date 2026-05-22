@@ -1,12 +1,16 @@
 {
-  "name": "Constructo AI - ERP Construction",
+  "name": "Constructo AI - Construction & Fabrication ERP",
   "short_name": "Constructo AI",
-  "description": "ERP intelligent pour entreprises de construction au Québec",
+  "description": "All-in-one ERP for construction and fabrication contractors across Canada and the USA. Bids, billing, projects, mobile time clock, AI assistants.",
+  "lang": "en-CA",
+  "dir": "ltr",
   "start_url": "/",
+  "scope": "/",
   "display": "standalone",
   "background_color": "#FFFFFF",
-  "theme_color": "#3B82F6",
+  "theme_color": "#0078D4",
   "orientation": "portrait-primary",
+  "categories": ["business", "productivity", "construction", "saas"],
   "icons": [
     {
       "src": "/icon-192x192.png",

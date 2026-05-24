@@ -6,7 +6,7 @@
     <!-- Homepage (bilingue FR/EN) — Canada + USA targeting via hreflang reciproque -->
     <url>
         <loc>https://constructoai.ca/</loc>
-        <lastmod>2026-05-22</lastmod>
+        <lastmod>2026-05-24</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
         <xhtml:link rel="alternate" hreflang="fr-CA" href="https://constructoai.ca/"/>
@@ -27,7 +27,7 @@
     <!-- Homepage English variant (?lang=en) — déclaration réciproque pour Google -->
     <url>
         <loc>https://constructoai.ca/?lang=en</loc>
-        <lastmod>2026-05-22</lastmod>
+        <lastmod>2026-05-24</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
         <xhtml:link rel="alternate" hreflang="fr-CA" href="https://constructoai.ca/"/>
@@ -44,35 +44,35 @@
     <!-- Pages d'atterrissage francophones (Quebec-targeted, fr-CA uniquement) -->
     <url>
         <loc>https://constructoai.ca/erp-construction-quebec.html</loc>
-        <lastmod>2026-05-22</lastmod>
+        <lastmod>2026-05-24</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
         <xhtml:link rel="alternate" hreflang="fr-CA" href="https://constructoai.ca/erp-construction-quebec.html"/>
     </url>
     <url>
         <loc>https://constructoai.ca/logiciel-soumission-construction.html</loc>
-        <lastmod>2026-05-22</lastmod>
+        <lastmod>2026-05-24</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
         <xhtml:link rel="alternate" hreflang="fr-CA" href="https://constructoai.ca/logiciel-soumission-construction.html"/>
     </url>
     <url>
         <loc>https://constructoai.ca/gestion-chantier-quebec.html</loc>
-        <lastmod>2026-05-22</lastmod>
+        <lastmod>2026-05-24</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
         <xhtml:link rel="alternate" hreflang="fr-CA" href="https://constructoai.ca/gestion-chantier-quebec.html"/>
     </url>
     <url>
         <loc>https://constructoai.ca/conformite-rbq-ccq.html</loc>
-        <lastmod>2026-05-22</lastmod>
+        <lastmod>2026-05-24</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
         <xhtml:link rel="alternate" hreflang="fr-CA" href="https://constructoai.ca/conformite-rbq-ccq.html"/>
     </url>
     <url>
         <loc>https://constructoai.ca/calculateurs-construction-quebec.html</loc>
-        <lastmod>2026-05-22</lastmod>
+        <lastmod>2026-05-24</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
         <xhtml:link rel="alternate" hreflang="fr-CA" href="https://constructoai.ca/calculateurs-construction-quebec.html"/>
@@ -81,7 +81,7 @@
     <!-- Comparison landing pages (English, Canada + USA targeting) -->
     <url>
         <loc>https://constructoai.ca/vs-procore.html</loc>
-        <lastmod>2026-05-22</lastmod>
+        <lastmod>2026-05-24</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.85</priority>
         <xhtml:link rel="alternate" hreflang="en-CA" href="https://constructoai.ca/vs-procore.html"/>
@@ -90,7 +90,7 @@
     </url>
     <url>
         <loc>https://constructoai.ca/vs-buildertrend.html</loc>
-        <lastmod>2026-05-22</lastmod>
+        <lastmod>2026-05-24</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.85</priority>
         <xhtml:link rel="alternate" hreflang="en-CA" href="https://constructoai.ca/vs-buildertrend.html"/>
@@ -99,7 +99,7 @@
     </url>
     <url>
         <loc>https://constructoai.ca/vs-sage-construction.html</loc>
-        <lastmod>2026-05-22</lastmod>
+        <lastmod>2026-05-24</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.85</priority>
         <xhtml:link rel="alternate" hreflang="en-CA" href="https://constructoai.ca/vs-sage-construction.html"/>
@@ -108,7 +108,7 @@
     </url>
     <url>
         <loc>https://constructoai.ca/vs-autodesk-construction-cloud.html</loc>
-        <lastmod>2026-05-22</lastmod>
+        <lastmod>2026-05-24</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.85</priority>
         <xhtml:link rel="alternate" hreflang="en-CA" href="https://constructoai.ca/vs-autodesk-construction-cloud.html"/>
@@ -117,7 +117,7 @@
     </url>
     <url>
         <loc>https://constructoai.ca/vs-cmic.html</loc>
-        <lastmod>2026-05-22</lastmod>
+        <lastmod>2026-05-24</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.85</priority>
         <xhtml:link rel="alternate" hreflang="en-CA" href="https://constructoai.ca/vs-cmic.html"/>
@@ -126,7 +126,7 @@
     </url>
     <url>
         <loc>https://constructoai.ca/vs-jobber.html</loc>
-        <lastmod>2026-05-22</lastmod>
+        <lastmod>2026-05-24</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.85</priority>
         <xhtml:link rel="alternate" hreflang="en-CA" href="https://constructoai.ca/vs-jobber.html"/>
@@ -135,7 +135,7 @@
     </url>
     <url>
         <loc>https://constructoai.ca/vs-bluebeam.html</loc>
-        <lastmod>2026-05-22</lastmod>
+        <lastmod>2026-05-24</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.85</priority>
         <xhtml:link rel="alternate" hreflang="en-CA" href="https://constructoai.ca/vs-bluebeam.html"/>
@@ -146,14 +146,14 @@
     <!-- Blog (francophone) -->
     <url>
         <loc>https://constructoai.ca/blog/</loc>
-        <lastmod>2026-05-22</lastmod>
+        <lastmod>2026-05-24</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.7</priority>
         <xhtml:link rel="alternate" hreflang="fr-CA" href="https://constructoai.ca/blog/"/>
     </url>
     <url>
         <loc>https://constructoai.ca/blog/choisir-logiciel-soumission-construction-quebec-2026.html</loc>
-        <lastmod>2026-05-22</lastmod>
+        <lastmod>2026-05-24</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
         <xhtml:link rel="alternate" hreflang="fr-CA" href="https://constructoai.ca/blog/choisir-logiciel-soumission-construction-quebec-2026.html"/>
@@ -162,19 +162,19 @@
     <!-- Application web -->
     <url>
         <loc>https://app.constructoai.ca/</loc>
-        <lastmod>2026-05-22</lastmod>
+        <lastmod>2026-05-24</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
     </url>
     <url>
         <loc>https://app.constructoai.ca/privacy-policy</loc>
-        <lastmod>2026-05-22</lastmod>
+        <lastmod>2026-05-24</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.5</priority>
     </url>
     <url>
         <loc>https://app.constructoai.ca/terms-of-service</loc>
-        <lastmod>2026-05-22</lastmod>
+        <lastmod>2026-05-24</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.5</priority>
     </url>

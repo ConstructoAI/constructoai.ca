@@ -425,6 +425,29 @@
             .comparison-table th, .comparison-table td { padding: 10px 12px; }
         }
     </style>
+    <!-- Google Consent Mode v2 - PIPEDA / Quebec Law 25 / GDPR / CCPA (defaults denied before consent) -->
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('consent', 'default', {
+            'analytics_storage': 'denied',
+            'ad_storage': 'denied',
+            'ad_user_data': 'denied',
+            'ad_personalization': 'denied',
+            'wait_for_update': 2000
+        });
+    </script>
+
+    <!-- Google tag (gtag.js) - tracking via cookieless pings tant que consent denied -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-0YR5DE1V9W"></script>
+    <script>
+        gtag('js', new Date());
+        gtag('config', 'G-0YR5DE1V9W', {
+            'anonymize_ip': true
+        });
+        gtag('config', 'AW-405629883');
+    </script>
+
 </head>
 <body>
 

@@ -1,6 +1,27 @@
 # Robots.txt pour Constructo AI
 # https://constructoai.ca
 
+# Googlebot — pas de crawl-delay (Google peut crawler a pleine vitesse)
+# Idem pour Bingbot et Slurp (Yahoo) qui supportent un crawl optimise
+User-agent: Googlebot
+Allow: /
+Disallow: /og-image.html
+Disallow: /*.json$
+Disallow: /cdn-cgi/
+
+User-agent: Bingbot
+Allow: /
+Disallow: /og-image.html
+Disallow: /*.json$
+Disallow: /cdn-cgi/
+
+User-agent: Slurp
+Allow: /
+Disallow: /og-image.html
+Disallow: /*.json$
+Disallow: /cdn-cgi/
+
+# Tous les autres bots (avec crawl-delay defensif pour bots agressifs)
 User-agent: *
 Allow: /
 
@@ -21,5 +42,5 @@ Disallow: /cdn-cgi/
 # Sitemap principal
 Sitemap: https://constructoai.ca/sitemap.xml
 
-# Crawl-delay (respecté par certains robots)
+# Crawl-delay (respecté par bots non-Google/Bing/Yahoo)
 Crawl-delay: 1

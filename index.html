@@ -922,6 +922,53 @@
         }
 
         /* Problems Section */
+        /* Trusted By Section — pill style for client company names */
+        .client-pill {
+            display: inline-block;
+            padding: 8px 16px;
+            background: var(--white);
+            border: 1px solid #e2e8f0;
+            border-radius: 999px;
+            font-size: 13px;
+            font-weight: 500;
+            color: #334155;
+            transition: all 0.2s ease;
+            line-height: 1.4;
+            white-space: nowrap;
+        }
+
+        .client-pill:hover {
+            background: #f0f4ff;
+            border-color: var(--primary);
+            color: var(--primary);
+            transform: translateY(-1px);
+            box-shadow: 0 2px 8px rgba(0, 120, 212, 0.12);
+            cursor: default;
+        }
+
+        .trusted-by-section .section-title {
+            color: var(--gray-900);
+            font-size: 28px;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 12px;
+        }
+
+        .trusted-by-section .section-subtitle {
+            color: var(--gray-500);
+            font-size: 15px;
+            text-align: center;
+            line-height: 1.6;
+        }
+
+        @media (max-width: 640px) {
+            .client-pill {
+                font-size: 12px;
+                padding: 6px 12px;
+                white-space: normal;
+            }
+        }
+
         .problems-section {
             padding: 70px 24px;
             background: var(--white);
@@ -3479,6 +3526,80 @@
                     <div class="stat-label" data-i18n-en="Fabrication workstations">Postes de travail fabrication</div>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <!-- Trusted By Section — Social proof: 50+ companies that trust Constructo AI -->
+    <section class="trusted-by-section" style="padding: 70px 24px; background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%); border-top: 1px solid #f1f5f9; border-bottom: 1px solid #f1f5f9;">
+        <div style="max-width: 1200px; margin: 0 auto; text-align: center;">
+            <div style="display: inline-flex; align-items: center; gap: 8px; padding: 6px 14px; background: rgba(0, 120, 212, 0.08); border: 1px solid rgba(0, 120, 212, 0.18); border-radius: 999px; font-size: 12px; font-weight: 600; color: var(--primary); margin-bottom: 18px; letter-spacing: 0.5px; text-transform: uppercase;">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M9 11l3 3L22 4"/>
+                    <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/>
+                </svg>
+                <span data-i18n-en="Social proof">Confiance clients</span>
+            </div>
+            <h2 class="section-title" data-i18n-en="They trust us">Ils nous font confiance</h2>
+            <p class="section-subtitle" style="max-width: 720px; margin: 0 auto;" data-i18n-en="Over 50 construction and fabrication companies across Quebec, Canada and the United States — from general contractors to specialized trades.">Plus de 50 entreprises en construction et fabrication au Québec, au Canada et aux États-Unis — des entrepreneurs généraux aux corps de métier spécialisés.</p>
+
+            <div style="display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-top: 40px; max-width: 1100px; margin-left: auto; margin-right: auto;">
+                <span class="client-pill">Construction Larochelle</span>
+                <span class="client-pill">Plomberie Corbeil inc.</span>
+                <span class="client-pill">Plomberie Phenix</span>
+                <span class="client-pill">Groupe Pro-Logis Inc.</span>
+                <span class="client-pill">Fun-Cor Solutions Inc.</span>
+                <span class="client-pill">GESTION NP2D INC.</span>
+                <span class="client-pill">VoilàConstruction Inc.</span>
+                <span class="client-pill">Les Entreprises ICK Inc.</span>
+                <span class="client-pill">Tuyodo Maître Tuyauteur</span>
+                <span class="client-pill">Groupe WAKO</span>
+                <span class="client-pill">SOS Chantier</span>
+                <span class="client-pill">RénotechM. Construction Inc.</span>
+                <span class="client-pill">zad rénovation</span>
+                <span class="client-pill">MIRCO Construction inc.</span>
+                <span class="client-pill">Novera Construction inc.</span>
+                <span class="client-pill">Entrepreneur Logan</span>
+                <span class="client-pill">Nexar</span>
+                <span class="client-pill">Construction Nouvelle Ère</span>
+                <span class="client-pill">Menuiserie MB Inc.</span>
+                <span class="client-pill">Répav</span>
+                <span class="client-pill">Arsen construction inc.</span>
+                <span class="client-pill">Conception Structurelle</span>
+                <span class="client-pill">Le Projet Construction</span>
+                <span class="client-pill">Les Entreprises A. Belhumeur inc.</span>
+                <span class="client-pill">BASS système intérieur</span>
+                <span class="client-pill">Multi-Services Champagne</span>
+                <span class="client-pill">9544-8544 Québec Inc.</span>
+                <span class="client-pill">Lanka construction inc.</span>
+                <span class="client-pill">Revetement Pro-TG inc.</span>
+                <span class="client-pill">Catherine Estimatrice</span>
+                <span class="client-pill">Première Zones</span>
+                <span class="client-pill">Plomberie Atmosphère</span>
+                <span class="client-pill">Les Constructions Immo-Alliances</span>
+                <span class="client-pill">Démolition LCS</span>
+                <span class="client-pill">Construction Integritas inc.</span>
+                <span class="client-pill">Integritas Construction Inc.</span>
+                <span class="client-pill">DEXCO</span>
+                <span class="client-pill">Travaux Généraux FL</span>
+                <span class="client-pill">Jeremy B Poirier</span>
+                <span class="client-pill">Construction Lamsley inc.</span>
+                <span class="client-pill">TPS Construction</span>
+                <span class="client-pill">EV RENOVATION</span>
+                <span class="client-pill">Novika Construction inc.</span>
+                <span class="client-pill">l'Échappé atelier général</span>
+                <span class="client-pill">Soudure SL 2000</span>
+                <span class="client-pill">Polär Construction + Architecture inc.</span>
+                <span class="client-pill">Rénovation Construction Vortex</span>
+                <span class="client-pill">Service Précylia Morin</span>
+                <span class="client-pill">COVEM Construction</span>
+                <span class="client-pill">Véronique Tremblay</span>
+                <span class="client-pill">Construction Nosco</span>
+                <span class="client-pill">Groupe DZ</span>
+                <span class="client-pill">Novaxion Construction</span>
+                <span class="client-pill">Gestion R. Cyrenne Inc.</span>
+            </div>
+
+            <p style="margin-top: 36px; font-size: 13px; color: var(--gray-500); font-style: italic;" data-i18n-en="Merci à toutes ces entreprises de nous faire confiance.">Merci à toutes ces entreprises de nous faire confiance.</p>
         </div>
     </section>
 

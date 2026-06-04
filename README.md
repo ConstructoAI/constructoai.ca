@@ -879,7 +879,7 @@ Pour obtenir un accès, contactez : [info@constructoai.ca](mailto:info@construct
 Fondateur & Développeur - Constructo AI Inc.
 
 - 📧 Email : [info@constructoai.ca](mailto:info@constructoai.ca)
-- 📱 Téléphone : [(514) 820-1972](tel:+15148201972)
+- 📱 Téléphone : [1 (936) 587-1141](tel:+19365871141)
 - 🏢 Adresse : 1760, rue Jacques-Cartier Sud, Farnham QC J2N 1Y8
 - 🌐 Site web : [constructoai.ca](https://constructoai.ca)
 - 📱 Application : [app.constructoai.ca](https://app.constructoai.ca)
@@ -1005,7 +1005,7 @@ Pour les membres de l'équipe Constructo AI :
 Pour les questions concernant le site web public :
 
 - **Email** : info@constructoai.ca
-- **Téléphone** : (514) 820-1972
+- **Téléphone** : 1 (936) 587-1141
 - **Chat en direct** : [app.constructoai.ca](https://app.constructoai.ca)
 
 ---
